@@ -1,3 +1,6 @@
 {
-  "template": "nextjs-shadcn"
+  "projectId": "vanborglimited",
+  "theme": "dark",
+  "engine": "nextjs",
+  "shadcn": true
 }
