@@ -1,0 +1,240 @@
+/* Animation styles */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideUpAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDownAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeftAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRightAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleInAnimation {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleOutAnimation {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+@keyframes pulseAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes spinAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounceAnimation {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Animation utility classes */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-fade-out {
+  animation: fadeOut 0.3s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUpAnimation 0.5s ease-out forwards;
+}
+
+.animate-slide-down {
+  animation: slideDownAnimation 0.5s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideLeftAnimation 0.5s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideRightAnimation 0.5s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleInAnimation 0.3s ease-out forwards;
+}
+
+.animate-scale-out {
+  animation: scaleOutAnimation 0.3s ease-out forwards;
+}
+
+.animate-pulse {
+  animation: pulseAnimation 1.5s ease-in-out infinite;
+}
+
+.animate-spin {
+  animation: spinAnimation 1s linear infinite;
+}
+
+.animate-bounce {
+  animation: bounceAnimation 2s ease infinite;
+}
+
+/* Animation delays */
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Animation durations */
+.animation-duration-fast {
+  animation-duration: 0.2s;
+}
+
+.animation-duration-normal {
+  animation-duration: 0.5s;
+}
+
+.animation-duration-slow {
+  animation-duration: 0.8s;
+}
+
+/* Animation timing functions */
+.animation-ease {
+  animation-timing-function: ease;
+}
+
+.animation-linear {
+  animation-timing-function: linear;
+}
+
+.animation-ease-in {
+  animation-timing-function: ease-in;
+}
+
+.animation-ease-out {
+  animation-timing-function: ease-out;
+}
+
+.animation-ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+
+/* Animation fill modes */
+.animation-forwards {
+  animation-fill-mode: forwards;
+}
+
+.animation-backwards {
+  animation-fill-mode: backwards;
+}
+
+.animation-both {
+  animation-fill-mode: both;
+}
+
+/* Animation utilities for hover states */
+.hover\:animate-pulse:hover {
+  animation: pulseAnimation 1.5s ease-in-out infinite;
+}
+
+.hover\:animate-bounce:hover {
+  animation: bounceAnimation 2s ease infinite;
+}
