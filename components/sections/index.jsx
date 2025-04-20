@@ -1,8 +1,0 @@
-export default function TestHero() {
-  return (
-    <section className="p-10 text-center bg-black text-white">
-      <h1 className="text-4xl font-bold">🚀 Van Borg Test Hero</h1>
-      <p className="mt-2 text-lg opacity-80">If you're seeing this, Bolt & Stack are synced like gods.</p>
-    </section>
-  );
-}
