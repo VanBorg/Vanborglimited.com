@@ -3,39 +3,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Loader2 } from 'lucide-react';
 
-interface VoiceflowConfig {
-  verify: {
-    projectID: string;
-  };
-  url: string;
-  versionID: string;
-  voice: {
-    url: string;
-    apiKey: string;
-  };
-  render: {
-    mode: 'embedded';
-    target: HTMLElement;
-    style: {
-      width: string;
-      height: string;
-    };
-  };
-  session: {
-    persist: boolean;
-    resumeSession: boolean;
-    sessionID: string;
-  };
-  user: {
-    name: string;
-  };
-}
-
 declare global {
   interface Window {
     voiceflow?: {
       chat?: {
-        load: (config: VoiceflowConfig) => { destroy?: () => void };
+        load: (config: any) => { destroy?: () => void };
       };
     };
   }
@@ -51,6 +23,10 @@ export const ChatbotEmbed = React.forwardRef<HTMLDivElement, { className?: strin
     useEffect(() => {
       const container = containerRef.current;
       if (!container) return;
+
+      // Clear any lingering local/session storage just in case
+      window.localStorage.clear();
+      window.sessionStorage.clear();
 
       const chatDiv = document.createElement('div');
       chatDiv.id = 'voiceflow-chat';
