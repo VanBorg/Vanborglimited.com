@@ -4,6 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "18"
+  NEXT_DISABLE_NETLIFY_PLUGIN = "true"  # 🔥 Force-disable Netlify's Next.js runtime
 
 [[redirects]]
   from = "/*"
