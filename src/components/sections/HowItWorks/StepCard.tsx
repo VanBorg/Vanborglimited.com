@@ -34,7 +34,7 @@ const StepCard: React.FC<StepCardProps> = ({ index, step, withAnimation }) => {
           className={cn(
             "mb-6 w-20 h-20 rounded-full flex items-center justify-center border-4 shadow-lg transform transition-all duration-500 bg-gradient-to-br relative z-10",
             index === 0 ? "from-light-brand-primary/50 to-light-brand-primary/70 border-light-brand-primary/60 text-light-brand-primary dark:from-dark-brand-primary/50 dark:to-dark-brand-primary/70 dark:border-dark-brand-primary/60 dark:text-dark-brand-primary" : 
-            index === 1 ? "from-light-accent/50 to-light-accent/70 border-light-accent/60 text-light-accent dark:from-dark-accent/50 dark:to-dark-accent/70 dark:border-dark-accent/60 dark:text-dark-accent" : 
+            index === 1 ? "from-light-brand-primary/50 to-light-brand-primary/70 border-light-brand-primary/60 text-light-brand-primary dark:from-dark-brand-primary/50 dark:to-dark-brand-primary/70 dark:border-dark-brand-primary/60 dark:text-dark-brand-primary" : 
             "from-light-brand-secondary/50 to-light-brand-secondary/70 border-light-brand-secondary/60 text-light-brand-secondary dark:from-dark-brand-secondary/50 dark:to-dark-brand-secondary/70 dark:border-dark-brand-secondary/60 dark:text-dark-brand-secondary"
           )}
         >

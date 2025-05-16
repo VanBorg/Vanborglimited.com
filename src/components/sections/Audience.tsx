@@ -4,41 +4,56 @@ import { Container } from '../ui/Container';
 import GlassCard from '../ui/GlassCard';
 import { cn } from '../../utils/cn';
 import Badge from '../ui/Badge';
+import Button from '../ui/Button';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import type { TargetAudience } from '../../types';
 import * as Icons from 'lucide-react';
 
 const CARDS_TO_SHOW = 3;
 
+interface NicheItem {
+  id: string;
+  title: string;
+  icon: string;
+  bullets: string[];
+  pitch: string;
+  bestBot: string;
+}
+
 interface AudienceProps {
   title: string;
-  subtitle?: string;
-  audiences: TargetAudience[];
+  subtitle: string;
+  infoText: string;
+  audiences: NicheItem[];
+  outroText: string;
   withAnimation?: boolean;
   className?: string;
+  scrollToChatbot?: () => void;
 }
 
 export const Audience: React.FC<AudienceProps> = ({
   title,
   subtitle,
+  infoText,
   audiences,
+  outroText,
   withAnimation = true,
   className,
+  scrollToChatbot,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const total = audiences.length;
+  const totalAudiences = audiences.length;
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + CARDS_TO_SHOW) % total);
+    setCurrentIndex((prev) => (prev + CARDS_TO_SHOW) % totalAudiences);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - CARDS_TO_SHOW + total) % total);
+    setCurrentIndex((prev) => (prev - CARDS_TO_SHOW + totalAudiences) % totalAudiences);
   };
 
   const getVisibleCards = () => {
     return Array.from({ length: CARDS_TO_SHOW }, (_, i) =>
-      audiences[(currentIndex + i) % total]
+      audiences[(currentIndex + i) % totalAudiences]
     );
   };
 
@@ -57,7 +72,7 @@ export const Audience: React.FC<AudienceProps> = ({
 
       <div className="relative z-30">
         <Container>
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-8">
             {withAnimation ? (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -66,11 +81,11 @@ export const Audience: React.FC<AudienceProps> = ({
                 transition={{ duration: 0.5 }}
                 className="inline-block mb-4"
               >
-                <Badge variant="primary" size="lg">PERFECT CLIENTS</Badge>
+                <Badge variant="primary" size="lg">{title}</Badge>
               </motion.div>
             ) : (
               <div className="inline-block mb-4">
-                <Badge variant="primary" size="lg">PERFECT CLIENTS</Badge>
+                <Badge variant="primary" size="lg">{title}</Badge>
               </div>
             )}
 
@@ -91,8 +106,17 @@ export const Audience: React.FC<AudienceProps> = ({
             )}
 
             <p className="text-xl text-light-text-secondary dark:text-dark-text-secondary max-w-3xl mx-auto font-body">
-              11 Custom AI Automations Engineered for Service-Based Businesses
+              {subtitle}
             </p>
+          </div>
+
+          {/* INFO BANNER */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <div className="bg-light-bg-secondary/50 dark:bg-dark-bg-secondary/50 p-6 rounded-lg border-l-4 border-light-brand-primary dark:border-dark-brand-primary">
+              <p className="text-light-text-secondary dark:text-dark-text-secondary font-body text-center">
+                {infoText}
+              </p>
+            </div>
           </div>
 
           {/* CAROUSEL SECTION */}
@@ -100,13 +124,11 @@ export const Audience: React.FC<AudienceProps> = ({
             <div className="flex justify-center gap-8">
               {getVisibleCards().map((audience, index) => {
                 const IconComponent = (Icons as any)[audience.icon] || Icons.Users;
-                const cardNumber = ((currentIndex + index) % total + 1)
-                  .toString()
-                  .padStart(2, '0');
+                const cardNumber = audience.id;
 
                 return (
                   <motion.div
-                    key={index}
+                    key={audience.title}
                     className="flex-shrink-0 w-[380px]"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -136,32 +158,37 @@ export const Audience: React.FC<AudienceProps> = ({
                         </h3>
                       </div>
 
-                      {/* BULLETS BOXED, NO OVERLAP */}
+                      {/* BULLETS BOXED */}
                       <div className="mb-6 rounded-lg bg-light-bg-secondary/40 dark:bg-dark-bg-secondary/40 p-4 border border-light-border/10 dark:border-dark-border/10">
-                        <div className="space-y-3 h-[140px] overflow-hidden">
-                          {audience.benefits?.map((benefit, idx) => (
+                        <div className="space-y-3">
+                          {audience.bullets.map((bullet, idx) => (
                             <div
                               key={idx}
-                              className="flex items-start text-light-text-secondary dark:text-dark-text-secondary text-sm min-h-[40px]"
+                              className="flex items-start text-light-text-secondary dark:text-dark-text-secondary text-sm min-h-[24px]"
                             >
-                              <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-br from-light-brand-primary to-light-brand-secondary dark:from-dark-brand-primary dark:to-dark-brand-secondary mr-2 mt-1" />
-                              <span className="flex-1">{benefit}</span>
+                              <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-br from-light-brand-primary to-light-brand-secondary dark:from-dark-brand-primary dark:to-dark-brand-secondary mr-2 mt-1.5" />
+                              <span className="flex-1">{bullet}</span>
                             </div>
                           ))}
                         </div>
                       </div>
 
-                      {/* Impact */}
+                      {/* Pitch */}
                       <div className="bg-light-bg-secondary/50 dark:bg-dark-bg-secondary/50 p-4 rounded-lg mb-6 border-l-4 border-light-brand-primary dark:border-dark-brand-primary min-h-[80px] flex items-center">
                         <p className="text-sm italic text-light-text-secondary dark:text-dark-text-secondary">
-                          {audience.impact}
+                          {audience.pitch}
                         </p>
                       </div>
 
-                      {/* Bot Path */}
-                      <div className="text-xs uppercase tracking-wide font-bold bg-gradient-to-r from-light-brand-primary to-light-brand-secondary dark:from-dark-brand-primary dark:to-dark-brand-secondary bg-clip-text text-transparent pt-2 mt-auto border-t border-light-text-secondary/10 dark:border-dark-text-secondary/10">
-                        Recommended Bot Path: {audience.botPath}
-                        <div className="h-2"></div>
+                      {/* Best Bot */}
+                      <div className="text-xs uppercase tracking-wide font-bold pt-2 mt-auto border-t border-light-text-secondary/10 dark:border-dark-text-secondary/10 flex items-center">
+                        <span className="bg-gradient-to-r from-light-brand-primary to-light-brand-secondary dark:from-dark-brand-primary dark:to-dark-brand-secondary bg-clip-text text-transparent">
+                          Recommended Bot Path:
+                        </span>
+                        <span className="ml-1 text-light-text-secondary dark:text-dark-text-secondary">
+                          {audience.bestBot}
+                        </span>
+                        <div className="h-4"></div>
                       </div>
                     </GlassCard>
                   </motion.div>
@@ -179,7 +206,7 @@ export const Audience: React.FC<AudienceProps> = ({
               <ChevronLeft className="w-8 h-8 text-light-brand-primary dark:text-dark-brand-primary" />
             </button>
             <div className="flex items-center gap-2">
-              {Array.from({ length: 11 }).map((_, i) => (
+              {Array.from({ length: totalAudiences }).map((_, i) => (
                 <div
                   key={i}
                   className={cn(
@@ -200,8 +227,21 @@ export const Audience: React.FC<AudienceProps> = ({
           </div>
           
           <p className="text-center text-lg mt-12 font-body text-light-text-primary dark:text-dark-text-secondary max-w-2xl mx-auto">
-            <span className="font-title">Choose your niche. Get the perfect system. Scale without limits.</span>
+            <span className="font-title">{outroText}</span>
           </p>
+          
+          {scrollToChatbot && (
+            <div className="flex justify-center mt-8">
+              <Button
+                onClick={scrollToChatbot}
+                variant="outline"
+                size="lg"
+                className="ring-4 ring-light-brand-primary/30 dark:ring-dark-brand-primary/30 hover:border-light-brand-primary hover:ring-light-brand-primary dark:hover:border-dark-brand-primary dark:hover:ring-dark-brand-primary transition-all duration-300 bg-gradient-to-r from-light-brand-primary/10 to-light-brand-secondary/5 dark:from-dark-brand-primary/10 dark:to-dark-brand-secondary/5"
+              >
+                Chat With the Van Borg Assistant
+              </Button>
+            </div>
+          )}
         </Container>
       </div>
     </section>

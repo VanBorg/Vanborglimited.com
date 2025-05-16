@@ -3,18 +3,33 @@ import GlassCard from '../../../components/ui/GlassCard';
 
 const Section10: React.FC = () => {
   return (
-    <GlassCard className="p-8" intensity="medium">
+    <GlassCard className="p-6" intensity="medium">
       <div className="prose prose-lg max-w-none text-light-text-secondary dark:text-dark-text-secondary">
-        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">10. Limitations of Liability</h2>
+        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">
+          10. TERMS MODIFICATIONS
+        </h2>
         <p>
-          To the maximum extent permitted by law:
+          Van Borg Limited retains the right to modify, refine, or expand these Terms of Service to reflect evolving technical standards, legal compliance, and infrastructure capabilities.
+        </p>
+        <p>
+          Conditions of Change:
         </p>
         <ul>
-          <li>Van Borg shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the Services</li>
-          <li>Our total liability for any claims relating to these Terms or the Services shall not exceed the amount you paid for the Services during the twelve (12) months preceding the event giving rise to the liability</li>
-          <li>These limitations apply regardless of whether the damages are based on contract, tort, or any other legal theory</li>
-          <li>Some jurisdictions do not allow the exclusion of certain warranties or the limitation of liability for some types of damages, so some of the above limitations may not apply to you</li>
+          <li>Updated terms will be posted at www.vanborglimited.com/terms and/or sent via registered contact email</li>
+          <li>Changes take immediate effect upon publication unless stated otherwise</li>
+          <li>Continued use of any system, module, or service after notice is deemed full acceptance of the revised terms</li>
         </ul>
+        <p>
+          Your Obligations:
+        </p>
+        <ul>
+          <li>You are responsible for reviewing changes and remaining compliant</li>
+          <li>If you do not agree with updated terms, you must discontinue use immediately</li>
+          <li>Use of any Van Borg system constitutes acceptance of all binding terms, past and present</li>
+        </ul>
+        <p>
+          Van Borg does not negotiate terms individually. This agreement is uniform, enforced, and non-negotiable.
+        </p>
       </div>
     </GlassCard>
   );

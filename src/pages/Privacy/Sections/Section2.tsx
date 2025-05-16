@@ -5,23 +5,36 @@ const Section2: React.FC = () => {
   return (
     <GlassCard className="p-8" intensity="medium">
       <div className="prose prose-lg max-w-none text-light-text-secondary dark:text-dark-text-secondary">
-        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">2. Data Collection and Use</h2>
+        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">
+          2. Data Collection
+        </h2>
         <p>
-          We collect and process personal data to the extent necessary to provide and enhance our Services. This includes:
+          Van Borg Limited collects and processes data solely on a lawful, purpose-bound, and contractually justifiable basis. All collection activities are guided by the principle of data minimization and proportionality.
         </p>
+
+        <h3 className="text-lg font-semibold mt-6 mb-3 text-light-text-primary dark:text-dark-text-primary">
+          2.1. Categories of Data Collected
+        </h3>
         <ul>
-          <li><strong>Information Provided by You:</strong> Data submitted through our platforms, including but not limited to contact details, service inquiries, and feedback.</li>
-          <li><strong>Automated Data Collection:</strong> Information gathered via cookies and similar technologies to analyze usage patterns and improve user experience.</li>
-          <li><strong>Third-Party Integrations:</strong> Data obtained through integrations with external services, subject to their respective privacy policies.</li>
+          <li>Voluntary Submissions: Data submitted by you directly via forms, chatbot interactions, service inquiries, support tickets, onboarding documents, or consultation requests.</li>
+          <li>Automated System Data: Information collected via platform interaction logs, session diagnostics, cookie identifiers (non-invasive), device metadata, browser fingerprints, and aggregated behavioral tracking.</li>
+          <li>Third-Party Integrations: Information transmitted from authorized third-party tools (e.g., CRM platforms, analytics systems, payment processors) governed by your explicit authorization and subject to their independent privacy terms.</li>
         </ul>
-        <p>The data collected is utilized for:</p>
+
+        <h3 className="text-lg font-semibold mt-6 mb-3 text-light-text-primary dark:text-dark-text-primary">
+          2.2. Purposes of Data Collection
+        </h3>
+        <p>The data collected is used exclusively to:</p>
         <ul>
-          <li>Delivering and maintaining our Services.</li>
-          <li>Communicating with you regarding your account or transactions.</li>
-          <li>Enhancing and personalizing user experience.</li>
-          <li>Complying with legal obligations.</li>
+          <li>Deliver, provision, and maintain licensed AI automation systems and related services</li>
+          <li>Facilitate secure identity validation, system access, and client interaction flows</li>
+          <li>Communicate essential service updates, billing, infrastructure notices, or support engagements</li>
+          <li>Comply with applicable regulatory, tax, contractual, and cybersecurity obligations</li>
+          <li>Improve the operational performance, responsiveness, and resilience of our AI infrastructure</li>
         </ul>
-        <p>We do not sell or rent your personal data to third parties.</p>
+        <p>
+          Van Borg does not engage in data resale, behavioral ad tracking, or third-party monetization. All data processing remains within the scope of direct service enablement or contractual performance.
+        </p>
       </div>
     </GlassCard>
   );

@@ -12,11 +12,40 @@ import Sitemap from './pages/Sitemap';
 
 // ScrollToTop component to handle scroll behavior on route change
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (hash) {
+      // If there's a hash, attempt to scroll to that element
+      setTimeout(() => {
+        // Properly format the hash for querySelector (remove the # from the hash)
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          // Add offset to account for fixed header (adjust the value as needed)
+          const yOffset = -100; 
+          const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          
+          window.scrollTo({
+            top: y,
+            behavior: 'smooth'
+          });
+          
+          // Add a highlight effect to make it clear where we scrolled to
+          const originalBackground = element.style.backgroundColor;
+          element.style.backgroundColor = 'rgba(220, 38, 38, 0.1)';
+          setTimeout(() => {
+            element.style.backgroundColor = originalBackground;
+          }, 1500);
+        } else {
+          console.error(`Element with id "${id}" not found`);
+        }
+      }, 800); // Longer delay to ensure elements are rendered
+    } else {
+      // If no hash, scroll to top
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
   
   return null;
 }

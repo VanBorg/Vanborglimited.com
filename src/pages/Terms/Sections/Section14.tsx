@@ -3,21 +3,15 @@ import GlassCard from '../../../components/ui/GlassCard';
 
 const Section14: React.FC = () => {
   return (
-    <GlassCard className="p-8" intensity="medium">
+    <GlassCard className="p-6" intensity="medium">
       <div className="prose prose-lg max-w-none text-light-text-secondary dark:text-dark-text-secondary">
-        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">14. Confidentiality</h2>
-        <p>
-          During your relationship with Van Borg, you may have access to confidential information. You agree to:
-        </p>
-        <ul>
-          <li>Maintain the confidentiality of any proprietary or confidential information disclosed to you</li>
-          <li>Use such information only for the purposes of using our Services</li>
-          <li>Not disclose such information to any third party without our prior written consent</li>
-          <li>Take reasonable measures to protect the confidentiality of such information</li>
-          <li>Return or destroy all confidential information upon termination of your relationship with us, if requested</li>
-        </ul>
-        <p>
-          This obligation shall survive the termination of your relationship with Van Borg.
+        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">
+          14. OUTRO STATEMENT
+        </h2>
+        <p className="italic">
+          "Van Borg licenses infrastructure — not apps.<br />
+          If you're here to scale with structured automation, you're in the right place.<br />
+          If you're here to clone, coast, or copy — don't sign."
         </p>
       </div>
     </GlassCard>

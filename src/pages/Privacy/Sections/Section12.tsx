@@ -3,19 +3,25 @@ import GlassCard from '../../../components/ui/GlassCard';
 
 const Section12: React.FC = () => {
   return (
-    <GlassCard className="p-8" intensity="medium">
+    <GlassCard className="p-6" intensity="medium">
       <div className="prose prose-lg max-w-none text-light-text-secondary dark:text-dark-text-secondary">
-        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">12. Controlled Sharing and Data Disclosure</h2>
+        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">
+          12. Controlled Sharing and Data Disclosure
+        </h2>
         <p>
-          Van Borg Limited does not engage in the commercial sale, lease, or barter of personal data. Information may be disclosed to the following categories of recipients under strictly regulated terms:
+          Van Borg Limited does not sell, lease, trade, or barter client or user data under any circumstances. All data sharing is controlled, contract-bound, and scoped to operational necessity.
         </p>
+
+        <h3 className="text-lg font-semibold mt-6 mb-3 text-light-text-primary dark:text-dark-text-primary">
+          12.1 Categories of Authorized Disclosure
+        </h3>
         <ul>
-          <li><strong>Authorized Service Providers:</strong> Entities contracted to perform technical, infrastructural, or support services on our behalf, bound by data processing agreements that ensure confidentiality and compliance with applicable data protection laws.</li>
-          <li><strong>Strategic Partners:</strong> Where explicitly authorized by you, we may share limited information to facilitate co-branded offerings, platform integrations, or pilot deployments.</li>
-          <li><strong>Legal and Regulatory Authorities:</strong> Where required by statute, court order, or enforceable request by competent authorities, or where disclosure is necessary to defend our legal rights, protect public safety, or investigate fraud.</li>
+          <li>Authorized Processors: Third-party service providers contracted under Data Processing Agreements (DPAs) which bind them to confidentiality, security compliance, and regulatory enforcement</li>
+          <li>Strategic Partners: Data may be shared with a co-branded technology or fulfillment partner only with your explicit, documented authorization</li>
+          <li>Regulatory & Legal Bodies: Where required by enforceable legal mandate (e.g., subpoena, court order, public safety concern), Van Borg will disclose only the minimum required data to the competent authority</li>
         </ul>
         <p>
-          In all cases, disclosure is minimized to the narrowest scope necessary and executed in accordance with the principle of proportionality.
+          No disclosure exceeds what is necessary for legal, contractual, or operational delivery. All disclosures follow the principle of proportionality.
         </p>
       </div>
     </GlassCard>

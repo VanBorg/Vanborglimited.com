@@ -50,29 +50,29 @@ const Hero: React.FC<HeroProps> = ({ chatbotRef, scrollToChatbot }) => {
               {animate(
                 <div className="inline-block mb-6">
                   <Badge variant="primary" size="lg">
-                    AI Chatbots & Automation Systems
+                    AI Chatbots & Automation
                   </Badge>
                 </div>
               )}
 
               {animate(
-                <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight text-light-text-primary dark:text-dark-text-primary">
+                <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight text-light-text-primary dark:text-dark-text-primary mb-8">
                     <span className="block">AI Systems</span>
                     <span className="block">That Convert.</span>
                     <span className="block">Licensed to Scale.</span>
                 </h1>
               )}
 
-              <div className="h-12 mb-6 flex items-center">
+              <div className="h-12 mb-8 flex items-center">
                 <TypeAnimation
                   sequence={[
-                    'Advanced AI Chat Assistants',
+                    'AI Systems That Capture & Convert',
                     2000,
-                    'Automated Lead Conversion Systems',
+                    '24/7 Sales Automation — No Staff Needed',
                     2000,
-                    'Smart Booking & Follow-Up Flows',
+                    'Lead Capture. Booking. Follow-Up.',
                     2000,
-                    'Scalable Automation for Any Business',
+                    'Real Systems. Real Results. Zero Fluff.',
                     2000,
                   ]}
                   wrapper="div"
@@ -83,9 +83,9 @@ const Hero: React.FC<HeroProps> = ({ chatbotRef, scrollToChatbot }) => {
               </div>
 
               {animate(
-                <p className="text-xl text-light-text-secondary dark:text-dark-text-secondary mb-6 font-body">
-                  Van Borg bots capture leads, automate bookings, and sync with your CRM — all in one modular system.
-Licensed, not sold. Tailored to your business. Deployed in days.
+                <p className="text-xl text-light-text-secondary dark:text-dark-text-secondary mb-6 font-body space-y-2">
+                  <span className="block">Van Borg bots don't just chat — they operate.</span>  
+                  <span className="block">Licensed infrastructure, not a rented tool — built for your business, deployed in days.</span>
                 </p>,
                 0.1
               )}

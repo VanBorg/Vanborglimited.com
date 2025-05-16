@@ -4,7 +4,8 @@ import { businessAutomations } from './automations';
 // Chatbot Solutions section data
 export const chatbotSolutions = [
   {
-    title: '01. Lead Capture System',
+    titleTop: '01. Lead Capture System',
+    titleBottom: 'Smart FAQ & Lead Capture',
     description: 'Smart FAQ answering, lead form capture, and booking links - perfect for fast-moving coaches and solo operators.',
     icon: 'Bot',
     features: [
@@ -17,7 +18,8 @@ export const chatbotSolutions = [
     useCase: 'Ideal for coaches or small studios starting out with AI automation.'
   },
   {
-    title: '02. Client Booking Assistant',
+    titleTop: '02. Client Booking Assistant',
+    titleBottom: 'Calendar & CRM Integration',
     description: 'Complete booking automation with calendar integration, CRM sync, and intelligent follow-up sequences.',
     icon: 'MessageSquareMore',
     features: [
@@ -31,7 +33,8 @@ export const chatbotSolutions = [
     useCase: 'Perfect for wellness businesses ready to automate daily operations and increase conversions.'
   },
   {
-    title: '03. Full-Service Chat Automation',
+    titleTop: '03. Full-Service Chat Automation',
+    titleBottom: 'Multi-Channel AI System',
     description: 'Multi-channel AI system with integrated loyalty programs, advanced analytics, and complete booking automation.',
     icon: 'Brain',
     features: [
@@ -44,7 +47,8 @@ export const chatbotSolutions = [
     useCase: 'Built for gyms and clinics managing complex flows or multi-location scheduling.'
   },
   {
-    title: '04. Custom AI Solution',
+    titleTop: '04. Custom AI Solution',
+    titleBottom: 'Enterprise-Grade AI',
     description: 'Enterprise-grade AI with white-label UI, deep CRM integration, and custom automation flows across your entire tech stack.',
     icon: 'Settings',
     features: [

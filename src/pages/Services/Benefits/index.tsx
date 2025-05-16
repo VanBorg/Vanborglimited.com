@@ -127,13 +127,12 @@ const BenefitsSection: React.FC<BenefitsSectionProps> = ({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
-                className="transform hover:scale-105 transition-all duration-300"
-                as="div"
+                className=""
               >
                 <GlassCard
-                  className="p-6 h-full flex flex-col relative overflow-hidden border-2 border-light-brand-primary/20 dark:border-dark-brand-primary/20"
+                  className="p-6 h-full flex flex-col relative overflow-hidden border-2 border-light-brand-primary/20 dark:border-dark-brand-primary/20 transition-all duration-300 hover:shadow-light-brand-primary/20 dark:hover:shadow-dark-brand-primary/20 hover:border-light-brand-primary/30 dark:hover:border-dark-brand-primary/30"
                   intensity="medium"
-                  hoverEffect
+                  hoverEffect={false}
                 >
                   {/* Decorative corner accent */}
                   <div className="absolute top-0 right-0 w-16 h-16 bg-light-brand-primary/10 dark:bg-dark-brand-primary/10 transform rotate-45 translate-x-8 -translate-y-8"></div>
@@ -171,7 +170,7 @@ const BenefitsSection: React.FC<BenefitsSectionProps> = ({
         {/* CTA Line */}
         <div className="text-center mt-12">
           <p className="text-xl text-light-text-secondary dark:text-dark-text-secondary font-title">
-            Build once. Own forever. Or let us handle the backend — your AI, your way.
+            Built once. Licensed for life. Fully managed. Your bot, your way.
           </p>
         </div>
       </Container>

@@ -3,12 +3,9 @@ import { motion } from 'framer-motion';
 import { Container } from '../ui/Container';
 import GlassCard from '../ui/GlassCard';
 import Badge from '../ui/Badge';
-import Button from '../ui/Button';
 import { cn } from '../../utils/cn';
-import * as Icons from 'lucide-react';
 import { businessAutomations } from '../../data/automations';
-
-import type { Automation } from '../../types';
+import { Button } from '../ui/Button';
 
 interface ProcessAutomationsProps {
   title: string;
@@ -22,8 +19,8 @@ export const ProcessAutomations: React.FC<ProcessAutomationsProps> = ({
   title,
   subtitle,
   withAnimation = true,
-  scrollToChatbot,
   className,
+  scrollToChatbot,
 }) => {
   return (
     <section
@@ -84,11 +81,15 @@ export const ProcessAutomations: React.FC<ProcessAutomationsProps> = ({
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-xl text-light-text-secondary dark:text-dark-text-secondary max-w-3xl mx-auto font-body mb-8"
               >
-                Powerful add-ons to streamline your business operations.
+                {subtitle.split('. Add power')[0]}.
+                <br />
+                Add power. Scale fast.
               </motion.p>
             ) : (
               <p className="text-xl text-light-text-secondary dark:text-dark-text-secondary max-w-3xl mx-auto font-body">
-                Powerful add-ons to streamline your business operations.
+                {subtitle.split('. Add power')[0]}.
+                <br />
+                Add power. Scale fast.
               </p>
             )
           )}
@@ -108,60 +109,25 @@ export const ProcessAutomations: React.FC<ProcessAutomationsProps> = ({
                     <thead>
                       <tr className="bg-light-bg-secondary dark:bg-dark-bg-secondary border-b border-light-text-secondary/10 dark:border-dark-text-secondary/10">
                         <th className="px-3 py-2.5 text-left text-light-text-primary dark:text-dark-text-primary font-title">Automation</th>
+                        <th className="px-3 py-2.5 text-left text-light-text-primary dark:text-dark-text-primary font-title">What It Does</th>
                         <th className="px-3 py-2.5 text-left text-light-text-primary dark:text-dark-text-primary font-title">Timeline</th>
-                        <th className="px-3 py-2.5 text-left text-light-text-primary dark:text-dark-text-primary font-title">Purpose</th>
-                        <th className="px-3 py-2.5 text-left text-light-text-primary dark:text-dark-text-primary font-title w-72">Best For</th>
                       </tr>
                     </thead>
                     <tbody>
-                      {businessAutomations.map((automation, index) => {
-                        const IconComponent = (Icons as any)[automation.icon] || Icons.Workflow;
-                        const isEven = index % 2 === 0;
-                        
-                        return (
-                          <tr 
-                            key={index}
-                            className={`
-                              border-b border-light-text-secondary/10 dark:border-dark-text-secondary/10 
-                              transition-all duration-500
-                              hover:bg-gradient-to-r hover:from-light-brand-primary/5 hover:to-light-brand-secondary/5
-                              dark:hover:bg-gradient-to-r dark:hover:from-dark-brand-primary/5 dark:hover:to-dark-brand-secondary/5
-                              hover:shadow-[inset_0_0_30px_rgba(220,38,38,0.05)] dark:hover:shadow-[inset_0_0_30px_rgba(0,175,185,0.05)]
-                              ${index % 2 === 0 ? 'bg-white/90 dark:bg-white/[0.03]' : 'bg-gray-50/90 dark:bg-white/[0.01]'}
-                            `}
-                          >
-                            <td className="px-3 py-2">
-                              <div className="flex items-center space-x-3">
-                                <div className="flex-shrink-0 bg-gradient-to-br from-light-brand-primary/20 via-light-brand-primary/10 to-light-brand-secondary/20 dark:from-dark-brand-primary/20 dark:via-dark-brand-primary/10 dark:to-dark-brand-secondary/20 p-2 rounded-full border border-light-brand-primary/30 dark:border-dark-brand-primary/30 shadow-[0_2px_4px_rgba(220,38,38,0.1)] dark:shadow-[0_2px_4px_rgba(0,175,185,0.1)] backdrop-blur-sm">
-                                  <IconComponent size={16} className="text-light-brand-primary dark:text-white" />
-                                </div>
-                                <span className="font-semibold text-light-text-primary dark:text-dark-text-primary font-body">{automation.name}</span>
-                              </div>
-                            </td>
-                            <td className="px-3 py-2">
-                              <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-gradient-to-br from-light-brand-primary/20 via-light-brand-primary/10 to-light-brand-secondary/20 dark:from-dark-brand-primary/20 dark:via-dark-brand-primary/10 dark:to-dark-brand-secondary/20 text-light-brand-primary dark:text-dark-brand-primary font-body border border-light-brand-primary/30 dark:border-dark-brand-primary/30 shadow-[0_2px_4px_rgba(220,38,38,0.1)] dark:shadow-[0_2px_4px_rgba(0,175,185,0.1)] backdrop-blur-sm">
-                                <Icons.Clock className="mr-1" size={12} />
-                                {automation.timeline}
-                              </span>
-                            </td>
-                            <td className="px-3 py-2 text-gray-700 dark:text-dark-text-secondary font-body">
-                              {automation.purpose}
-                            </td>
-                            <td className="px-3 py-2">
-                              <div className="flex flex-wrap gap-1 max-w-[300px]">
-                                {(automation.niches || []).map((niche, idx) => (
-                                  <span
-                                    key={idx}
-                                    className="bg-gradient-to-br from-light-brand-primary/20 via-light-brand-primary/10 to-light-brand-secondary/20 dark:from-dark-brand-primary/20 dark:via-dark-brand-primary/10 dark:to-dark-brand-secondary/20 rounded-full px-2 py-0.5 text-[10px] text-light-brand-primary dark:text-dark-brand-primary font-title border border-light-brand-primary/30 dark:border-dark-brand-primary/30 whitespace-nowrap shadow-[0_2px_4px_rgba(220,38,38,0.1)] dark:shadow-[0_2px_4px_rgba(0,175,185,0.1)] backdrop-blur-sm hover:scale-105 transition-transform duration-300"
-                                  >
-                                    {niche}
-                                  </span>
-                                ))}
-                              </div>
-                            </td>
-                          </tr>
-                        );
-                      })}
+                      {businessAutomations.map((automation, index) => (
+                        <tr 
+                          key={index}
+                          className={`border-b border-light-text-secondary/10 dark:border-dark-text-secondary/10 ${
+                            index % 2 === 0 
+                              ? "bg-light-bg-secondary/60 dark:bg-dark-bg-secondary/70" 
+                              : "bg-light-bg-primary/90 dark:bg-dark-bg-primary/95"
+                          } hover:bg-light-brand-primary/30 dark:hover:bg-dark-brand-primary/15 transition-colors duration-200`}
+                        >
+                          <td className="px-3 py-2 text-light-text-primary dark:text-dark-text-primary font-body">{automation.name}</td>
+                          <td className="px-3 py-2 text-light-text-secondary dark:text-dark-text-secondary font-body">{automation.description}</td>
+                          <td className="px-3 py-2 text-light-text-primary dark:text-dark-text-primary font-body">{automation.timeline}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>
@@ -173,67 +139,45 @@ export const ProcessAutomations: React.FC<ProcessAutomationsProps> = ({
                 <table className="w-full">
                   <thead>
                     <tr className="bg-light-bg-secondary dark:bg-dark-bg-secondary border-b border-light-text-secondary/10 dark:border-dark-text-secondary/10">
-                      <th className="px-6 py-4 text-left text-light-text-primary dark:text-dark-text-primary font-title">Automation</th>
-                      <th className="px-6 py-4 text-left text-light-text-primary dark:text-dark-text-primary font-title">Timeline</th>
-                      <th className="px-6 py-4 text-left text-light-text-primary dark:text-dark-text-primary font-title">Purpose</th>
-                      <th className="px-6 py-4 text-left text-light-text-primary dark:text-dark-text-primary font-title w-32">Best For</th>
+                      <th className="px-3 py-2.5 text-left text-light-text-primary dark:text-dark-text-primary font-title">Automation</th>
+                      <th className="px-3 py-2.5 text-left text-light-text-primary dark:text-dark-text-primary font-title">What It Does</th>
+                      <th className="px-3 py-2.5 text-left text-light-text-primary dark:text-dark-text-primary font-title">Timeline</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {(automations || []).map((automation, index) => {
-                      const IconComponent = (Icons as any)[automation.icon] || Icons.Workflow;
-                      const isEven = index % 2 === 0;
-                      
-                      return (
-                        <tr 
-                          key={index}
-                          className={`
-                            border-b border-light-text-secondary/10 dark:border-dark-text-secondary/10 
-                            transition-colors duration-300 hover:bg-light-bg-secondary/60 dark:hover:bg-dark-bg-secondary/60
-                            ${index % 2 === 0 ? 'bg-white/60 dark:bg-white/5' : 'bg-gray-50/60 dark:bg-white/[0.02]'}
-                          `}
-                        >
-                          <td className="px-6 py-4">
-                            <div className="flex items-center space-x-3">
-                              <div className="flex-shrink-0 bg-light-brand-primary/10 dark:bg-dark-brand-primary/10 text-light-brand-primary dark:text-dark-brand-primary p-2 rounded-full">
-                                <IconComponent size={18} />
-                              </div>
-                              <span className="font-medium text-light-text-primary dark:text-dark-text-primary font-body">{automation.name}</span>
-                            </div>
-                          </td>
-                          <td className="px-6 py-4">
-                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-light-brand-primary/10 dark:bg-dark-brand-primary/10 text-light-brand-primary dark:text-dark-brand-primary font-body">
-                              <Icons.Clock className="mr-1" size={12} />
-                              {automation.buildTime}
-                            </span>
-                          </td>
-                          <td className="px-6 py-4 text-light-text-secondary dark:text-dark-text-secondary font-body">
-                            {automation.purpose}
-                          </td>
-                          <td className="px-6 py-4">
-                            <div className="flex flex-wrap gap-1.5">
-                              {(automation.niches || []).map((niche, idx) => (
-                                <span
-                                  key={idx}
-                                  className="bg-gradient-to-br from-light-brand-primary/20 to-light-brand-secondary/20 dark:from-dark-brand-primary/20 dark:to-dark-brand-secondary/20 rounded-full px-2 py-0.5 text-[10px] text-light-brand-primary dark:text-dark-brand-primary font-title border border-light-brand-primary/30 dark:border-dark-brand-primary/30"
-                                >
-                                  {niche}
-                                </span>
-                              ))}
-                            </div>
-                          </td>
-                        </tr>
-                      );
-                    })}
+                    {businessAutomations.map((automation, index) => (
+                      <tr 
+                        key={index}
+                        className={`border-b border-light-text-secondary/10 dark:border-dark-text-secondary/10 ${
+                          index % 2 === 0 
+                            ? "bg-light-bg-secondary/60 dark:bg-dark-bg-secondary/70" 
+                            : "bg-light-bg-primary/90 dark:bg-dark-bg-primary/95"
+                        } hover:bg-light-brand-primary/30 dark:hover:bg-dark-brand-primary/15 transition-colors duration-200`}
+                      >
+                        <td className="px-3 py-2 text-light-text-primary dark:text-dark-text-primary font-body">{automation.name}</td>
+                        <td className="px-3 py-2 text-light-text-secondary dark:text-dark-text-secondary font-body">{automation.description}</td>
+                        <td className="px-3 py-2 text-light-text-primary dark:text-dark-text-primary font-body">{automation.timeline}</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
             </GlassCard>
           )}
         </div>
-        <div className="text-center mt-8 mb-16">
+        <div className="text-center mt-8 mb-8">
+          <Button
+            onClick={scrollToChatbot}
+            variant="outline"
+            size="lg"
+            className="ring-4 ring-light-brand-primary/30 dark:ring-dark-brand-primary/30 hover:border-light-brand-primary hover:ring-light-brand-primary dark:hover:border-dark-brand-primary dark:hover:ring-dark-brand-primary transition-all duration-300 bg-gradient-to-r from-light-brand-primary/10 to-light-brand-secondary/5 dark:from-dark-brand-primary/10 dark:to-dark-brand-secondary/5"
+          >
+            Chat With the Van Borg Assistant
+          </Button>
+        </div>
+        <div className="text-center mb-16">
           <p className="text-lg text-light-text-secondary dark:text-dark-text-secondary font-title">
-            These add-ons bolt directly into your Van Borg system. Add power. Scale fast. No rebuilds needed.
+            These add-ons bolt directly into your Van Borg system. Add power. Scale fast.
           </p>
         </div>
       </Container>

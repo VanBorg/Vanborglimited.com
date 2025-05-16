@@ -3,21 +3,35 @@ import GlassCard from '../../../components/ui/GlassCard';
 
 const Section5: React.FC = () => {
   return (
-    <GlassCard className="p-8" intensity="medium">
+    <GlassCard className="p-6" intensity="medium">
       <div className="prose prose-lg max-w-none text-light-text-secondary dark:text-dark-text-secondary">
-        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">5. Cookies, Analytics, and Automated Collection Technologies</h2>
+        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">
+          5. Cookies, Analytics, and Automated Collection Technologies
+        </h2>
         <p>
-          We utilize strictly limited, non-invasive cookies and similar data collection technologies solely for the purpose of optimizing platform functionality, ensuring security, and understanding user interaction in aggregate.
+          Van Borg Limited implements non-invasive, privacy-first data collection technologies to maintain platform stability, monitor performance, and improve service quality.
         </p>
-        <p>Key points:</p>
+        <p>
+          No advertising, retargeting, or behavioral profiling cookies are used at any point.
+        </p>
+
+        <h3 className="text-lg font-semibold mt-6 mb-3 text-light-text-primary dark:text-dark-text-primary">
+          5.1 Cookie Usage Overview
+        </h3>
         <ul>
-          <li><strong>No Marketing or Retargeting Cookies:</strong> Our systems do not deploy advertising trackers or behavioral profiling mechanisms.</li>
-          <li><strong>Analytics Usage:</strong> We may use anonymized analytics (e.g. IP region, session duration, bounce rates) to assess platform performance, but no personally identifiable information (PII) is extracted or retained without consent.</li>
-          <li><strong>Cookie Consent Management:</strong> Where required by jurisdiction, we provide users with clear opt-in mechanisms for non-essential cookies. Users can revoke or modify their preferences at any time via browser settings or embedded cookie controls.</li>
+          <li>Strictly Necessary Cookies Only: Cookies are deployed exclusively to support session security, load balancing, and functional system behavior.</li>
+          <li>No Marketing or Third-Party Ad Trackers: We do not use behavioral retargeting, profile building, or cross-site user identification methods.</li>
+          <li>Anonymous Analytics: Platform usage metrics (e.g., page duration, bounce rate, regional distribution) are collected in fully anonymized form, without PII linkage.</li>
         </ul>
-        <p>
-          For full technical specifications, refer to our Cookie Policy or contact our Data Protection Officer.
-        </p>
+
+        <h3 className="text-lg font-semibold mt-6 mb-3 text-light-text-primary dark:text-dark-text-primary">
+          5.2 Consent and User Control
+        </h3>
+        <ul>
+          <li>Where jurisdictionally required (e.g., EU, UK, UAE), all non-essential cookies are subject to explicit, user-granted opt-in consent.</li>
+          <li>Consent is revocable at any time via in-platform controls or browser settings.</li>
+          <li>We maintain full logs of cookie preferences for audit compliance where applicable.</li>
+        </ul>
       </div>
     </GlassCard>
   );

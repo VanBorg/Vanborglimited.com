@@ -3,42 +3,33 @@ import GlassCard from '../../../components/ui/GlassCard';
 
 const Section4: React.FC = () => {
   return (
-    <GlassCard className="p-8" intensity="medium">
+    <GlassCard className="p-6" intensity="medium">
       <div className="prose prose-lg max-w-none text-light-text-secondary dark:text-dark-text-secondary">
-        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">10. Limitations of Liability</h2>
+        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">
+          4. INFRASTRUCTURE & LICENSE ENFORCEMENT
+        </h2>
         <p>
-          To the maximum extent permitted by law:
+          All Van Borg systems are deployed only on pre-approved infrastructure (e.g., Netlify, secure VPS, Edge services). You may not migrate or rehost any part of the system without express, written authorization.
+        </p>
+        <p>
+          Enforcement Terms:
         </p>
         <ul>
-          <li>Van Borg shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the Services</li>
-          <li>Our total liability for any claims relating to these Terms or the Services shall not exceed the amount you paid for the Services during the twelve (12) months preceding the event giving rise to the liability</li>
-          <li>These limitations apply regardless of whether the damages are based on contract, tort, or any other legal theory</li>
+          <li>Exporting system logic to unapproved platforms (e.g., Zapier, ChatGPT, Make.com) is a breach</li>
+          <li>Self-hosting, third-party hosting, or cloning is strictly prohibited</li>
+          <li>Licensing is tied directly to the status of your active Maintenance Plan</li>
         </ul>
-
-        <h2 className="text-xl font-bold mb-4 mt-8 text-light-text-primary dark:text-dark-text-primary font-title">11. Disclaimer of Warranties</h2>
         <p>
-          Your use of our Services is at your sole risk. The Services are provided on an "AS IS" and "AS AVAILABLE" basis, without warranties of any kind, either express or implied, including but not limited to:
+          Plan Lapse Consequences:
         </p>
         <ul>
-          <li>The Services will meet your specific requirements</li>
-          <li>The Services will be uninterrupted, timely, secure, or error-free</li>
-          <li>Results obtained from using the Services will be accurate or reliable</li>
-          <li>Any defects or errors will be corrected</li>
+          <li>Immediate deactivation of your system within 72 hours</li>
+          <li>All automation modules are suspended</li>
+          <li>No refund unless otherwise negotiated in writing</li>
         </ul>
         <p>
-          This disclaimer does not affect any warranties which cannot be excluded or limited under applicable law.
+          Van Borg reserves the right to enforce infrastructure compliance silently and without prior notice.
         </p>
-
-        <h2 className="text-xl font-bold mb-4 mt-8 text-light-text-primary dark:text-dark-text-primary font-title">12. Indemnification</h2>
-        <p>
-          You agree to defend, indemnify, and hold harmless Van Borg and its officers, directors, employees, and agents from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to:
-        </p>
-        <ul>
-          <li>Your violation of these Terms</li>
-          <li>Your use of the Services, including any content you provide</li>
-          <li>Your violation of any third-party rights</li>
-          <li>Your violation of any applicable laws or regulations</li>
-        </ul>
       </div>
     </GlassCard>
   );

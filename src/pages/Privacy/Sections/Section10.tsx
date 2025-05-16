@@ -3,19 +3,31 @@ import GlassCard from '../../../components/ui/GlassCard';
 
 const Section10: React.FC = () => {
   return (
-    <GlassCard className="p-8" intensity="medium">
+    <GlassCard className="p-6" intensity="medium">
       <div className="prose prose-lg max-w-none text-light-text-secondary dark:text-dark-text-secondary">
-        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">10. Mechanisms of Data Collection</h2>
+        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">
+          10. Mechanisms of Data Collection
+        </h2>
         <p>
-          Van Borg Limited employs a multi-faceted approach to data acquisition, ensuring that the collection of personal and operational information is both transparent and contextually justified. Information is obtained through the following lawful methods:
+          Van Borg Limited employs a multi-channel, fully audited approach to collecting data in a lawful, proportional, and purpose-bound manner.
         </p>
+
+        <h3 className="text-lg font-semibold mt-6 mb-3 text-light-text-primary dark:text-dark-text-primary">
+          10.1 Lawful Sources of Data
+        </h3>
         <ul>
-          <li><strong>Direct Interactions:</strong> Information you provide voluntarily by completing forms, initiating support inquiries, scheduling consultations, or engaging with our chatbots and AI interfaces.</li>
-          <li><strong>Automated Technologies:</strong> Data captured passively through your use of our websites and services (e.g., IP address, browser type, session behavior, and device identifiers) via cookies, server logs, and other diagnostic tools.</li>
-          <li><strong>Third-Party and Public Sources:</strong> Where legally permissible, we may collect data from publicly accessible registers, commercial data providers, affiliate networks, and platforms integrated with our systems (e.g., HubSpot, Supabase, Notion).</li>
+          <li>Direct Interactions: Data you voluntarily submit through chatbot conversations, intake forms, support tickets, onboarding documentation, and consultation calls.</li>
+          <li>Automated Collection: Information collected passively via browser sessions, IP geolocation, session timestamps, interaction tracking, cookies (non-invasive), and system telemetry.</li>
+          <li>Third-Party/Public Sources: Where lawful and permitted under applicable contracts or regulations, we may collect relevant data from:
+            <ul>
+              <li>Public registries (e.g., Companies House)</li>
+              <li>CRM platforms integrated with your system (e.g., HubSpot, Supabase, Notion)</li>
+              <li>Affiliate referrals or partner applications</li>
+            </ul>
+          </li>
         </ul>
         <p>
-          All data collection activities are limited to what is necessary, proportionate, and relevant to the purpose for which such information is intended.
+          All data collected is restricted to the minimum amount required to enable licensed service delivery, enforce compliance, and secure your infrastructure.
         </p>
       </div>
     </GlassCard>

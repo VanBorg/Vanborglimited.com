@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container } from './Container';
 import { cn } from '../../utils/cn';
-import { Github, Linkedin, Twitter, Instagram, Facebook, MapPin, Mail, Phone, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Twitter, Instagram, Facebook, MapPin, Mail, ExternalLink } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -132,7 +132,7 @@ export const Footer: React.FC = () => {
         <div className="border-t border-light-text-secondary/10 dark:border-dark-text-secondary/10 pt-6 mt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-light-text-secondary dark:text-dark-text-secondary mb-4 md:mb-0">
-              © {currentYear} Van Borg Limited. All rights reserved. Managing Director: Nicolaas P. Sterenborg
+              © {currentYear} Van Borg Limited. All rights reserved.
             </p>
             <p className="text-sm text-light-text-secondary dark:text-dark-text-secondary">
               This site uses cookies for functional analytics. No tracking or selling.

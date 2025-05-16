@@ -5,6 +5,8 @@ import AutomationsTable from './AutomationsTable';
 import GlassCard from '../../../components/ui/GlassCard';
 import * as Icons from 'lucide-react';
 import { businessAutomations } from '../../../data/automations';
+import Button from '../../../components/ui/Button';
+import { ArrowRight } from 'lucide-react';
 
 import type { Automation } from '../../../types';
 
@@ -63,13 +65,25 @@ const AutomationsSection: React.FC<AutomationsSectionProps> = ({
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl text-light-text-secondary dark:text-dark-text-secondary max-w-3xl mx-auto font-body"
           >
-            {subtitle}
+            {subtitle.split('. Add power')[0] || 'Powerful add-ons that bolt directly into your Van Borg system'}.
+            <br />
+            Add power. Scale fast.
           </motion.p>
         </div>
 
         <AutomationsTable automations={businessAutomations} />
         
-        <div className="text-center mt-8 mb-16">
+        <div className="text-center mt-8 mb-8">
+          <Button
+            onClick={scrollToChatbot}
+            variant="outline"
+            size="lg"
+            className="ring-4 ring-light-brand-primary/30 dark:ring-dark-brand-primary/30 hover:border-light-brand-primary hover:ring-light-brand-primary dark:hover:border-dark-brand-primary dark:hover:ring-dark-brand-primary transition-all duration-300 bg-gradient-to-r from-light-brand-primary/10 to-light-brand-secondary/5 dark:from-dark-brand-primary/10 dark:to-dark-brand-secondary/5"
+          >
+            Chat With the Van Borg Assistant
+          </Button>
+        </div>
+        <div className="text-center mb-16">
           <p className="text-lg text-light-text-secondary dark:text-dark-text-secondary font-body font-medium">
             <strong>These add-ons bolt directly into your Van Borg system. Add power. Scale fast. No rebuilds needed.</strong>
           </p>

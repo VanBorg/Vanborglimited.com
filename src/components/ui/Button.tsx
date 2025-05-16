@@ -85,7 +85,11 @@ export const Button: React.FC<ButtonProps> = ({
       );
     }
     return (
-      <Link to={href} className={baseClasses} onClick={onClick}>
+      <Link 
+        to={href} 
+        className={baseClasses} 
+        onClick={onClick}
+      >
         {content}
       </Link>
     );

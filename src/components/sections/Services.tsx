@@ -90,8 +90,6 @@ export const Services: React.FC<ServicesProps> = ({
           <Button 
             href="/services" 
             size="lg"
-            icon={<ArrowRight size={18} />}
-            iconPosition="right"
           >
             View All Solutions
           </Button>

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '../../ui/Container';
@@ -19,28 +21,30 @@ interface HowItWorksProps {
   className?: string;
 }
 
+const defaultSteps: Step[] = [
+  {
+    title: 'Start the Process',
+    description: `Take the quiz or send a message. Then we schedule your strategy call. We'll map your niche, goals, and system needs — no fluff. Just clarity.`,
+    icon: 'ClipboardCheck'
+  },
+  {
+    title: 'Build & Deployment',
+    description: `We build and license your Van Borg AI system — CRM integrated, calendar connected, branded to your voice. You don't configure anything. We deploy. You own the outcome.`,
+    icon: 'Wrench'
+  },
+  {
+    title: 'Maintenance & Support',
+    description: `We maintain performance, optimize logic, and handle your GPT, CRM tokens, and flow updates. This is licensed infrastructure — not some DIY chatbot.`,
+    icon: 'ShieldCheck'
+  }
+];
+
 const HowItWorks: React.FC<HowItWorksProps> = ({
-  title = "Your AI System, Deployed in Days. Designed to Dominate.",
-  subtitle = "We don't sell bots — we license high-performance AI systems that generate, qualify, and retain clients. Here's exactly how we launch your business into automation.",
-  steps = [
-    {
-      title: 'Strategic Discovery',
-      description: 'We dive deep into your niche, offer, and friction points. Then we map the exact Van Borg system tier and automations that will remove your bottlenecks and capture demand.',
-      icon: 'Search',
-    },
-    {
-      title: 'Build & Deploy',
-      description: 'You get a licensed Van Borg AI bot, deployed fast — with your calendar, CRM, and workflows pre-integrated. No drag-and-drop fluff. No DIY. Just results.',
-      icon: 'Code',
-    },
-    {
-      title: 'Automate & Scale',
-      description: 'Your system goes live. It books clients, handles lead flows, sends follow-ups, and logs performance. Everything stacks. Everything scales.',
-      icon: 'Rocket',
-    },
-  ],
+  title = 'Your AI System. Licensed. Built Fast.',
+  subtitle = `This isn't a chatbot you customize — it's an AI infrastructure stack we deploy for you. Here's how the Van Borg system is launched:`,
+  steps = defaultSteps,
   withAnimation = true,
-  className,
+  className
 }) => {
   return (
     <section
@@ -117,23 +121,17 @@ const HowItWorks: React.FC<HowItWorksProps> = ({
           )}
         </div>
 
-        <div className="relative">
-          <div className="hidden md:block absolute top-1/2 left-0 w-full h-[3px] transform -translate-y-1/2 z-0 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-light-brand-primary/30 to-light-brand-secondary/30 dark:from-dark-brand-primary/30 dark:to-dark-brand-secondary/30 animate-pulse"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-            {steps.map((step, index) => (
-              <StepCard
-                key={index}
-                index={index}
-                step={step}
-                withAnimation={withAnimation}
-              />
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+          {steps.map((step, index) => (
+            <StepCard
+              key={index}
+              index={index}
+              step={step}
+              withAnimation={withAnimation}
+            />
+          ))}
         </div>
-        
+
         <div className="text-center mt-12">
           <p className="text-xl text-light-text-primary dark:text-white font-title">
             Setup takes days. Results show fast. Scaling becomes automatic.
@@ -144,5 +142,4 @@ const HowItWorks: React.FC<HowItWorksProps> = ({
   );
 };
 
-
-export { HowItWorks }
+export { HowItWorks };

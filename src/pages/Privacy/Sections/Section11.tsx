@@ -3,22 +3,28 @@ import GlassCard from '../../../components/ui/GlassCard';
 
 const Section11: React.FC = () => {
   return (
-    <GlassCard className="p-8" intensity="medium">
+    <GlassCard className="p-6" intensity="medium">
       <div className="prose prose-lg max-w-none text-light-text-secondary dark:text-dark-text-secondary">
-        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">11. Purpose and Legal Basis of Processing</h2>
+        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">
+          11. Purpose and Legal Basis of Processing
+        </h2>
         <p>
-          Your personal data is processed only for defined, explicit, and legitimate purposes. These include but are not limited to:
+          Van Borg Limited processes personal and operational data only where there is a defined, legitimate, and enforceable purpose. All processing is governed by the principles of data minimization, proportionality, and lawful basis as outlined in the UK GDPR, EU GDPR, and relevant global frameworks.
         </p>
+
+        <h3 className="text-lg font-semibold mt-6 mb-3 text-light-text-primary dark:text-dark-text-primary">
+          11.1 Processing Objectives
+        </h3>
+        <p>Data may be processed to:</p>
         <ul>
-          <li>Ensuring the delivery, maintenance, and enhancement of our products and services.</li>
-          <li>Fulfilling contractual obligations, including responding to queries and managing transactions.</li>
-          <li>Issuing legally required, security-critical, or service-relevant communications (e.g., policy updates, infrastructure notices).</li>
-          <li>Conducting diagnostic, statistical, and performance analysis to improve system resilience and user experience.</li>
-          <li>Developing new features or automation logic within the scope of your existing license.</li>
-          <li>Enforcing contractual terms, investigating misuse, and protecting the operational integrity of our systems and intellectual property.</li>
+          <li>Deliver and maintain licensed systems, user accounts, and automated workflows</li>
+          <li>Fulfill contractual obligations including onboarding, account support, and service configuration</li>
+          <li>Comply with legal requirements (e.g., tax, regulatory, cybersecurity reporting)</li>
+          <li>Diagnose, audit, and enhance system uptime, performance, and user experience</li>
+          <li>Prevent misuse, detect security anomalies, and protect Van Borg intellectual property</li>
         </ul>
         <p>
-          Processing occurs under one or more legal bases defined in Section 16 (e.g., consent, contract performance, legal obligation, legitimate interest).
+          Processing always occurs under one or more lawful bases including: explicit consent, contractual necessity, legal obligation, or legitimate interest.
         </p>
       </div>
     </GlassCard>

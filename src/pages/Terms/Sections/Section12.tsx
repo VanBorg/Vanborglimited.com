@@ -3,20 +3,24 @@ import GlassCard from '../../../components/ui/GlassCard';
 
 const Section12: React.FC = () => {
   return (
-    <GlassCard className="p-8" intensity="medium">
+    <GlassCard className="p-6" intensity="medium">
       <div className="prose prose-lg max-w-none text-light-text-secondary dark:text-dark-text-secondary">
-        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">12. Indemnification</h2>
+        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">
+          12. FINAL DECLARATION
+        </h2>
         <p>
-          You agree to defend, indemnify, and hold harmless Van Borg and its officers, directors, employees, and agents from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to:
+          You are not buying an app. You are licensing an AI-powered infrastructure deployment built for performance, governed by contract, and enforced by design.
+        </p>
+        <p>
+          Van Borg systems are:
         </p>
         <ul>
-          <li>Your violation of these Terms</li>
-          <li>Your use of the Services, including any content you provide</li>
-          <li>Your violation of any third-party rights</li>
-          <li>Your violation of any applicable laws or regulations</li>
+          <li>Business-critical frameworks with operational weight</li>
+          <li>Embedded AI logic, not downloadable software</li>
+          <li>Licensed modules with legal guardrails and activation rules</li>
         </ul>
         <p>
-          This indemnification obligation will survive the termination of these Terms and your use of the Services.
+          By engaging with Van Borg, you're entering into a commercial infrastructure agreement — not a product purchase. If you're not ready to treat automation like an asset, you're not ready for Van Borg.
         </p>
       </div>
     </GlassCard>

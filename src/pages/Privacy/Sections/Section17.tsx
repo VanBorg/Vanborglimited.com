@@ -3,19 +3,35 @@ import GlassCard from '../../../components/ui/GlassCard';
 
 const Section17: React.FC = () => {
   return (
-    <GlassCard className="p-8" intensity="medium">
+    <GlassCard className="p-6" intensity="medium">
       <div className="prose prose-lg max-w-none text-light-text-secondary dark:text-dark-text-secondary">
-        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">17. Policy Amendments and Effective Date</h2>
+        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">
+          17. Policy Review, Amendment, and Version Control
+        </h2>
         <p>
-          This Policy may be amended from time to time to reflect changes in legal frameworks, technological advancements, or our internal practices.
+          This Policy is a living document, subject to refinement in accordance with emerging legal requirements, platform evolution, and security innovations.
         </p>
+
+        <h3 className="text-lg font-semibold mt-6 mb-3 text-light-text-primary dark:text-dark-text-primary">
+          17.1 Update Procedures
+        </h3>
         <ul>
-          <li><strong>Effective Date:</strong> 4 May 2025 (current version).</li>
-          <li><strong>Notification:</strong> Substantive revisions will be posted on our official website and, where appropriate, communicated directly to affected clients.</li>
-          <li><strong>Review Encouragement:</strong> We encourage all clients and partners to periodically review this Policy to remain informed of their rights and obligations.</li>
+          <li>Effective Date is always listed at the top of the Policy</li>
+          <li>Material revisions will be communicated clearly via our website or direct client notification</li>
+          <li>Continued usage of Van Borg services following any policy update constitutes binding acceptance of the amended terms</li>
+        </ul>
+
+        <h3 className="text-lg font-semibold mt-6 mb-3 text-light-text-primary dark:text-dark-text-primary">
+          17.2 Review Recommendation
+        </h3>
+        <p>Clients are encouraged to review this Policy periodically, particularly prior to:</p>
+        <ul>
+          <li>Licensing renewal</li>
+          <li>Service tier upgrades</li>
+          <li>Integration of new automation modules</li>
         </ul>
         <p>
-          Continued use of our Services following any update shall constitute acceptance of the revised Policy.
+          Version control is managed internally and archived for legal traceability.
         </p>
       </div>
     </GlassCard>

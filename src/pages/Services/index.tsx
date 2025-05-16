@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { ChatbotEmbed, FloatingChatbotButton } from '../../components/chatbot/ChatbotEmbed';
+import React, { useRef } from 'react';
+import { FloatingChatbotButton } from '../../components/chatbot/ChatbotEmbed';
 
 // Import section components
 import Hero from './Hero';
@@ -7,7 +7,6 @@ import BenefitsSection from './Benefits';
 import BotPackagesSection from './BotPackages';
 import AutomationsSection from './Automations';
 import MaintenancePlans from './Automations/MaintenancePlans';
-import FAQSection from './FAQ'; 
 import HomeFinalCTA from '../../components/sections/HomeFinalCTA';
 
 const ServicesPage: React.FC = () => {
@@ -16,18 +15,6 @@ const ServicesPage: React.FC = () => {
   const scrollToChatbot = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      const el = document.querySelector(hash);
-      if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({ behavior: 'smooth' });
-        }, 200);
-      }
-    }
-  }, []);
 
   return (
     <>
@@ -45,9 +32,6 @@ const ServicesPage: React.FC = () => {
       
       {/* Maintenance Plans Section */}
       <MaintenancePlans />
-      
-      {/* FAQ Section */}
-      <FAQSection />
       
       <HomeFinalCTA 
         onClick={scrollToChatbot}

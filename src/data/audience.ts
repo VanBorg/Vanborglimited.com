@@ -123,3 +123,69 @@ export const targetAudiences: TargetAudience[] = [
     botPath: '03 → 04'
   }
 ];
+
+export const focusedNiches: TargetAudience[] = [
+  {
+    title: 'Fitness Coaches',
+    benefits: ['Automated client intake', 'Seamless booking & payments', 'Personalized workout delivery'],
+    icon: 'Dumbbell', // Reused icon, can be changed
+    impact: 'Scale your coaching business without the admin grind.',
+    botPath: '01 → 02'
+  },
+  {
+    title: 'Personal Trainers',
+    benefits: ['24/7 lead qualification', 'Effortless session scheduling', 'Client progress tracking'],
+    icon: 'UserCog', // Reused icon
+    impact: 'Fill your schedule and focus on client results.',
+    botPath: '01 → 02'
+  },
+  {
+    title: 'Yoga Instructors',
+    benefits: ['Class & workshop bookings', 'Automated waitlists & reminders', 'Membership management tools'],
+    icon: 'Lotus', // Reused icon
+    impact: 'Grow your community and streamline class administration.',
+    botPath: '01 → 02'
+  },
+  {
+    title: 'Health & Mindset Coaches',
+    benefits: ['Structured onboarding flows', 'Secure client communication', 'Resource & content delivery'],
+    icon: 'Brain', // Reused icon
+    impact: 'Deliver transformative coaching with powerful automation.',
+    botPath: '01 → 02 → 03'
+  },
+  {
+    title: 'Nutritionists & Diet Coaches',
+    benefits: ['Automated meal plan suggestions', 'Dietary preference tracking', 'Client check-ins & support'],
+    icon: 'Apple', // Reused icon
+    impact: 'Provide personalized nutrition guidance at scale.',
+    botPath: '01 → 02'
+  },
+  {
+    title: 'Gyms & Fitness Centers',
+    benefits: ['Membership inquiries & sign-ups', 'Class scheduling & capacity management', 'Member communication hub'],
+    icon: 'Building', // Changed icon from Dumbbell to Building for distinction
+    impact: 'Boost memberships and enhance member experience.',
+    botPath: '01 → 02 → 03'
+  },
+  {
+    title: 'Wellness Studios',
+    benefits: ['Multi-service booking system', 'Workshop & event promotion', 'Client feedback collection'],
+    icon: 'HeartPulse', // Reused icon
+    impact: 'Manage diverse wellness offerings with ease.',
+    botPath: '01 → 02 → 03'
+  },
+  {
+    title: 'Solo Therapists',
+    benefits: ['Confidential client intake forms', 'Secure appointment scheduling', 'Automated session reminders'],
+    icon: 'MessageSquareHeart', // Reused icon
+    impact: 'Focus on your clients, not administrative tasks.',
+    botPath: '02 → 03'
+  },
+  {
+    title: 'Franchise Studios & Chains',
+    benefits: ['Standardized AI tools for all locations', 'Centralized reporting & analytics', 'Brand consistency in communication'],
+    icon: 'Network', // Changed icon from Building for distinction
+    impact: 'Scale your franchise operations with unified AI solutions.',
+    botPath: '03 → 04'
+  }
+];

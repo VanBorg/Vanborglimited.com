@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import Container from './Container';
-import Button from './Button';
 import ThemeToggle from './ThemeToggle';
 import { navigationItems } from '../../data/navigation';
 import { cn } from '../../utils/cn';
@@ -49,6 +48,7 @@ export const Navbar: React.FC = () => {
           {/* Logo */}
           <Link
             to="/"
+            onClick={() => window.scrollTo(0, 0)}
             className="text-2xl font-title font-bold bg-gradient-to-r from-light-brand-primary to-light-brand-secondary dark:from-dark-brand-primary dark:to-dark-brand-secondary bg-clip-text text-transparent"
           >
             Van Borg
@@ -60,6 +60,7 @@ export const Navbar: React.FC = () => {
               <Link
                 key={item.path}
                 to={item.path}
+                onClick={() => window.scrollTo(0, 0)}
                 className={cn(
                   'text-light-text-primary dark:text-white hover:text-light-brand-primary dark:hover:text-dark-brand-primary transition-colors duration-200 font-title',
                   location.pathname === item.path && 'font-medium text-light-brand-primary dark:text-dark-brand-primary'
@@ -90,6 +91,7 @@ export const Navbar: React.FC = () => {
             <div className="flex flex-col space-y-4 px-4">
               <Link
                 to="/"
+                onClick={() => window.scrollTo(0, 0)}
                 className={cn(
                   'py-2 text-light-text-primary dark:text-white hover:text-light-brand-primary dark:hover:text-dark-brand-primary transition-colors duration-200 font-title',
                   location.pathname === '/' && 'font-medium text-light-brand-primary dark:text-dark-brand-primary'
@@ -101,6 +103,7 @@ export const Navbar: React.FC = () => {
                 <Link
                   key={item.path}
                   to={item.path}
+                  onClick={() => window.scrollTo(0, 0)}
                   className={cn(
                     'py-2 text-light-text-primary dark:text-white hover:text-light-brand-primary dark:hover:text-dark-brand-primary transition-colors duration-200 font-title',
                     location.pathname === item.path && 'font-medium text-light-brand-primary dark:text-dark-brand-primary'

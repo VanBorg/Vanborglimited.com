@@ -30,35 +30,28 @@ export const ChatbotEmbed = React.forwardRef<HTMLDivElement, { className?: strin
       const container = containerRef.current;
       if (!container) return;
 
-      // Clean state
       window.localStorage.clear();
       window.sessionStorage.clear();
 
-      // Create the embed container div
       const glowDiv = document.createElement('div');
       glowDiv.id = 'VG_OVERLAY_CONTAINER';
-      glowDiv.style.width = '500px';
-      glowDiv.style.height = '500px';
-      glowDiv.style.borderRadius = '12px';
+      glowDiv.style.width = '600px';
+      glowDiv.style.height = '512px';
+      glowDiv.style.margin = '-8px';
+      glowDiv.style.borderRadius = '14px';
       glowDiv.style.overflow = 'hidden';
-      glowDiv.style.boxShadow = '0 0 20px rgba(0,0,0,0.15)';
       glowDiv.style.background = 'white';
+      glowDiv.style.boxShadow = '0 0 20px rgba(0,0,0,0.15)';
+      glowDiv.style.border = '2px solid #000000';
       glowDivRef.current = glowDiv;
 
       container.appendChild(glowDiv);
 
-      // Voiceglow config
       window.VG_CONFIG = {
         ID: '69pZGVcmCeqNZdketNHf',
         region: 'na',
         render: 'full-width',
-        stylesheets: [
-          'https://vg-bunny-cdn.b-cdn.net/vg_live_build/styles.css'
-        ],
-        // Optional:
-        // autostart: true,
-        // modalMode: true,
-        // userID: 'xyz',
+        stylesheets: ['https://vg-bunny-cdn.b-cdn.net/vg_live_build/styles.css'],
       };
 
       const script = document.createElement('script');
@@ -87,17 +80,17 @@ export const ChatbotEmbed = React.forwardRef<HTMLDivElement, { className?: strin
       <div ref={ref} className={className}>
         <div
           ref={containerRef}
-          className={`relative min-h-[500px] transition-all duration-700 ${
+          className={`relative min-h-[512px] transition-all duration-700 ${
             isLoaded ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
         >
           {!isLoaded && !error && (
-            <div className="absolute inset-0 flex items-center justify-center bg-white dark:bg-gray-900 rounded-xl">
+            <div className="absolute inset-0 flex items-center justify-center bg-white dark:bg-gray-900 rounded-xl border-2 border-black">
               <Loader2 className="w-8 h-8 animate-spin text-light-brand-primary dark:text-dark-brand-primary" />
             </div>
           )}
           {error && (
-            <div className="absolute inset-0 flex items-center justify-center bg-white dark:bg-gray-900 rounded-xl">
+            <div className="absolute inset-0 flex items-center justify-center bg-white dark:bg-gray-900 rounded-xl border-2 border-black">
               <p className="text-red-500 text-sm">{error}</p>
             </div>
           )}

@@ -4,7 +4,8 @@ export interface NavItem {
 }
 
 export interface ChatbotSolution {
-  title: string;
+  titleTop: string;
+  titleBottom: string;
   description: string;
   icon: string;
   features: string[];

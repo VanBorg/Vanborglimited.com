@@ -31,19 +31,19 @@ const Hero: React.FC<HeroProps> = ({ chatbotRef, scrollToChatbot }) => {
       {/* z-20 overlay gradient */}
       <div className="absolute inset-0 z-20 bg-gradient-to-b from-light-bg-secondary via-light-bg-secondary to-light-bg-primary dark:from-dark-bg-secondary dark:via-dark-bg-secondary dark:to-dark-bg-primary pointer-events-none" />
 
-      {/* z-30 actual content */}
-      <div className="relative z-30">
-        {/* Animated lines */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-          {[...Array(5)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute h-[2px] bg-gradient-to-r from-transparent via-light-brand-primary/60 to-transparent dark:via-dark-brand-primary/60 animate-pulse-glow w-[80%] md:w-[60%] left-[10%] md:left-[20%]"
-              style={{ top: `${20 + i * 15}%`, animationDelay: `${i * 100}ms` }}
-            />
-          ))}
-        </div>
+      {/* z-30 animated lines - placed between gradient and content */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-30">
+        {[...Array(5)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute h-[2px] bg-gradient-to-r from-transparent via-light-brand-primary/60 to-transparent dark:via-dark-brand-primary/60 animate-pulse-glow w-[80%] md:w-[60%] left-[10%] md:left-[20%]"
+            style={{ top: `${17 + i * 17}%`, animationDelay: `${i * 100}ms` }}
+          />
+        ))}
+      </div>
 
+      {/* z-40 actual content */}
+      <div className="relative z-40">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -80,7 +80,7 @@ const Hero: React.FC<HeroProps> = ({ chatbotRef, scrollToChatbot }) => {
 
               {animate(
                 <p className="text-xl text-light-text-secondary dark:text-dark-text-secondary mb-6 font-body">
-                  Built for 11 high-impact niches — from fitness and wellness to medical clinics and agencies — Van Borg delivers full-funnel AI systems without the cost or lock-in of typical SaaS tools.
+                  Engineered for 11 high-impact niches — from coaches and clinics to studios and agencies — Van Borg delivers permanent, full-funnel AI systems without SaaS bloat, fees, or restrictions.
                 </p>,
                 0.1
               )}
@@ -89,9 +89,14 @@ const Hero: React.FC<HeroProps> = ({ chatbotRef, scrollToChatbot }) => {
                 <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-4">
                   <Button
                     onClick={() => {
-                      const packagesSection = document.getElementById('packages');
-                      if (packagesSection) {
-                        packagesSection.scrollIntoView({ behavior: 'smooth' });
+                      const aiSystemsSection = document.getElementById('ai-systems');
+                      if (aiSystemsSection) {
+                        const yOffset = -100;
+                        const y = aiSystemsSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                        window.scrollTo({
+                          top: y,
+                          behavior: 'smooth'
+                        });
                       }
                     }}
                     size="lg"

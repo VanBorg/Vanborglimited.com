@@ -3,36 +3,29 @@ import GlassCard from '../../../components/ui/GlassCard';
 
 const Section9: React.FC = () => {
   return (
-    <GlassCard className="p-8" intensity="medium">
+    <GlassCard className="p-6" intensity="medium">
       <div className="prose prose-lg max-w-none text-light-text-secondary dark:text-dark-text-secondary">
-        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">9. Conclusion & Contact Provisions</h2>
+        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">
+          9. Contractual Status of This Policy
+        </h2>
         <p>
-          This Privacy & Licensing Policy constitutes an integral part of your contractual relationship with Van Borg Limited. By continuing to access or utilize any aspect of our Services, you acknowledge that you have read, understood, and agreed to be legally bound by the terms herein.
+          This Privacy & Licensing Policy forms an integral part of every contractual relationship between Van Borg Limited and its clients, users, or partners.
         </p>
+        <ul>
+          <li>By accessing or using any Van Borg service, platform, or system, you agree to be legally bound by the terms of this Policy.</li>
+          <li>This Policy holds equal weight and enforceability to all executed service agreements, licenses, statements of work, or onboarding documents.</li>
+          <li>Violations of any provision herein, including but not limited to data misuse, license breach, or unauthorized distribution, may result in:
+            <ul>
+              <li>Immediate license suspension</li>
+              <li>Revocation of system access</li>
+              <li>Legal enforcement procedures</li>
+              <li>Termination of contract with cause</li>
+            </ul>
+          </li>
+        </ul>
         <p>
-          We reiterate that our commitment to data protection, intellectual property integrity, and operational transparency is not merely regulatory — it is foundational to the trust our clients place in our systems and in the proprietary automation architecture we deliver.
+          Data protection and IP enforcement are not optional — they are foundational to the trust framework between Van Borg and its clients.
         </p>
-        <p>
-          Should you require clarification regarding any element of this Policy, or wish to exercise your rights under applicable data protection legislation, you are encouraged to initiate formal correspondence with our Data Protection Officer or Legal Affairs Division:
-        </p>
-        <hr className="my-4 border-light-text-secondary/20 dark:border-dark-text-secondary/20" />
-        <div className="my-4">
-          <p className="font-medium">
-            Van Borg Limited<br />
-            Attn: Legal & Compliance<br />
-            71–75 Shelton Street<br />
-            Covent Garden<br />
-            London, WC2H 9JQ<br />
-            United Kingdom<br />
-            📧 info@vanborglimited.com<br />
-            🌐 www.vanborglimited.com
-          </p>
-        </div>
-        <hr className="my-4 border-light-text-secondary/20 dark:border-dark-text-secondary/20" />
-        <div className="mt-4">
-          <p className="font-bold">End of Policy Document<br />
-          Effective: 4 May 2025</p>
-        </div>
       </div>
     </GlassCard>
   );

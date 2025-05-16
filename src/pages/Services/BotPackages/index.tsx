@@ -9,137 +9,155 @@ import { ArrowUp, Clock, DollarSign, Plus, Bot, Calendar, Database, Send, Heart,
 const bots = [
   {
     name: '01. Lead Capture System',
-    price: '€1,200–€1,800',
-    time: '2–4 Days',
-    audience: 'Fitness Coaches, Health Coaches, Nutritionists, Solo Practitioners, Small Studios',
-    what: 'Smart FAQ answering (pre-loaded with 20+ industry-specific questions), lead capture form with custom fields, embedded booking links (Calendly or direct), and instant notifications.',
+    price: '€1,200–€3,500',
+    time: '3–9 Days',
+    audience: 'Fitness Coaches, Yoga Instructors, Health & Mindset Coaches, Nutritionists & Diet Coaches, Therapists, Gyms & Studios (solo or small teams)',
+    what: 'Replaces static forms with 24/7 real-time lead conversations. Captures names, goals, pain points, and contact info — then pushes qualified data into your CRM or inbox. Boosts conversion and trust with intelligent, guided chat flows.',
     how: [
-      'Greets visitor with smart intro',
-      'Answers top questions (custom scripts)',
-      'Collects name + email',
-      'Sends booking link or notification'
+      'Visitor arrives on site or landing page',
+      'Bot triggers based on embed, click, or pop-up',
+      'Asks key questions (goal, name, contact)',
+      'Captures and qualifies lead data',
+      'Pushes data to CRM, email, or sheet'
     ],
     addOns: [
       { name: 'CRM Sync Integration', price: '€800–€1,200', icon: <Database size={14} />, impact: 'Pushes lead data into HubSpot, Supabase, Notion, etc.' },
       { name: 'Follow-Up Emails/SMS', price: '€500–€1,000', icon: <Send size={14} />, impact: 'Re-engages leads who don\'t book or reply' },
-      { name: 'Calendar & Booking', price: '€1,000–€1,500', icon: <Calendar size={14} />, impact: 'Embeds a live calendar directly into the bot' }
+      { name: 'Calendar & Booking', price: '€1,000–€1,500', icon: <Calendar size={14} />, impact: 'Embeds a live calendar directly into the bot' },
+      { name: 'Lead Quiz + Magnet', price: '€500–€1,000', icon: <Send size={14} />, impact: 'Captures quiz data and delivers lead magnet PDF' },
+      { name: 'WhatsApp/DM Nudges', price: '€400–€800', icon: <MessageCircle size={14} />, impact: 'Captures or re-engages leads via WhatsApp, DMs' },
+      { name: 'GPT FAQ Assistant', price: '€600–€1,200', icon: <Bot size={14} />, impact: 'Answers user queries via GPT or knowledge base' },
+      { name: 'Lead Flow Optimizer', price: '€900–€1,400', icon: <Settings size={14} />, impact: 'Scoring, nurture, reminders, upsells, rebooking' }
     ],
     features: [
-      'Smart FAQ answering (20+ industry Qs)',
-      'Lead capture form with custom fields',
-      'Embedded booking links (Calendly or direct)',
-      'Email notifications for each lead',
-      'Basic analytics dashboard'
+      'Smart FAQ chat (20+ niche questions)',
+      'Dynamic lead form with custom fields',
+      'Embedded booking or redirect links',
+      'Real-time notifications per lead',
+      'Multilingual support (add-on ready)'
     ],
-    benefits: [
-      'Captures and qualifies leads 24/7',
-      'Ideal for landing pages, lead magnets, and opt-ins',
-      'Automates first contact with zero human error',
-      'Builds a contact list you fully own — no platform lock-in'
+        benefits: [
+      'Captures & qualifies leads 24/7',
+      'Replaces forms with intelligent flows',
+      'Pushes leads directly to your CRM',
+      'Boosts trust and conversion instantly',
+      'Perfect for ads, landing pages, and solo ops'
     ],
-    useCase: 'A fitness coach\'s site bot captures 12 new leads weekly while she trains clients.'
+    useCase: 'A fitness coach\'s site bot captures 12 new leads weekly — hands-free — while she trains clients.'
   },
   {
-    name: '02. Client Booking Assistant',
-    price: '€2,000–€3,500',
-    time: '5–7 Days',
-    audience: 'Personal Trainers, Solo Therapists, Yoga Instructors, Wellness Studios',
-    what: 'Complete booking automation with calendar integration, CRM sync, and intelligent follow-up sequences.',
+    name: '02. Booking Assistant Bot',
+    price: '€2,000–€4,500',
+    time: '4–12 Days',
+    audience: 'Personal Trainers, Nutritionists, Solo Therapists, Wellness Clinics, Gyms & Yoga Studios, Franchises / Multi-staff Studios',
+    what: 'AI-powered scheduling bot that handles bookings, reschedules, cancellations, and reminders. It syncs with your calendar (Google, Calendly, or custom), detects intent, confirms availability, and ensures no session is ever missed — no human needed.',
     how: [
-      'Chatbot answers intro Qs',
-      'Offers appointment slots',
-      'Books session + confirms',
-      'Pushes to CRM + sends follow-up'
+      'User lands on your site or landing page',
+      'Bot detects booking intent and offers to schedule',
+      'Shows available slots via embedded calendar',
+      'Captures contact info, service type, and preferred time',
+      'Pushes booking to connected calendar instantly'
     ],
     addOns: [
-      { name: 'Loyalty & Reward Flows', price: '€1,500–€2,000', icon: <Heart size={14} />, impact: 'Incentivizes repeat visits, renewals, and referrals' },
-      { name: 'WhatsApp Integration', price: '€1,500–€2,000', icon: <MessageCircle size={14} />, impact: 'Let\'s users chat/book via mobile-first messaging' },
-      { name: 'Analytics Dashboard', price: '€2,000–€3,000', icon: <BarChart2 size={14} />, impact: 'Tracks drop-offs, lead sources, booking conversions' }
+      { name: 'CRM Sync Integration', price: '€800–€1,200', icon: <Database size={14} />, impact: 'Pushes booking data into your CRM system' },
+      { name: 'Auto Payment Trigger', price: '€700–€1,400', icon: <Send size={14} />, impact: 'Automatically triggers payment when booking is confirmed' },
+      { name: 'Post-Booking Upsell Flow', price: '€600–€1,200', icon: <ArrowUp size={14} />, impact: 'Offers upsells after booking is confirmed' },
+      { name: 'Attendance & Conflict Handler', price: '€500–€1,000', icon: <Calendar size={14} />, impact: 'Handles attendance tracking and scheduling conflicts' },
+      { name: 'Lead Flow Optimizer', price: '€900–€1,400', icon: <Settings size={14} />, impact: 'Optimizes booking flow for maximum conversions' },
+      { name: 'Instant Booking + Calendar Sync', price: '€1,000–€1,500', icon: <Zap size={14} />, impact: 'Syncs bookings instantly with your calendar system' }
     ],
     features: [
-      'All features from Lead Capture System',
-      'Integrated calendar booking with logic',
-      'Payment link flows (Stripe, PayPal, etc.)',
-      'Built-in CRM sync (Supabase, HubSpot)',
-      'Automated confirmations and reminders via email/SMS'
+      'Real-time booking via embedded calendar',
+      'Handles reschedules, cancellations, reminders',
+      'Pre-session reminders by email/SMS/DM',
+      'Time zone auto-detection',
+      'Multi-staff logic for larger teams'
     ],
     benefits: [
-      'Automates the entire booking cycle — zero manual input needed',
-      'Reduces no-shows with built-in reminders and confirmations',
-      'Syncs instantly with your calendar, CRM, and payment tools',
-      'Delivers a smooth, branded booking experience that clients trust'
+      'Instant session booking with zero admin',
+      'Eliminates calendar back-and-forth',
+      'Avoids double-bookings or missed sessions',
+      'Sends reminders to reduce no-shows',
+      'Scales from solo to full-team setups'
     ],
-    useCase: 'A studio cuts admin time in half after switching to this bot.'
+    useCase: 'A personal trainer uses the bot to automate her entire booking flow — saving 10 hours per week while keeping her schedule full.'
   },
   {
-    name: '03. Full-Service Chat Automation',
-    price: '€4,000–€7,000',
-    time: '10–14 Days',
-    audience: 'Gyms, Clinics, Multi-Location Studios, High-Traffic Sites',
-    what: 'An AI-powered omnichannel system that engages users across platforms, segments them in real time, delivers personalized flows, and tracks every interaction for optimization.',
+    name: '03. Performance Support Bot',
+    price: '€1,250–€4,000',
+    time: '4–15 Days',
+    audience: 'Mindset Coaches, Fitness Coaches, Personal Trainers, Therapists, Group Coaching Programs, 30-/60-/90-Day Challenge Leaders',
+    what: '24/7 automated check-ins and motivational support system. It keeps clients engaged between sessions by logging progress, reacting to input, triggering nudges, and reinforcing long-term goals — all without manual effort.',
     how: [
-      'Engages on web, WhatsApp, or FB',
-      'Segments users live',
-      'Offers tailored flows + rewards',
-      'Logs everything into analytics'
+      'Bot triggers check-in (daily/weekly/inactivity)',
+      'Asks client for mood, wins, obstacles',
+      'Responds with affirmations, tips, or next steps',
+      'Logs check-in data to CRM or habit tracker',
+      'Optionally triggers nudges, rewards, or plan prompts'
     ],
     addOns: [
-      { name: 'Abandoned Chat Recovery', price: '€500–€800', icon: <Zap size={14} />, impact: 'Saves 5–15% of leads who dropped mid-flow' },
-      { name: 'Advanced CRM Logic', price: '€800–€1,200', icon: <Database size={14} />, impact: 'Adds lead scoring, follow-up sequences, event-based segmentation' },
-      { name: 'Analytics Dashboard', price: '€2,000–€3,000', icon: <BarChart2 size={14} />, impact: 'Tracks user actions across all platforms' }
+      { name: 'WhatsApp/DM Nudges', price: '€400–€900', icon: <MessageCircle size={14} />, impact: 'Sends nudges and reminders via WhatsApp or DMs' },
+      { name: 'AI Response Coaching', price: '€600–€1,300', icon: <Bot size={14} />, impact: 'Uses AI to provide tailored coaching responses' },
+      { name: 'Weekly Motivation Loop', price: '€500–€1,000', icon: <ArrowUp size={14} />, impact: 'Creates weekly motivation cycles to keep clients engaged' },
+      { name: 'Goal Milestone Tracker', price: '€700–€1,400', icon: <Check size={14} />, impact: 'Tracks and celebrates client progress toward goals' },
+      { name: 'Goal-Based Plan Generator', price: '€800–€1,500', icon: <Settings size={14} />, impact: 'Automatically generates plans based on client goals' }
     ],
     features: [
-      'All features from Booking Assistant',
-      'Multi-channel delivery (Web, WhatsApp, Facebook Messenger)',
-      'Loyalty logic embedded directly into chat flows',
-      'Segmentation for return visitors, cold leads, high-intent users',
-      'Admin training, onboarding, and CMS-style control panel'
+      'Scheduled check-in logic (daily/weekly)',
+      'Habit & mood tracking with progress logging',
+      'Basic tone detection for real-time response',
+      'Multi-channel support (chat + WhatsApp/email)',
+      'Emotionally safe language framework'
     ],
     benefits: [
-      'Delivers unified conversations across all channels — web, WhatsApp, FB',
-      'Identifies high-intent users and routes them to the right flows instantly',
-      'Turns every chat into a data-rich lead with full tracking and segmentation',
-      'Empowers staff with control panel access for live edits, promos, and insights'
+      'Drives long-term retention through check-ins',
+      'Automates support between live sessions',
+      'Increases client accountability and motivation',
+      'Reduces coach workload while boosting value',
+      'Supports scalable 1:many program delivery'
     ],
-    useCase: 'A chain of clinics added 17% retention using multi-channel loyalty.'
+    useCase: 'A challenge coach uses the bot to keep 120+ clients engaged daily — without sending a single message manually.'
   },
   {
-    name: '04. Custom AI Solution',
-    price: '€8,000–€20,000+',
-    time: '3–6 Weeks',
-    audience: 'Franchise Chains, Medical Clinics, SaaS Brands, Multi-Brand Enterprises',
-    what: 'An enterprise-grade AI system tailored to your operations — integrating departments, syncing with CRMs, and delivering white-label automation built for compliance and scale.',
+    name: '04. Custom AI System (Full-Stack)',
+    price: '€5,000–€20,000+',
+    time: '10–60 Days',
+    audience: 'Premium Fitness Coaches, Performance Consultants, Holistic Health Coaches, Elite Wellness Studios, Online Scalable Programs, Group + 1:1 Hybrid Coaching Models',
+    what: 'End-to-end AI system that merges lead capture, booking, and retention flows into one fully customized, branded automation engine. Designed for high-ticket or high-scale businesses that need full operational support without manual input.',
     how: [
-      'We scope departments + logic',
-      'Integrate with CRM/ERP',
-      'Design custom UX/UI',
-      'Train + test in real-world flows'
+      'We scope needs and select blueprint(s)',
+      'Customize flows for your brand/audience',
+      'Build integration stack (Stripe, CRM, etc.)',
+      'Deploy on preferred platforms',
+      'Train + test full system flow-by-flow'
     ],
     addOns: [
-      { name: 'WhatsApp Integration', price: '€1,500–€2,000', icon: <MessageCircle size={14} />, impact: 'Supports mobile-first bookings, re-engagement, and comms' },
-      { name: 'Analytics Dashboard', price: '€2,000–€3,000', icon: <BarChart2 size={14} />, impact: 'Multi-role dashboards for execs, admins, marketing' },
-      { name: 'Loyalty & Reward Flows', price: '€1,500–€2,000', icon: <Heart size={14} />, impact: 'Custom retention, membership bonuses, milestone triggers' },
-      { name: 'Advanced CRM / Full Logic Stack', price: 'Custom', icon: <Database size={14} />, impact: 'Handles internal ops, marketing flows, segmentation, enterprise sync' }
+      { name: 'Lead + Booking → Conversion', price: 'Custom', icon: <Zap size={14} />, impact: 'Shortens sales cycle to under 5 minutes' },
+      { name: 'Booking + Performance → Retention', price: 'Custom', icon: <Heart size={14} />, impact: 'Maximizes retention in program-based models' },
+      { name: 'Lead + Performance → Funnel Warm-Up', price: 'Custom', icon: <ArrowUp size={14} />, impact: 'Perfect for intro funnels with high-ticket backend' },
+      { name: 'Full-Stack Merge → Coaching OS', price: 'Custom', icon: <Settings size={14} />, impact: 'Done-for-you backend for coaching and consulting ops' }
     ],
     features: [
-      'Full-stack CRM, pipeline, and backend integrations',
-      'Custom UI/UX (white-label) to match client brand',
-      'AI-trained prompts tailored to operations',
-      'Multi-language + region logic',
-      'Enterprise-level security, governance, and SLA contracts'
+      'Custom-branded lead, booking, and support flows',
+      'Handles intake, payments, scheduling, and retention',
+      'Works across multiple platforms and channels',
+      'Supports multi-language, multi-staff, and branching logic',
+      'Operates like an AI operations team at scale'
     ],
     benefits: [
-      'Built for scale, security, and cross-team collaboration',
-      'Great for ops-heavy orgs needing reporting, segmentation, and total control',
-      'Can power internal tools, client-facing bots, and high-conversion funnels'
+      'Unifies sales, service, and support in one bot',
+      'No need for VAs or admin staff',
+      'Triggers custom automations per user type',
+      'Integrates with Stripe, CRM, calendar, email, WhatsApp',
+      'Saves 15–25+ hours per week in ops and delivery'
     ],
-    useCase: 'An enterprise replaced 3 tools with 1 Van Borg bot, saving €25K/year.'
+    useCase: 'A high-ticket coaching brand uses a full-stack AI bot to qualify, book, onboard, and retain 50+ clients/month — all without human involvement.'
   }
 ];
 
 export default function BotPackagesSection() {
   return (
-    <section className="py-20 relative overflow-hidden bg-gradient-to-b from-light-bg-secondary via-light-bg-secondary to-light-bg-primary dark:from-dark-bg-secondary dark:via-dark-bg-secondary dark:to-dark-bg-primary" id="packages">
+    <section className="py-20 pt-28 relative overflow-hidden bg-gradient-to-b from-light-bg-secondary via-light-bg-secondary to-light-bg-primary dark:from-dark-bg-secondary dark:via-dark-bg-secondary dark:to-dark-bg-primary" id="ai-systems">
       {/* Background decorations */}
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-light-brand-primary/30 dark:via-dark-brand-primary/30 to-transparent"></div>
       <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-light-brand-primary/30 dark:via-dark-brand-primary/30 to-transparent"></div>
@@ -176,7 +194,7 @@ export default function BotPackagesSection() {
               className="h-full"
             >
               <GlassCard 
-                className="p-0 h-full border-3 border-light-brand-primary/20 dark:border-dark-brand-primary/20 hover:border-light-brand-primary/40 dark:hover:border-dark-brand-primary/40 hover:border-4 transition-all duration-300 hover:shadow-[0_4px_0_0_rgba(220,38,38,0.3),0_0_30px_rgba(220,38,38,0.3)] dark:hover:shadow-[0_4px_0_0_rgba(0,175,185,0.3),0_0_50px_rgba(0,175,185,0.3)]"
+                className="p-0 h-full border-3 border-light-brand-primary/20 dark:border-dark-brand-primary/20 hover:border-light-brand-primary/40 dark:hover:border-dark-brand-primary/40 transition-all duration-300 hover:shadow-[0_4px_0_0_rgba(220,38,38,0.3),0_0_30px_rgba(220,38,38,0.3)] dark:hover:shadow-[0_4px_0_0_rgba(0,175,185,0.3),0_0_50px_rgba(0,175,185,0.3)]"
                 intensity="heavy"
               >
                 {/* Header section with gradient */}
@@ -184,7 +202,7 @@ export default function BotPackagesSection() {
                   <div>
                     <h3 className="text-2xl font-bold text-light-text-primary dark:text-dark-text-primary font-title">{bot.name}</h3>
                     <div className="text-sm font-semibold mt-1 text-light-text-secondary dark:text-dark-text-secondary font-title px-3 py-1 bg-light-bg-secondary/50 dark:bg-dark-bg-secondary/50 rounded-lg inline-block">
-                      Perfect For: {bot.audience}
+                      <span className="text-light-brand-primary dark:text-dark-brand-primary font-bold mr-1">Perfect For:</span> {bot.audience}
                     </div>
                   </div>
                   
@@ -195,12 +213,12 @@ export default function BotPackagesSection() {
                   </div>
                 </div>
                 
-                <div className="flex items-center justify-between border-b border-light-text-secondary/10 dark:border-dark-text-secondary/10 px-6 py-2 bg-light-brand-primary/5 dark:bg-dark-brand-primary/5">
-                  <div className="inline-flex items-center text-sm text-light-brand-primary dark:text-dark-brand-primary font-body px-3 py-1 rounded-full">
+                <div className="flex items-center justify-between border-b border-light-text-secondary/10 dark:border-dark-text-secondary/10 px-6 py-3 bg-light-brand-primary/5 dark:bg-dark-brand-primary/5">
+                  <div className="inline-flex items-center text-sm font-semibold text-light-brand-primary dark:text-dark-brand-primary font-body px-3 py-1.5 rounded-lg bg-light-brand-primary/10 dark:bg-dark-brand-primary/10 border border-light-brand-primary/20 dark:border-dark-brand-primary/20">
                     <Clock size={16} className="mr-1.5" />
                     {bot.time}
                   </div>
-                  <div className="inline-flex items-center text-sm text-light-brand-primary dark:text-dark-brand-primary font-body px-3 py-1 rounded-full">
+                  <div className="inline-flex items-center text-base font-bold text-light-brand-primary dark:text-dark-brand-primary font-body px-4 py-1.5 rounded-lg bg-light-brand-primary/10 dark:bg-dark-brand-primary/10 border border-light-brand-primary/20 dark:border-dark-brand-primary/20">
                     {bot.price}
                   </div>
                 </div>
@@ -214,8 +232,8 @@ export default function BotPackagesSection() {
                     </p>
                   </div>
                   
-                  {/* How It Works & Add-Ons (side by side) */}
-                  <div className="grid grid-cols-2 gap-4 mb-5">
+                  {/* How It Works & Add-Ons (stacked vertically) */}
+                  <div className="flex flex-col gap-6 mb-5">
                     <div>
                       <h4 className="font-semibold text-base mb-3 text-light-text-primary dark:text-dark-text-primary font-title inline-flex items-center">
                         <span className="bg-light-brand-primary/10 dark:bg-dark-brand-primary/10 p-1 rounded-md mr-2">
@@ -242,7 +260,7 @@ export default function BotPackagesSection() {
                         </span>
                         Recommended Add-Ons
                       </h4>
-                      <div className="flex flex-col gap-2">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                         {bot.addOns.map((addon, i) => (
                           <div key={i} className="bg-light-bg-secondary/50 dark:bg-dark-bg-secondary/50 px-3 py-2 rounded-lg text-sm flex items-center gap-2 text-light-text-secondary dark:text-dark-text-secondary font-body border border-light-text-secondary/20 dark:border-dark-text-secondary/20 hover:border-light-brand-primary/50 dark:hover:border-dark-brand-primary/50 transition-all duration-300 hover:bg-light-brand-primary/5 dark:hover:bg-dark-brand-primary/5">
                             <div className="bg-light-brand-primary/20 dark:bg-dark-brand-primary/20 p-1 rounded-full">
@@ -314,34 +332,14 @@ export default function BotPackagesSection() {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="ring-4 ring-light-brand-primary/30 dark:ring-dark-brand-primary/30 hover:border-light-brand-primary hover:ring-light-brand-primary dark:hover:border-dark-brand-primary dark:hover:ring-dark-brand-primary transition-all duration-300 bg-gradient-to-r from-light-brand-primary/10 to-light-brand-secondary/5 dark:from-dark-brand-primary/10 dark:to-dark-brand-secondary/5"
           >
-            <div className="flex items-center justify-center gap-3">
-              <motion.div
-                animate={{ y: [-2, 0] }}
-                transition={{
-                  duration: 0.6,
-                  repeat: Infinity,
-                  repeatType: 'reverse',
-                  ease: 'easeInOut'
-                }}
-                className="bg-light-brand-primary/20 dark:bg-dark-brand-primary/20 p-2 rounded-full"
-              >
-                <ArrowUp size={16} />
-              </motion.div>
-              <span>Talk to the Van Borg Assistant</span>
-              <motion.div
-                animate={{ y: [-2, 0] }}
-                transition={{
-                  duration: 0.6,
-                  repeat: Infinity,
-                  repeatType: 'reverse',
-                  ease: 'easeInOut'
-                }}
-                className="bg-light-brand-primary/20 dark:bg-dark-brand-primary/20 p-2 rounded-full"
-              >
-                <ArrowUp size={16} />
-              </motion.div>
-            </div>
+            Talk to the Van Borg Assistant
           </Button>
+        </div>
+
+        <div className="text-center mt-8">
+          <p className="text-lg text-light-text-secondary dark:text-dark-text-secondary font-body font-medium">
+            <strong>Built once. Licensed for life. Fully managed. Your bot, your way.</strong>
+          </p>
         </div>
       </Container>
     </section>

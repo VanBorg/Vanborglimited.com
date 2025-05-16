@@ -3,41 +3,38 @@ import GlassCard from '../../../components/ui/GlassCard';
 
 const Section3: React.FC = () => {
   return (
-    <GlassCard className="p-8" intensity="medium">
+    <GlassCard className="p-6" intensity="medium">
       <div className="prose prose-lg max-w-none text-light-text-secondary dark:text-dark-text-secondary">
-        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">7. User Responsibilities</h2>
+        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">
+          3. LICENSING & INTELLECTUAL PROPERTY
+        </h2>
         <p>
-          When using our Services, you agree to:
+          Van Borg systems are governed by strict licensing terms. You are not purchasing software; you are entering a structured license agreement defining limited use rights and clear boundaries.
+        </p>
+        <p>
+          Client Owns:
         </p>
         <ul>
-          <li>Provide accurate and complete information to us and your end users</li>
-          <li>Use the Services in compliance with all applicable laws and regulations</li>
-          <li>Not use the Services for any illegal or unauthorized purpose</li>
-          <li>Not attempt to probe, scan, or test the vulnerability of our systems or breach security measures</li>
-          <li>Not interfere with or disrupt our Services or servers</li>
+          <li>Custom chatbot scripts, forms, and flows created specifically for your business</li>
+          <li>Client-facing copy and UI/UX elements unique to your deployment</li>
+          <li>Any customer data collected through your system</li>
+          <li>Any uniquely developed frontend component</li>
         </ul>
-        
-        <h2 className="text-xl font-bold mb-4 mt-8 text-light-text-primary dark:text-dark-text-primary font-title">8. Payment and Billing</h2>
         <p>
-          Our payment terms for AI systems and maintenance include:
+          Van Borg Retains:
         </p>
         <ul>
-          <li>Prices are quoted in Euros (€) unless otherwise specified</li>
-          <li>Initial system development fees are due according to the payment schedule in your service agreement</li>
-          <li>Maintenance fees are billed monthly or annually based on your selected plan</li>
-          <li>Late payments may result in service interruption or termination</li>
-          <li>All fees are non-refundable unless otherwise specified in your service agreement</li>
+          <li>Core logic frameworks and underlying automation scaffolds</li>
+          <li>Flow structures, prompt scripting architecture, and decision trees</li>
+          <li>All backend automation logic and proprietary integration wiring</li>
+          <li>IP rights, kill-switch access, enforcement tools, and deployment frameworks</li>
         </ul>
-
-        <h2 className="text-xl font-bold mb-4 mt-8 text-light-text-primary dark:text-dark-text-primary font-title">9. Third-Party Integrations</h2>
         <p>
-          Our Services may integrate with third-party services and platforms:
+          Non-Negotiables:
         </p>
         <ul>
-          <li>We are not responsible for third-party services or their content or policies</li>
-          <li>Your use of third-party services is subject to their respective terms and privacy policies</li>
-          <li>We do not guarantee the continued availability or functionality of any third-party integrations</li>
-          <li>You are responsible for maintaining any necessary accounts or subscriptions with integrated third-party services</li>
+          <li>You cannot copy, sandbox, export, or clone any part of the Van Borg logic</li>
+          <li>Breach triggers instant deactivation of the system and potential legal action</li>
         </ul>
       </div>
     </GlassCard>

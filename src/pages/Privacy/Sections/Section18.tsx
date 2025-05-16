@@ -3,17 +3,35 @@ import GlassCard from '../../../components/ui/GlassCard';
 
 const Section18: React.FC = () => {
   return (
-    <GlassCard className="p-8" intensity="medium">
+    <GlassCard className="p-6" intensity="medium">
       <div className="prose prose-lg max-w-none text-light-text-secondary dark:text-dark-text-secondary">
-        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">18. Dispute Resolution and Jurisdictional Framework</h2>
+        <h2 className="text-xl font-bold mb-4 text-light-text-primary dark:text-dark-text-primary font-title">
+          18. Dispute Resolution & Jurisdiction
+        </h2>
         <p>
-          Van Borg Limited is committed to resolving all privacy-related inquiries and complaints in a fair, transparent, and timely manner.
+          Van Borg Limited is committed to resolving all privacy, licensing, and compliance matters transparently, promptly, and with due process.
         </p>
+
+        <h3 className="text-lg font-semibold mt-6 mb-3 text-light-text-primary dark:text-dark-text-primary">
+          18.1 Complaint Handling Pathway
+        </h3>
         <ul>
-          <li><strong>Initial Complaint:</strong> Contact us directly at info@vanborglimited.com with a detailed description of your concern.</li>
-          <li><strong>Escalation Path:</strong> If unsatisfied with our response, you may escalate the matter to the Information Commissioner's Office (ICO) or your local data protection authority.</li>
-          <li><strong>Governing Law:</strong> This Policy is governed by and construed in accordance with the laws of England and Wales, without prejudice to mandatory provisions under international law.</li>
-          <li><strong>Exclusive Venue:</strong> Any legal action or proceeding arising from this Policy shall be brought exclusively in the courts of London, United Kingdom, unless otherwise required by binding statutory provisions.</li>
+          <li>Step 1 – Internal Resolution: Submit complaints to info@vanborglimited.com. Our legal and compliance team will respond within 14 days.</li>
+          <li>Step 2 – Supervisory Escalation: If resolution is not satisfactory, you may escalate your claim to:
+            <ul>
+              <li>The Information Commissioner's Office (ICO) in the UK</li>
+              <li>Or your local supervisory authority if located outside the United Kingdom</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3 className="text-lg font-semibold mt-6 mb-3 text-light-text-primary dark:text-dark-text-primary">
+          18.2 Jurisdictional Authority
+        </h3>
+        <ul>
+          <li>This Policy is governed by the laws of England and Wales</li>
+          <li>All disputes, claims, or legal proceedings shall be brought before the courts of London, United Kingdom</li>
+          <li>This jurisdiction applies unless superseded by mandatory consumer protection laws under international treaties or bilateral data protection frameworks</li>
         </ul>
       </div>
     </GlassCard>
