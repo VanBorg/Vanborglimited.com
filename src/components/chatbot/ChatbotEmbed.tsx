@@ -38,7 +38,12 @@ export const ChatbotEmbed = React.forwardRef<HTMLDivElement, { className?: strin
             },
             render: {
               mode: 'embedded',
-              target: container
+              target: container,
+              style: {
+                width: '100%',
+                height: '100%',
+                overflow: 'hidden'
+              }
             }
           });
           setIsLoaded(true);
@@ -63,23 +68,27 @@ export const ChatbotEmbed = React.forwardRef<HTMLDivElement, { className?: strin
     }, []);
 
     return (
-      <div ref={ref} className={className}>
+      <div ref={ref} className={`flex justify-center items-center w-full ${className}`}>
         <div
-          ref={containerRef}
-          className={`relative min-h-[682px] w-full max-w-[800px] mx-auto transition-all duration-700 ${
-            isLoaded ? 'opacity-100' : 'opacity-0 pointer-events-none'
-          }`}
+          className="w-[610px] h-[480px] rounded-xl overflow-hidden relative"
         >
-          {!isLoaded && !error && (
-            <div className="absolute inset-0 flex items-center justify-center bg-white dark:bg-gray-900 rounded-xl border-2 border-black">
-              <Loader2 className="w-8 h-8 animate-spin text-light-brand-primary dark:text-dark-brand-primary" />
-            </div>
-          )}
-          {error && (
-            <div className="absolute inset-0 flex items-center justify-center bg-white dark:bg-gray-900 rounded-xl border-2 border-black">
-              <p className="text-red-500 text-sm">{error}</p>
-            </div>
-          )}
+          <div
+            ref={containerRef}
+            className={`w-full h-full overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent transition-all duration-700 ${
+              isLoaded ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            }`}
+          >
+            {!isLoaded && !error && (
+              <div className="absolute inset-0 flex items-center justify-center bg-white dark:bg-gray-900 rounded-xl border-2 border-black z-10">
+                <Loader2 className="w-8 h-8 animate-spin text-light-brand-primary dark:text-dark-brand-primary" />
+              </div>
+            )}
+            {error && (
+              <div className="absolute inset-0 flex items-center justify-center bg-white dark:bg-gray-900 rounded-xl border-2 border-black z-10">
+                <p className="text-red-500 text-sm">{error}</p>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     );
