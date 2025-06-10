@@ -66,7 +66,7 @@ export const ChatbotEmbed = React.forwardRef<HTMLDivElement, { className?: strin
       <div ref={ref} className={className}>
         <div
           ref={containerRef}
-          className={`relative min-h-[512px] transition-all duration-700 ${
+          className={`relative min-h-[682px] w-full max-w-[800px] mx-auto transition-all duration-700 ${
             isLoaded ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
         >
