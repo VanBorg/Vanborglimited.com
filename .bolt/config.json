@@ -1,0 +1,6 @@
+{
+  "projectId": "vanborglimited",
+  "theme": "dark",
+  "engine": "nextjs",
+  "shadcn": true
+}
