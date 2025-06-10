@@ -5,15 +5,10 @@ import { Loader2 } from 'lucide-react';
 
 declare global {
   interface Window {
-    VG_CONFIG?: {
-      ID: string;
-      region: string;
-      render: string;
-      stylesheets: string[];
-      autostart?: boolean;
-      modalMode?: boolean;
-      userID?: string;
-      [key: string]: unknown;
+    voiceflow?: {
+      chat: {
+        load: (config: any) => void;
+      };
     };
   }
 }
@@ -24,52 +19,43 @@ export const ChatbotEmbed = React.forwardRef<HTMLDivElement, { className?: strin
     const [isLoaded, setIsLoaded] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const scriptRef = useRef<HTMLScriptElement | null>(null);
-    const glowDivRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
       const container = containerRef.current;
       if (!container) return;
 
-      window.localStorage.clear();
-      window.sessionStorage.clear();
-
-      const glowDiv = document.createElement('div');
-      glowDiv.id = 'VG_OVERLAY_CONTAINER';
-      glowDiv.style.width = '600px';
-      glowDiv.style.height = '512px';
-      glowDiv.style.margin = '-8px';
-      glowDiv.style.borderRadius = '14px';
-      glowDiv.style.overflow = 'hidden';
-      glowDiv.style.background = 'white';
-      glowDiv.style.boxShadow = '0 0 20px rgba(0,0,0,0.15)';
-      glowDiv.style.border = '2px solid #000000';
-      glowDivRef.current = glowDiv;
-
-      container.appendChild(glowDiv);
-
-      window.VG_CONFIG = {
-        ID: '69pZGVcmCeqNZdketNHf',
-        region: 'na',
-        render: 'full-width',
-        stylesheets: ['https://vg-bunny-cdn.b-cdn.net/vg_live_build/styles.css'],
-      };
-
       const script = document.createElement('script');
-      script.src = 'https://vg-bunny-cdn.b-cdn.net/vg_live_build/vg_bundle.js';
-      script.defer = true;
-      script.onload = () => setIsLoaded(true);
+      script.type = 'text/javascript';
+      script.src = 'https://cdn.voiceflow.com/widget-next/bundle.mjs';
+      script.onload = () => {
+        if (window.voiceflow) {
+          window.voiceflow.chat.load({
+            verify: { projectID: '682ea93254d60af2a37971a3' },
+            url: 'https://general-runtime.voiceflow.com',
+            versionID: 'production',
+            voice: {
+              url: 'https://runtime-api.voiceflow.com'
+            },
+            render: {
+              mode: 'embedded',
+              target: container
+            }
+          });
+          setIsLoaded(true);
+        } else {
+          setError('Failed to load Voiceflow');
+          console.error('Voiceflow not available after script load');
+        }
+      };
       script.onerror = () => {
         setError('Failed to load chatbot script');
-        console.error('Voiceglow embed script failed to load');
+        console.error('Voiceflow embed script failed to load');
       };
 
       document.body.appendChild(script);
       scriptRef.current = script;
 
       return () => {
-        if (glowDivRef.current && container.contains(glowDivRef.current)) {
-          container.removeChild(glowDivRef.current);
-        }
         if (scriptRef.current && document.body.contains(scriptRef.current)) {
           document.body.removeChild(scriptRef.current);
         }
