@@ -1,19 +1,35 @@
-import { memo } from 'react';
+import { memo, useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Button from './Button';
 
 const Navbar = memo(() => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   
-  const navLinks = [
-    { label: 'Google Ads', href: '/google-ads' },
-    { label: 'AI Chatbots', href: '/ai-chatbots' },
-    { label: 'Google Ranking', href: '/google-ranking' },
-    { label: 'Lead-Gen Funnels', href: '/lead-generation' },
-    { label: 'SEO Website', href: '/seo-website' },
-    { label: 'Automations', href: '/automations' }
+  const services = [
+    { label: 'SEO Website', href: '/seo-website', description: 'High-performance websites' },
+    { label: 'Google Ads', href: '/google-ads', description: 'Targeted advertising campaigns' },
+    { label: 'AI Chatbots', href: '/ai-chatbots', description: '24/7 AI assistants' },
+    { label: 'Lead Generation', href: '/lead-generation', description: 'Complete funnel systems' },
+    { label: 'Automations', href: '/automations', description: 'CRM & workflow automation' },
+    { label: 'Google Ranking', href: '/google-ranking', description: 'Top 3 search rankings' }
   ];
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsServicesOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   const handleNavClick = (href: string) => {
     if (location.pathname === href) {
@@ -120,23 +136,59 @@ const Navbar = memo(() => {
               </button>
             </div>
 
-            {/* Navigation Links - Center (hidden on mobile) */}
-            <div className="hidden md:flex items-center gap-1 lg:gap-2">
-              {navLinks.map((link) => (
+            {/* Services Dropdown - Center (hidden on mobile) */}
+            <div className="hidden md:flex items-center">
+              <div className="relative" ref={dropdownRef}>
                 <button
-                  key={link.label}
-                  onClick={() => handleNavClick(link.href)}
-                  className="relative px-4 py-2.5 text-sm lg:text-base font-semibold text-gray-900 hover:text-gray-900 transition-colors duration-200 rounded-lg group/link overflow-hidden sm:px-5 sm:py-3 sm:transition-all sm:duration-300"
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className="relative px-4 py-2.5 text-sm lg:text-base font-semibold text-gray-900 hover:text-gray-900 transition-colors duration-200 rounded-lg group/link overflow-hidden sm:px-5 sm:py-3 sm:transition-all sm:duration-300 flex items-center gap-1"
                 >
-                  {/* Animated underline - hidden on mobile for performance */}
+                  {/* Animated underline */}
                   <span className="hidden sm:block absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-sky-500 to-cyan-500 group-hover/link:w-3/4 transition-all duration-300 rounded-full" />
                   
-                  {/* Hover background glow - hidden on mobile for performance */}
+                  {/* Hover background glow */}
                   <span className="hidden sm:block absolute inset-0 opacity-0 group-hover/link:opacity-100 bg-gradient-to-r from-blue-50 to-indigo-50 transition-opacity duration-300 rounded-lg -z-10" />
                   
-                  <span className="relative">{link.label}</span>
+                  <span className="relative">Services</span>
+                  <svg className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
                 </button>
-              ))}
+
+                {/* Dropdown Menu */}
+                {isServicesOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-80 bg-white/95 backdrop-blur-lg border border-gray-200/60 rounded-2xl shadow-xl shadow-black/10 overflow-hidden z-50">
+                    <div className="p-2">
+                      {services.map((service) => (
+                        <button
+                          key={service.label}
+                          onClick={() => {
+                            handleNavClick(service.href);
+                            setIsServicesOpen(false);
+                          }}
+                          className="w-full text-left p-3 rounded-xl hover:bg-gradient-to-r hover:from-sky-50 hover:to-cyan-50 transition-all duration-200 group"
+                        >
+                          <div className="flex items-start gap-3">
+                            <div className="w-10 h-10 bg-gradient-to-br from-sky-500 to-cyan-500 rounded-lg flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-200">
+                              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                              </svg>
+                            </div>
+                            <div className="flex-1">
+                              <h3 className="font-semibold text-gray-900 group-hover:text-sky-700 transition-colors duration-200">
+                                {service.label}
+                              </h3>
+                              <p className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-200">
+                                {service.description}
+                              </p>
+                            </div>
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* CTA Button - Right */}
