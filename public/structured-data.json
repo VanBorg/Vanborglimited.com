@@ -1,0 +1,173 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Van Borg Limited",
+  "alternateName": "Vanborg.com",
+  "url": "https://vanborg.com",
+  "logo": "https://vanborg.com/logo.png",
+  "description": "AI-powered digital marketing agency specializing in lead generation systems, SEO, Google Ads, chatbots, and automation for UK businesses.",
+  "foundingDate": "2024",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "71-75 Shelton Street",
+    "addressLocality": "Covent Garden",
+    "addressRegion": "London",
+    "postalCode": "WC2H 9JQ",
+    "addressCountry": "GB"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+44-7846-885154",
+    "email": "info@vanborglimited.com",
+    "areaServed": "GB",
+    "availableLanguage": "en",
+    "hoursAvailable": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  },
+  "sameAs": [
+    "https://vanborg.com",
+    "https://linkedin.com/company/vanborglimited",
+    "https://twitter.com/vanborglimited"
+  ],
+  "priceRange": "£299-£4,999",
+  "currency": "GBP",
+  "areaServed": {
+    "@type": "Country",
+    "name": "United Kingdom"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Digital Marketing Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Lead Generation Funnel",
+          "description": "Complete AI-powered lead generation system with Google ranking, chatbots, and CRM automation."
+        },
+        "price": "4999",
+        "priceCurrency": "GBP",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "4999",
+          "priceCurrency": "GBP",
+          "billingIncrement": "P1M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "SEO + Google Business Profile Boost",
+          "description": "Dominate local search results and attract customers who are actively searching for your services."
+        },
+        "price": "499",
+        "priceCurrency": "GBP",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "499",
+          "priceCurrency": "GBP",
+          "billingIncrement": "P1M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Google Ads + Retargeting",
+          "description": "Laser-focused advertising campaigns that deliver qualified traffic and instant results."
+        },
+        "price": "1199",
+        "priceCurrency": "GBP",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "1199",
+          "priceCurrency": "GBP",
+          "billingIncrement": "P1M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "AI Chat + Voice Bot",
+          "description": "24/7 AI chatbots and voicebots that capture every lead and book appointments automatically."
+        },
+        "price": "1299",
+        "priceCurrency": "GBP",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "1299",
+          "priceCurrency": "GBP",
+          "billingIncrement": "P1M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "SEO-Optimized Website",
+          "description": "High-performance React websites built for speed, SEO, and conversions."
+        },
+        "price": "1999",
+        "priceCurrency": "GBP",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "1999",
+          "priceCurrency": "GBP",
+          "billingIncrement": "P1M"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "CRM + Email/SMS Automation",
+          "description": "Automated lead nurturing and follow-up systems that save 15+ hours per week."
+        },
+        "price": "499",
+        "priceCurrency": "GBP",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "499",
+          "priceCurrency": "GBP",
+          "billingIncrement": "P1M"
+        }
+      }
+    ]
+  },
+  "keywords": [
+    "digital marketing",
+    "lead generation",
+    "SEO",
+    "Google Ads",
+    "AI chatbots",
+    "automation",
+    "London",
+    "UK",
+    "business growth",
+    "online marketing",
+    "conversion optimization",
+    "CRM integration"
+  ],
+  "knowsAbout": [
+    "Digital Marketing",
+    "Search Engine Optimization",
+    "Google Ads",
+    "AI Chatbots",
+    "Lead Generation",
+    "Marketing Automation",
+    "CRM Integration",
+    "Local SEO",
+    "Conversion Optimization",
+    "Web Development"
+  ],
+  "serviceType": "Digital Marketing Agency",
+  "slogan": "More Leads. More Clients. More Revenue. Guaranteed Results."
+}
