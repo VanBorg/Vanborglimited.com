@@ -1,0 +1,70 @@
+{
+  "name": "Van Borg Limited",
+  "description": "AI-powered digital marketing agency specializing in lead generation systems",
+  "url": "https://vanborg.com",
+  "logo": "https://vanborg.com/logo.png",
+  "foundingDate": "2024",
+  "address": {
+    "streetAddress": "71-75 Shelton Street",
+    "addressLocality": "Covent Garden",
+    "addressRegion": "London",
+    "postalCode": "WC2H 9JQ",
+    "addressCountry": "GB"
+  },
+  "contact": {
+    "phone": "+44-7846-885154",
+    "email": "info@vanborglimited.com"
+  },
+  "services": [
+    {
+      "name": "Lead Generation Funnel",
+      "description": "Complete AI-powered lead generation system",
+      "price": "From £4,999 + £999/mo",
+      "timeline": "2-5 weeks"
+    },
+    {
+      "name": "SEO + GBP Boost",
+      "description": "Google Business Profile optimization",
+      "price": "From £499 + £150/mo",
+      "timeline": "3-6 days"
+    },
+    {
+      "name": "Google Ads + Retargeting",
+      "description": "Targeted advertising campaigns",
+      "price": "From £1,199 + £999/mo",
+      "timeline": "Instant results"
+    },
+    {
+      "name": "AI Chat + Voice Bot",
+      "description": "24/7 AI chatbots and voicebots",
+      "price": "From £1,299 + £299/mo",
+      "timeline": "4-7 days"
+    },
+    {
+      "name": "SEO-Optimized Website",
+      "description": "High-performance React websites",
+      "price": "From £1,999 + £299/mo",
+      "timeline": "1-2 weeks"
+    },
+    {
+      "name": "CRM + Email/SMS Automation",
+      "description": "Automated lead nurturing",
+      "price": "From £499 + £199/mo",
+      "timeline": "3-6 days"
+    }
+  ],
+  "technologies": [
+    "React.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "AI Chatbots",
+    "CRM Integration",
+    "SEO Optimization",
+    "Google Ads",
+    "Automation"
+  ],
+  "targetMarket": "UK-based businesses needing lead generation and digital marketing",
+  "valueProposition": "More Leads. More Clients. More Revenue. Guaranteed Results.",
+  "currency": "GBP",
+  "serviceArea": "United Kingdom"
+}

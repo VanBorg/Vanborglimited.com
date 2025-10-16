@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { height: 100%; }
+  body { @apply bg-white text-slate-900 antialiased; }
+  a { @apply text-brand; }
+}
+
+@layer components {
+  /* ========================= ANIMATION COMPONENTS ========================= */
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+
+  /* ========================= TYPOGRAPHY COMPONENTS ========================= */
+  /* Typography classes removed - use Tailwind font-display and font-body classes directly */
+
+  /* ========================= COLOR COMPONENTS ========================= */
+  .text-brand-primary {
+    @apply text-brand;
+  }
+  
+  .text-brand-secondary {
+    @apply text-gray-700;
+  }
+  
+  .text-brand-tertiary {
+    @apply text-gray-600;
+  }
+  
+  .text-brand-muted {
+    @apply text-gray-500;
+  }
+  
+  .bg-brand-primary {
+    @apply bg-brand;
+  }
+  
+  .bg-brand-light {
+    @apply bg-[#F7F9FC];
+  }
+  
+  .bg-brand-surface {
+    @apply bg-white;
+  }
+  
+  .bg-brand-subtle {
+    @apply bg-gray-50;
+  }
+
+  /* ========================= BUTTON COMPONENTS ========================= */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg font-body text-sm font-semibold transition-all duration-200 focus:outline-none focus:ring-4;
+  }
+  
+  .btn-primary {
+    @apply btn bg-brand text-white shadow-elev-1 hover:shadow-elev-2 focus:ring-brand/30 px-6 py-3;
+  }
+  
+  .btn-secondary {
+    @apply btn border border-brand bg-white text-brand shadow-elev-1 hover:bg-brand/5 focus:ring-brand/20 px-6 py-3;
+  }
+  
+  .btn-outline {
+    @apply btn border border-gray-300 text-gray-900 hover:bg-gray-50 px-5 py-2.5;
+  }
+  
+  .btn-small {
+    @apply px-4 py-2 text-xs;
+  }
+  
+  .btn-large {
+    @apply px-8 py-4 text-base;
+  }
+
+  /* ========================= CARD COMPONENTS ========================= */
+  .card {
+    @apply rounded-2xl border border-gray-200 bg-white shadow-elev-2;
+  }
+  
+  .card-large {
+    @apply card p-8 sm:p-12;
+  }
+  
+  .card-medium {
+    @apply card p-6 sm:p-8;
+  }
+  
+  .card-small {
+    @apply card p-4 sm:p-6;
+  }
+  
+  .card-subtle {
+    @apply rounded-xl border border-gray-200 bg-gray-50 p-2;
+  }
+
+  /* ========================= BADGE COMPONENTS ========================= */
+  .badge {
+    @apply inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 shadow-elev-1;
+  }
+  
+  .badge-brand {
+    @apply badge;
+  }
+  
+  .badge-dot {
+    @apply h-2 w-2 rounded-full bg-brand;
+  }
+  
+  .badge-small {
+    @apply px-2 py-1 text-xs;
+  }
+
+  /* ========================= CONTAINER COMPONENTS ========================= */
+  .container-hero {
+    @apply relative mx-auto max-w-6xl px-6 py-16 sm:py-20;
+  }
+  
+  .container-content {
+    @apply mx-auto max-w-4xl;
+  }
+  
+  .container-text {
+    @apply mx-auto max-w-3xl text-center;
+  }
+  
+  .container-badges {
+    @apply mb-8 rounded-full border border-gray-200 bg-gray-50 p-2;
+  }
+  
+  .container-buttons {
+    @apply mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row;
+  }
+  
+  .container-footnote {
+    @apply mx-auto mt-8 max-w-xl rounded-lg border border-gray-200 bg-gray-50 px-4 py-3;
+  }
+
+  /* ========================= BACKGROUND COMPONENTS ========================= */
+  .bg-hero {
+    @apply relative bg-brand-light text-gray-900;
+  }
+  
+  .bg-accent {
+    @apply pointer-events-none absolute inset-0;
+  }
+  
+  .bg-accent-blur {
+    @apply mx-auto h-40 w-[90%] max-w-6xl rounded-b-[28px] bg-white/60 blur-2xl;
+  }
+
+  /* ========================= VIDEO COMPONENTS ========================= */
+  .video-container {
+    @apply mx-auto mt-8 rounded-xl border border-gray-200 bg-gray-50 p-2;
+  }
+  
+  .video-placeholder {
+    @apply aspect-video w-full rounded-lg border border-dashed border-gray-300 bg-gray-100/70 shadow-elev-1 flex items-center justify-center;
+  }
+}
