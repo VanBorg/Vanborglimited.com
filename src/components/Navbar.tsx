@@ -9,12 +9,12 @@ const Navbar = memo(() => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   
   const services = [
+    { label: 'Google Ranking', href: '/google-ranking', description: 'Top 3 search rankings' },
+    { label: 'Lead Generation', href: '/lead-generation', description: 'Complete funnel systems' },
     { label: 'SEO Website', href: '/seo-website', description: 'High-performance websites' },
     { label: 'Google Ads', href: '/google-ads', description: 'Targeted advertising campaigns' },
     { label: 'AI Chatbots', href: '/ai-chatbots', description: '24/7 AI assistants' },
-    { label: 'Lead Generation', href: '/lead-generation', description: 'Complete funnel systems' },
     { label: 'Automations', href: '/automations', description: 'CRM & workflow automation' },
-    { label: 'Google Ranking', href: '/google-ranking', description: 'Top 3 search rankings' }
   ];
 
   // Close dropdown when clicking outside
@@ -170,9 +170,16 @@ const Navbar = memo(() => {
                         >
                           <div className="flex items-center gap-3">
                             <div className="flex-1">
-                              <h3 className="font-medium text-sm text-gray-900 group-hover:text-sky-700 transition-colors duration-200">
-                                {service.label}
-                              </h3>
+                              <div className="flex items-center gap-2">
+                                <h3 className="font-medium text-sm text-gray-900 group-hover:text-sky-700 transition-colors duration-200">
+                                  {service.label}
+                                </h3>
+                                {service.label === 'Google Ranking' && (
+                                  <span className="px-1.5 py-0.5 text-xs font-semibold text-orange-600 bg-orange-100 rounded-full">
+                                    Most Popular
+                                  </span>
+                                )}
+                              </div>
                               <p className="text-xs text-gray-600 group-hover:text-gray-700 transition-colors duration-200">
                                 {service.description}
                               </p>
