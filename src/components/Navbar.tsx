@@ -7,12 +7,12 @@ const Navbar = memo(() => {
   const location = useLocation();
   
   const navLinks = [
-    { label: 'Google Ads', href: '/GoogleAds' },
-    { label: 'AI Chatbots', href: '/AIChatbots' },
-    { label: 'Google Ranking', href: '/GoogleRanking' },
-    { label: 'Lead-Gen Funnels', href: '/LeadGenFunnels' },
-    { label: 'SEO Website', href: '/SEOWebsite' },
-    { label: 'Automations', href: '/Automations' }
+    { label: 'Google Ads', href: '/google-ads' },
+    { label: 'AI Chatbots', href: '/ai-chatbots' },
+    { label: 'Google Ranking', href: '/google-ranking' },
+    { label: 'Lead-Gen Funnels', href: '/lead-generation' },
+    { label: 'SEO Website', href: '/seo-website' },
+    { label: 'Automations', href: '/automations' }
   ];
 
   const handleNavClick = (href: string) => {
@@ -30,7 +30,7 @@ const Navbar = memo(() => {
   };
 
   const handleCTAClick = () => {
-    if (location.pathname === '/Contact') {
+    if (location.pathname === '/contact') {
       // If already on contact page, scroll to top
       window.scrollTo({
         top: 0,
@@ -38,7 +38,7 @@ const Navbar = memo(() => {
         behavior: 'smooth'
       });
     } else {
-      navigate('/Contact');
+      navigate('/contact');
     }
   };
 

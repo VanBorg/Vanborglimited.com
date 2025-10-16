@@ -162,7 +162,7 @@ const Services = memo(() => {
             <div className="flex justify-center mb-8 sm:mb-12">
               <div className="bg-white backdrop-blur-sm rounded-xl sm:rounded-2xl px-4 py-2 sm:px-6 sm:py-3 border border-gray-200/50 shadow-sm">
                 <h3 className="text-xs sm:text-sm md:text-base lg:text-lg font-medium text-gray-700 leading-relaxed text-center">
-                  Professional digital marketing solutions designed to grow your business and maximize your ROI. <a href="/Contact" className="text-sky-600 hover:text-sky-700 font-semibold underline">Get started today</a>!
+                  Professional digital marketing solutions designed to grow your business and maximize your ROI. <a href="/contact" className="text-sky-600 hover:text-sky-700 font-semibold underline">Get started today</a>!
                 </h3>
               </div>
             </div>
@@ -248,11 +248,11 @@ const Services = memo(() => {
                         onClick={() => {
                           // Navigate to respective service page
                           const serviceRoutes: Record<string, string> = {
-                            'seo': '/GoogleRanking',
-                            'google-ads': '/GoogleAds', 
-                            'chatbots': '/AIChatbots',
-                            'seo-website': '/SEOWebsite',
-                            'crm-automations': '/Automations'
+                            'seo': '/google-ranking',
+                            'google-ads': '/google-ads', 
+                            'chatbots': '/ai-chatbots',
+                            'seo-website': '/seo-website',
+                            'crm-automations': '/automations'
                           };
                           window.location.href = serviceRoutes[activeService.id] || '/';
                         }}

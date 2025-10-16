@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# LLM Crawling
+# AI & LLM Crawling - Comprehensive Coverage
 User-agent: GPTBot
 Allow: /
 
@@ -23,4 +23,103 @@ Allow: /
 User-agent: YouBot
 Allow: /
 
+User-agent: Bard
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: BingBot
+Allow: /
+
+User-agent: BingPreview
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: MJ12bot
+Allow: /
+
+User-agent: DotBot
+Allow: /
+
+User-agent: SeoCheckBot
+Allow: /
+
+User-agent: SiteAuditBot
+Allow: /
+
+User-agent: ScreamingFrogSEOSpider
+Allow: /
+
+User-agent: DataForSeoBot
+Allow: /
+
+User-agent: MegaIndex
+Allow: /
+
+User-agent: BLEXBot
+Allow: /
+
+User-agent: PetalBot
+Allow: /
+
+User-agent: AspiegelBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: ia_archiver
+Allow: /
+
+User-agent: Wayback
+Allow: /
+
+User-agent: archive.org_bot
+Allow: /
+
+# Crawl delay for heavy bots
+User-agent: SemrushBot
+Crawl-delay: 1
+
+User-agent: AhrefsBot
+Crawl-delay: 1
+
+User-agent: MJ12bot
+Crawl-delay: 1
+
+# Sitemap location
 Sitemap: https://vanborg.com/sitemap.xml
+
+# Additional sitemaps (if you add them later)
+# Sitemap: https://vanborg.com/sitemap-images.xml
+# Sitemap: https://vanborg.com/sitemap-news.xml

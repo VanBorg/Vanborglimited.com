@@ -28,12 +28,20 @@ function App() {
       <ScrollToTop />
       <div className="min-h-screen">
         <Routes>
-          <Route path="/GoogleRanking" element={<GoogleRanking />} />
-          <Route path="/AIChatbots" element={<AIChatbots />} />
-          <Route path="/GoogleAds" element={<GoogleAds />} />
-          <Route path="/LeadGenFunnels" element={<LeadGenFunnels />} />
+          <Route path="/seo-website" element={<SEOWebsite />} />
+          <Route path="/google-ads" element={<GoogleAds />} />
+          <Route path="/ai-chatbots" element={<AIChatbots />} />
+          <Route path="/lead-generation" element={<LeadGenFunnels />} />
+          <Route path="/automations" element={<Automations />} />
+          <Route path="/google-ranking" element={<GoogleRanking />} />
+          <Route path="/contact" element={<Contact />} />
+          {/* Legacy routes for backward compatibility */}
           <Route path="/SEOWebsite" element={<SEOWebsite />} />
+          <Route path="/GoogleAds" element={<GoogleAds />} />
+          <Route path="/AIChatbots" element={<AIChatbots />} />
+          <Route path="/LeadGenFunnels" element={<LeadGenFunnels />} />
           <Route path="/Automations" element={<Automations />} />
+          <Route path="/GoogleRanking" element={<GoogleRanking />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/" element={
             <>
