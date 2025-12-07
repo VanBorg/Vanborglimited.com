@@ -6,6 +6,20 @@
   html, body, #root { height: 100%; }
   body { @apply bg-white text-slate-900 antialiased; }
   a { @apply text-brand; }
+
+  #root {
+    opacity: 1;
+    animation: vb-fade-in 120ms ease-out;
+  }
+
+  @keyframes vb-fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 @layer components {

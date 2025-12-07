@@ -21,7 +21,6 @@
   },
   "main": "index.js",
   "dependencies": {
-    "baseline-browser-mapping": "^2.8.7",
     "browserslist": "^4.26.2",
     "caniuse-lite": "^1.0.30001745",
     "electron-to-chromium": "^1.5.224",

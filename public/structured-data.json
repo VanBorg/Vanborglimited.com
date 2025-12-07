@@ -4,7 +4,7 @@
   "name": "Van Borg Limited",
   "alternateName": "Vanborg.com",
   "url": "https://vanborg.com",
-  "logo": "https://vanborg.com/logo.png",
+  "logo": "https://vanborg.com/favicon.svg",
   "description": "AI-powered digital marketing agency specializing in lead generation systems and comprehensive digital marketing solutions for UK businesses",
   "foundingDate": "2024",
   "address": {
@@ -24,15 +24,17 @@
     "availableLanguage": "en",
     "hoursAvailable": {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "17:00"
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "08:00",
+      "closes": "21:00"
     }
   },
   "sameAs": [
     "https://vanborg.com",
-    "https://www.linkedin.com/company/vanborglimited",
-    "https://twitter.com/vanborglimited"
+    "https://www.facebook.com/profile.php?id=61580148003782",
+    "https://www.linkedin.com/in/niclas-van-borg/",
+    "https://x.com/VanBorgLimited",
+    "https://share.google/zC3N9lSOaJGFbh9Xi"
   ],
   "priceRange": "£499-£4,999",
   "currency": "GBP",
@@ -48,49 +50,41 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Lead Generation Funnel",
-          "description": "Complete AI-powered lead generation system with Google ranking, chatbots, and CRM automation"
+          "name": "Local SEO & Google Business Profile Ranking",
+          "description": "Local SEO and Google Business Profile optimisation to rank service businesses in the top results on Google Maps and local search."
         },
-        "price": "4999",
-        "priceCurrency": "GBP",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": "4999",
-          "priceCurrency": "GBP",
-          "billingIncrement": "P1M"
-        }
+        "price": "1000",
+        "priceCurrency": "GBP"
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "SEO + Google Business Profile Boost",
-          "description": "Google Business Profile optimization and local SEO for top rankings"
+          "name": "Google Ads – Lead Generation Campaigns",
+          "description": "High-intent Google Ads campaigns designed to generate qualified local leads with clear, measurable ROI."
         },
-        "price": "499",
-        "priceCurrency": "GBP",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": "499",
-          "priceCurrency": "GBP",
-          "billingIncrement": "P1M"
-        }
+        "price": "1000",
+        "priceCurrency": "GBP"
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "AI Chat + Voice Bot",
-          "description": "24/7 AI chatbots and voicebots for automatic lead capture"
+          "name": "SEO-Optimised, Conversion-Focused Websites",
+          "description": "Fast, mobile-first websites engineered with React and Tailwind, built to rank on Google and convert visitors into leads."
         },
-        "price": "1299",
-        "priceCurrency": "GBP",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": "1299",
-          "priceCurrency": "GBP",
-          "billingIncrement": "P1M"
-        }
+        "price": "2500",
+        "priceCurrency": "GBP"
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "AI Chatbots & Lead Automations",
+          "description": "Custom AI chatbots that capture, qualify and route leads 24/7, integrated into your website and key communication channels."
+        },
+        "price": "700",
+        "priceCurrency": "GBP"
       }
     ]
   },

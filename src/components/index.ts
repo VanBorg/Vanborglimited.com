@@ -15,10 +15,22 @@ export { default as Footer } from './Footer';
 
 // Content Components
 export { default as Stats } from './Stats';
-export { default as TrustBadge } from './TrustBadge';
 export { default as TheDifference } from './TheDifference';
 export { default as ContactSection } from './ContactSection';
 export { default as LazySection } from './LazySection';
+
+// Calculator Components
+export { default as BusinessInfo } from './calculator/BusinessInfo';
+export { default as RankingInfo } from './calculator/RankingInfo';
+export { default as ServiceSelection } from './calculator/ServiceSelection';
+export { default as ResultsDisplay } from './calculator/ResultsDisplay';
+
+// Calculator Icons
+export * from './calculator/icons';
+
+// Cookie Management Components (temporarily disabled)
+// export { default as CookieBanner } from './CookieBanner';
+// export { default as CookieProvider, useCookie } from './CookieProvider';
 
 // =========================
 // COMPONENT USAGE EXAMPLES
@@ -37,5 +49,4 @@ import Stats from './components/Stats';
 <Card variant="glass" size="medium">Content here</Card>
 <BadgeGroup badges={['SEO', 'AI Chatbot', 'Voice Bot']} />
 <Stats />
-<TrustBadge text="Custom trust message" />
 */

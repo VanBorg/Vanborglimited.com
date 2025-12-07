@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
+
+// Import CSS - Vite will bundle it, but we'll make it non-blocking via HTML
 import './index.css'
 import './styles/globals.css'
 

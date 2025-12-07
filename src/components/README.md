@@ -1,174 +1,123 @@
-# Component Library Documentation
+## Component Library Overview
+
+This README is a quick reference for how to use the shared components that power the marketing site (home page, service pages, and the ROI calculator).
+
+You normally won’t create a separate “About Us” page from here – instead you’ll reuse these components inside route pages in `src/pages`.
+
+---
 
 ## 🚀 Quick Start
 
-All components are ready to use across your entire site! Here's how to import and use them:
+All core components are exported from `src/components/index.ts`, so you can import them in two main ways:
 
-### Import Methods
+```tsx
+// Method 1: Import from the barrel file
+import { Button, Card, Navbar, Hero, Stats } from './components';
 
-```typescript
-// Method 1: Import individual components
-import { Button, Card, Stats, TrustBadge } from './components';
-
-// Method 2: Import specific components
+// Method 2: Import a specific component
 import Button from './components/Button';
 import Stats from './components/Stats';
-import TrustBadge from './components/TrustBadge';
 ```
 
-## 📦 Available Components
+---
 
-### Core UI Components
+## 📦 Available Components (high level)
 
-#### Button
-```tsx
-<Button variant="primary" onClick={handleClick}>
-  Get Started
-</Button>
-<Button variant="secondary" onClick={handleClick}>
-  Learn More
-</Button>
-```
+### Core UI
 
-#### Card
-```tsx
-<Card variant="glass" size="medium">
-  <h2>Card Content</h2>
-  <p>Your content here</p>
-</Card>
-```
+- **Button** – primary / secondary CTAs used across the site.
+- **Card** – glass / elevated cards used for sections, pricing, and feature blocks.
+- **Badge & BadgeGroup** – small label chips (e.g. SEO, AI Chatbot, Voice Bot).
 
-#### Badge & BadgeGroup
-```tsx
-<Badge variant="brand">Premium</Badge>
-<BadgeGroup badges={['SEO', 'AI Chatbot', 'Voice Bot']} />
-```
+### Layout & Site Shell
 
-### Layout Components
+- **Navbar** – main navigation bar with service dropdown.
+- **Hero** – homepage hero section (local SEO, top‑5 positioning).
+- **Footer** – global footer with links and contact information.
+- **LazySection** – helper to lazily mount heavy sections when scrolled into view.
+- **ScrollToTop** – scrolls back to top when navigating routes.
 
-#### Navbar
-```tsx
-<Navbar />
-```
+### Content Sections
 
-#### Hero
-```tsx
-<Hero />
-```
+- **Stats** – KPI / numbers block on the homepage.
+- **Services** – interactive services selector (Local SEO, Google Ads, SEO Website, AI Chatbots).
+- **ServiceCard / ServicePage** – building blocks for individual service pages.
+- **TheDifference** – comparison-style section explaining how you work.
+- **WebsiteComponents** – lists the pieces that go into an SEO website.
+- **ContactSection** – CTA/contact block used on pricing and service pages.
+- **FAQSection** – common questions used on the homepage and SEO pages.
+- **HowWeWork** – 4‑step process carousel describing your workflow.
+- **CookieBanner** – cookie consent banner (currently opt‑in, see component for details).
 
-### Content Components
+### ROI Calculator
 
-#### Stats
-```tsx
-<Stats />
-```
+Located in `src/components/calculator` and exported via `index.ts`:
 
-#### TrustBadge
-```tsx
-<TrustBadge />
-<TrustBadge text="Custom trust message" />
-```
+- **BusinessInfo** – collects industry, client value, and current performance.
+- **RankingInfo** – asks where you currently rank (top‑5, page 1, etc.).
+- **ServiceSelection** – lets users pick Local SEO, Ads, Website, and Chatbot.
+- **ResultsDisplay** – shows projections, ROI, and per‑service breakdown.
+- **icons.tsx** – shared icon set used by the calculator components.
 
-## 🎨 CSS Classes Available
-
-### Typography
-- `.heading-primary` - Main headlines
-- `.heading-secondary` - Subheadings
-- `.heading-tertiary` - Small headings
-- `.body-large` - Large body text
-- `.body-medium` - Medium body text
-- `.body-small` - Small body text
-
-### Layout
-- `.section-container` - Main section wrapper
-- `.section-content` - Content container
-- `.section-text` - Text container
-- `.space-section` - Section spacing
-- `.space-content` - Content spacing
-
-### Backgrounds
-- `.bg-section` - Light section background
-- `.bg-section-dark` - Dark section background
-
-### Buttons
-- `.btn` - Base button class
-- `.btn-primary` - Primary button
-- `.btn-secondary` - Secondary button
-- `.btn-outline` - Outline button
-
-### Cards
-- `.card` - Base card class
-- `.card-large` - Large card
-- `.card-medium` - Medium card
-- `.card-small` - Small card
+---
 
 ## 🎯 Usage Examples
 
-### Creating a New Section
-```tsx
-import { Card, Button, Stats } from './components';
+### Typical homepage layout
 
-const AboutSection = () => {
+```tsx
+import {
+  Navbar,
+  Hero,
+  Services,
+  Stats,
+  TheDifference,
+  HowWeWork,
+  FAQSection,
+  ContactSection,
+  Footer,
+} from './components';
+
+const HomePage = () => {
   return (
-    <section className="bg-section section-container">
-      <div className="section-content">
-        <Card variant="glass" size="medium">
-          <h1 className="heading-primary">About Us</h1>
-          <p className="body-large">We help businesses grow...</p>
-          <Button variant="primary">Learn More</Button>
-        </Card>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <Services />
         <Stats />
-      </div>
-    </section>
+        <TheDifference />
+        <HowWeWork />
+        <FAQSection />
+        <ContactSection />
+      </main>
+      <Footer />
+    </>
   );
 };
 ```
 
-### Creating a Services Section
+### Using the ROI calculator on the calculator page
+
 ```tsx
-import { Card, BadgeGroup, TrustBadge } from './components';
+import {
+  BusinessInfo,
+  RankingInfo,
+  ServiceSelection,
+  ResultsDisplay,
+} from './components';
 
-const ServicesSection = () => {
-  const services = ['Web Design', 'SEO', 'Marketing'];
-  
-  return (
-    <section className="bg-section section-container">
-      <div className="section-content">
-        <TrustBadge text="🚀 Trusted by 200+ Clients" />
-        <Card variant="elevated" size="large">
-          <h2 className="heading-secondary">Our Services</h2>
-          <BadgeGroup badges={services} variant="brand" />
-        </Card>
-      </div>
-    </section>
-  );
-};
+// In practice this is wired up via the `useCalculator` hook,
+// but this shows the building blocks you have available.
 ```
 
-## ✨ Features
+---
 
-- **Fully Responsive** - All components work on mobile, tablet, and desktop
-- **Consistent Styling** - Uses your design system colors and fonts
-- **Accessible** - Proper ARIA labels and keyboard navigation
-- **Customizable** - Props for variants, sizes, and custom classes
-- **Performance Optimized** - Memoized components and efficient animations
-- **TypeScript Ready** - Full type safety and IntelliSense support
+## ✨ Implementation Notes
 
-## 🎨 Design System
+- **Styling** – components are styled with Tailwind classes defined in `index.css` / `globals.css` (the old `.heading-primary` / `.bg-section` examples were placeholders and are no longer used).
+- **Accessibility** – components include ARIA labels where needed and are designed to work well with keyboard navigation.
+- **Performance** – heavier sections use `LazySection`, and many components are wrapped in `memo` to avoid unnecessary re‑renders.
+- **TypeScript** – all components are typed; importing from `./components` gives you full IntelliSense support.
 
-### Colors
-- Primary: Sky Blue (#2563EB)
-- Secondary: Cyan
-- Text: Gray scale
-- Background: Light gradients
-
-### Fonts
-- Display: Playfair Display
-- Body: Inter
-
-### Spacing
-- Consistent spacing scale
-- Responsive breakpoints
-- Mobile-first approach
-
-All components are ready to use across your entire site! 🚀
+All components are ready to reuse across new pages and sections – treat this file as a living reference and extend it if you add new shared components. 🚀

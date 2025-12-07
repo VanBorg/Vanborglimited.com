@@ -1,19 +1,22 @@
 import { memo, useCallback, useEffect, useRef, useState } from "react";
 import Button from './Button';
 import Card from './Card';
-import TrustBadge from './TrustBadge';
 
 // Preload Google Maps resources
 if (typeof document !== 'undefined') {
-  const preconnectLink = document.createElement('link');
-  preconnectLink.rel = 'preconnect';
-  preconnectLink.href = 'https://maps.google.com';
-  document.head.appendChild(preconnectLink);
-  
-  const dnsPrefetchLink = document.createElement('link');
-  dnsPrefetchLink.rel = 'dns-prefetch';
-  dnsPrefetchLink.href = 'https://maps.google.com';
-  document.head.appendChild(dnsPrefetchLink);
+  if (!document.querySelector('link[data-maps-preconnect]')) {
+    const preconnectLink = document.createElement('link');
+    preconnectLink.rel = 'preconnect';
+    preconnectLink.href = 'https://maps.google.com';
+    preconnectLink.dataset.mapsPreconnect = 'true';
+    document.head.appendChild(preconnectLink);
+
+    const dnsPrefetchLink = document.createElement('link');
+    dnsPrefetchLink.rel = 'dns-prefetch';
+    dnsPrefetchLink.href = 'https://maps.google.com';
+    dnsPrefetchLink.dataset.mapsPreconnect = 'true';
+    document.head.appendChild(dnsPrefetchLink);
+  }
 }
 
 // Background accents - same as Hero
@@ -44,7 +47,10 @@ const GoogleMapEmbed = memo(() => {
             io.disconnect();
           }
         },
-        { rootMargin: '200px' }
+        { 
+          // Load the map well before it scrolls into view so it appears faster
+          rootMargin: '1000px' 
+        }
       );
       io.observe(el);
       return () => io.disconnect();
@@ -61,7 +67,7 @@ const GoogleMapEmbed = memo(() => {
   return (
     <div
       ref={mountRef}
-      className="relative w-full h-full rounded-xl sm:rounded-2xl border border-gray-200 shadow-lg overflow-hidden bg-gray-100"
+      className="relative w-full h-full min-h-[300px] sm:min-h-[400px] rounded-xl sm:rounded-2xl border border-gray-200 shadow-lg overflow-hidden bg-gray-100"
       aria-label="Map to Van Borg Limited, 71-75 Shelton Street, Covent Garden, London"
     >
       {/* Skeleton Loading State - shows before render */}
@@ -135,7 +141,6 @@ const ContactSection = memo(() => {
             <div className="mx-auto max-w-3xl space-y-6 text-center sm:space-y-8">
               {/* Header */}
               <header className="space-y-4 sm:space-y-6">
-                <TrustBadge text="Get In Touch" />
 
                 <h2 className="text-xl font-black tracking-tight leading-tight sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
                   <span className="bg-gradient-to-r from-sky-500 via-cyan-500 to-blue-500 bg-clip-text text-transparent">
@@ -146,7 +151,7 @@ const ContactSection = memo(() => {
                 <div className="relative mx-auto max-w-5xl">
                   <div className="rounded-2xl border border-gray-200/50 bg-gray-100/80 px-4 py-2 shadow-sm backdrop-blur-sm sm:px-6 sm:py-3">
                     <p className="text-sm font-medium leading-relaxed text-gray-700 sm:text-base md:text-lg">
-                      Let's discuss how we can help you dominate local search and generate more leads.
+                      Let's discuss how we can help you dominate local search, and generate more leads.
                     </p>
                   </div>
                 </div>
@@ -157,7 +162,7 @@ const ContactSection = memo(() => {
                 {/* Left: Google Map + Buttons */}
                 <div className="order-1 lg:order-1 flex flex-col gap-4">
                   {/* Google Map - takes up remaining space */}
-                  <div className="flex-1">
+                  <div className="flex-1 min-h-[300px] sm:min-h-[400px]">
                     <GoogleMapEmbed />
                   </div>
 
@@ -203,7 +208,7 @@ const ContactSection = memo(() => {
                           </div>
                           <h4 className="font-semibold text-gray-900 text-base sm:text-lg">Our Location</h4>
                         </div>
-                        <address className="not-italic space-y-1 ml-13">
+                        <address className="not-italic space-y-1 ml-8">
                           <p className="font-semibold text-gray-900 text-base sm:text-lg">Van Borg Limited</p>
                           <p>71-75 Shelton Street</p>
                           <p>Covent Garden</p>
@@ -225,7 +230,7 @@ const ContactSection = memo(() => {
                           </div>
                           <h4 className="font-semibold text-gray-900 text-base sm:text-lg">Opening Times</h4>
                         </div>
-                        <div className="space-y-2 ml-13">
+                        <div className="space-y-2 ml-8">
                           <p className="flex justify-between">
                             <span>Mon - Fri:</span>
                             <span className="font-medium text-gray-900">8:00 AM - 9:00 PM</span>

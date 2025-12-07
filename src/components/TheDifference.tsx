@@ -1,5 +1,4 @@
 import { memo } from 'react'
-import TrustBadge from './TrustBadge'
 
 /* ================= Icons ================= */
 function CheckIcon({ className = 'w-5 h-5' }: { className?: string }) {
@@ -42,7 +41,6 @@ const TheDifference = memo(() => {
             {/* Header */}
             <div className="text-center mb-8 sm:mb-10">
               <div className="inline-block mb-4 sm:mb-6">
-                <TrustBadge text="Why Choose Van Borg" />
               </div>
               <h2 className="font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-3 sm:mb-4">
                 <span className="bg-gradient-to-r from-sky-500 via-cyan-500 to-blue-500 bg-clip-text text-transparent">

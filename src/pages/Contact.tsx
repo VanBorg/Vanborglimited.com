@@ -35,7 +35,10 @@ const GoogleMapEmbed = memo(() => {
             io.disconnect();
           }
         },
-        { rootMargin: '400px' } // Reasonable distance for lazy loading
+        { 
+          // Load the map well before it scrolls into view so it feels instant
+          rootMargin: '1000px' 
+        }
       );
       io.observe(el);
       return () => io.disconnect();

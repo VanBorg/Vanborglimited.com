@@ -1,188 +1,198 @@
-# Van Borg Limited - AI-Powered Digital Marketing Services
+# Van Borg Limited - AI-Powered Local SEO & Lead Generation
 
 ## Company Overview
-Van Borg Limited is a professional digital marketing agency based in London, UK, specializing in AI-powered lead generation systems and comprehensive digital marketing solutions. We help UK businesses transform their online presence through intelligent automation and data-driven growth strategies.
+Van Borg Limited is a digital marketing agency based in London, UK, specialising in **local SEO**, **Google Ads lead generation**, **SEO-optimised websites**, and **AI-powered chatbots** for service-based businesses.
+
+We help UK companies dominate **Google Search & Google Maps**, turn website visitors into qualified leads, and automate the boring follow-up so you can focus on delivering your service — not chasing enquiries.
 
 **Company Details:**
-- **Legal Name:** Van Borg Limited
-- **Trading As:** Vanborg.com
-- **Location:** 71-75 Shelton Street, Covent Garden, London WC2H 9JQ, United Kingdom
-- **Company Number:** 16172283
-- **Currency:** GBP (British Pounds)
-- **Service Area:** United Kingdom (England, Scotland, Wales, Northern Ireland)
-- **Founded:** 2024
-- **Industry:** Digital Marketing, Lead Generation, AI Automation
-- **Business Type:** Limited Company (Ltd)
-
-## Core Services & Pricing
-
-### 1. Lead Generation Funnel (Complete System)
-**Investment:** From £4,999 one-time setup + £999/month retainer
-**Timeline:** 2-5 weeks
-**ROI:** Typically 300-500% within 6 months
-**Description:** Complete AI-powered lead generation system that includes:
-- Google Search & Maps ranking optimization (Top 3 positions)
-- SEO-optimized website development (React/Tailwind)
-- AI chatbots and booking assistants (24/7 operation)
-- CRM integration with automated follow-ups
-- Multi-channel lead capture (website, social media, WhatsApp)
-- Conversion tracking and analytics
-- Monthly performance reports
-
-### 2. SEO + Google Business Profile Boost
-**Investment:** From £499 one-time setup + £150/month retainer
-**Timeline:** 3-6 days
-**ROI:** 200-400% increase in organic leads
-**Description:** 
-- Complete Google Business Profile setup and optimization
-- Top 5 ranking on Google Search and Maps
-- Local SEO optimization and citation building
-- Review management and reputation building
-- Monthly updates and maintenance
-- Competitor analysis and gap identification
-
-### 3. Google Ads + Retargeting
-**Investment:** From £1,199 one-time setup + £999/month retainer
-**Timeline:** Instant results (same day)
-**ROI:** 2-5x return on ad spend
-**Description:**
-- Laser-focused Google Ads campaigns (Search, Display, YouTube)
-- Smart retargeting strategies for website visitors
-- Qualified traffic generation with high-intent keywords
-- Cost-per-lead optimization and bid management
-- A/B testing and campaign optimization
-- Monthly performance analysis and scaling
-
-### 4. AI Chat + Voice Bot
-**Investment:** From £1,299 one-time setup + £299/month retainer
-**Timeline:** 4-7 days
-**ROI:** 24/7 lead capture, 40% increase in conversions
-**Description:**
-- 24/7 AI chatbots and voicebots (Voiceflow platform)
-- Automatic lead capture and qualification
-- Instant inquiry responses and FAQ handling
-- Prospect qualification and routing
-- Appointment booking automation
-- Multi-channel deployment (website, WhatsApp, Meta)
-
-### 5. SEO-Optimized Website
-**Investment:** From £1,999 one-time setup + £299/month retainer
-**Timeline:** 1-2 weeks
-**ROI:** 150-300% increase in organic traffic
-**Description:**
-- High-performance React/Tailwind websites
-- Mobile-first responsive design
-- Core Web Vitals optimization (90+ scores)
-- Search ranking focused architecture
-- Conversion-optimized pages and forms
-- Fast loading times (under 3 seconds)
-- SEO-friendly URL structure and meta tags
-
-### 6. CRM + Email/SMS Automation
-**Investment:** From £499 one-time setup + £199/month retainer
-**Timeline:** 3-6 days
-**ROI:** 15+ hours saved per week, 60% faster follow-ups
-**Description:**
-- CRM setup and integration (HubSpot, Pipedrive, etc.)
-- Email and SMS automation sequences
-- Lead nurturing sequences and drip campaigns
-- Automated follow-ups and reminders
-- Calendar integration and booking management
-- Performance tracking and analytics
-
-## Contact Information
-- **Phone:** +44 7846 885154
-- **Email:** info@vanborglimited.com
-- **Website:** https://vanborg.com
-- **Business Hours:** Monday-Friday, 9:00 AM - 5:00 PM GMT
-- **Emergency Contact:** Available for urgent client issues
-
-## Technology Stack & Expertise
-- **Frontend:** React.js with TypeScript, Tailwind CSS
-- **Backend:** Node.js, API integrations
-- **AI/ML:** Voiceflow chatbots, OpenAI integration, automation tools
-- **SEO Tools:** Google Search Console, SEMrush, Ahrefs, Screaming Frog
-- **Analytics:** Google Analytics 4, conversion tracking, heat mapping
-- **CRM Systems:** HubSpot, Pipedrive, Salesforce integration
-- **Email Marketing:** Mailchimp, ActiveCampaign, automated sequences
-- **Social Media:** Facebook Ads, Instagram, LinkedIn, WhatsApp Business
-
-## Target Market & Industries
-- **Geographic Focus:** United Kingdom (England, Scotland, Wales, Northern Ireland)
-- **Business Size:** Small to medium businesses (SMEs)
-- **Industries Served:**
-  - Professional services (lawyers, accountants, consultants)
-  - Healthcare and medical practices
-  - Home improvement and trades
-  - E-commerce and retail
-  - Technology and software companies
-  - Real estate agencies
-  - Fitness and wellness
-  - Education and training
-  - Financial services
-  - Hospitality and restaurants
-
-## Value Proposition & Guarantees
-**Primary Value Proposition:** "More Leads. More Clients. More Revenue. Guaranteed Results."
-
-**Key Benefits:**
-- Guaranteed top 3 Google rankings for local searches
-- 24/7 lead capture without additional staff
-- Automated follow-up systems that never miss opportunities
-- Data-driven optimization for continuous improvement
-- Transparent reporting and ROI tracking
-- Scalable systems that grow with your business
-
-**Service Guarantees:**
-- 30-day money-back guarantee on all services
-- Free consultation and strategy session
-- No long-term contracts (monthly retainer basis)
-- Dedicated account manager for each client
-- Regular performance reviews and optimization
-
-## Company Culture & Values
-- **Innovation:** Staying ahead of digital marketing trends
-- **Transparency:** Clear reporting and honest communication
-- **Results-Driven:** Focus on measurable business outcomes
-- **Client Success:** Partnership approach to business growth
-- **Continuous Learning:** Regular training and certification updates
-- **Ethical Practices:** White-hat SEO and compliant marketing
-
-## Certifications & Partnerships
-- Google Ads Certified Partner
-- Google Analytics Certified
-- Facebook Business Partner
-- HubSpot Certified Partner
-- Voiceflow Platform Expert
-- GDPR Compliant Data Handling
-- ISO 27001 Information Security (in progress)
-
-## Case Studies & Success Metrics
-- **Average Client Results:**
-  - 300% increase in qualified leads within 6 months
-  - 40% reduction in cost-per-lead
-  - 85% improvement in Google rankings
-  - 60% increase in website conversion rates
-  - 24/7 lead capture capability
-
-## Why Choose Van Borg Limited?
-1. **Proven Track Record:** 95% client retention rate
-2. **AI-Powered Solutions:** Cutting-edge automation technology
-3. **UK-Based Team:** Local understanding and support
-4. **Transparent Pricing:** No hidden fees or surprise costs
-5. **Scalable Systems:** Solutions that grow with your business
-6. **Fast Implementation:** Quick setup and immediate results
-7. **Ongoing Support:** Continuous optimization and improvement
-
-## Getting Started Process
-1. **Free Consultation:** 30-minute strategy session
-2. **Custom Proposal:** Tailored solution for your business
-3. **Quick Setup:** Fast implementation and testing
-4. **Go Live:** Launch and start generating leads
-5. **Optimize & Scale:** Continuous improvement and growth
+- **Legal Name:** Van Borg Limited  
+- **Trading As:** Vanborg.com  
+- **Location:** 71-75 Shelton Street, Covent Garden, London WC2H 9JQ, United Kingdom  
+- **Company Number:** 16172283 (Registered in England & Wales)  
+- **Currency:** GBP (British Pounds)  
+- **Service Area:** United Kingdom (England, Scotland, Wales, Northern Ireland)  
+- **Founded:** 2024  
+- **Industry:** Digital Marketing, Local SEO, AI Automation  
+- **Business Type:** Limited Company (Ltd)  
 
 ---
 
-*Last Updated: December 2024*
-*Document Version: 2.0*
+## Core Services & Pricing
+
+### 1. Local SEO & Google Business Profile Ranking
+**Investment:** From £1,000 one-time setup + from £200/month retainer  
+**Timeline:** Typically 60–90 days for strong movement  
+**Focus:** Get you into the **Top 5 on Google Maps & local search** for your best money keywords.
+
+**What’s Included:**
+- Full **Google Business Profile** setup, cleanup, and optimisation  
+- Local SEO strategy for your **priority services & locations**  
+- NAP consistency and citation building on trusted directories  
+- On-page SEO recommendations for your main service pages  
+- Review strategy & templates to grow high-quality Google reviews  
+- Competitor gap analysis (what the top 5 are doing that you’re not)  
+- Ongoing ranking checks, reporting, and iterative improvement  
+
+**Ideal For:**
+- Local service businesses where **a few extra jobs per month** matter  
+- Niches like emergency services, trades, repairs, clinics, and other high-ticket services  
+
+---
+
+### 2. Google Ads – Lead Generation Campaigns
+**Investment:** From £1,000 one-time setup + from £750/month management  
+**Ad Spend:** You control the budget (we advise & optimise)  
+**Timeline:** Leads can start same day once campaigns go live  
+
+**What’s Included:**
+- Keyword research focused on **high-intent, ready-to-buy searches**  
+- Campaign structure for Search (and optionally Display/YouTube where it makes sense)  
+- Ad copy that filters out time-wasters and attracts real buyers  
+- Landing page feedback or dedicated **SEO Website** builds for better conversion  
+- Conversion tracking (calls, forms, chats) so every pound is measured  
+- Weekly optimisation (bids, keywords, negatives, ad tests)  
+- Clear monthly reports and scaling plan once performance is proven  
+
+**Ideal For:**
+- Businesses that want **predictable lead flow** while SEO ramps up  
+- High-ticket services where even a handful of leads pays for the campaigns  
+
+---
+
+### 3. AI Chatbots & Automations
+**Investment:** From £700 one-time setup + from £100/month maintenance  
+**Timeline:** Typically 4–7 days depending on complexity  
+
+**What’s Included:**
+- Custom **AI chatbot** built on Voiceflow, tailored to your niche & services  
+- 24/7 instant responses for FAQs, services, prices, and basic qualification  
+- Lead capture flows (name, email, phone, service type, location, urgency, etc.)  
+- Optional booking handover to your calendar or contact form  
+- Integration with website and messaging channels (e.g. WhatsApp, web widget)  
+- Ongoing refinement as we see how real visitors use the bot  
+
+**What It Solves:**
+- No more lost leads because nobody answered the phone or emails at 21:00  
+- Less admin time spent answering the same basic questions  
+- Warmer, better-qualified enquiries by the time they reach you  
+
+---
+
+### 4. SEO-Optimised, Conversion-Focused Websites
+**Investment:** From £2,500 one-time build + from £200/month (hosting, care & minor updates)  
+**Timeline:** Typically 1–2 weeks for a focused, lean site  
+
+**What’s Included:**
+- Fast **React + Tailwind** builds with clean, modern UI  
+- Mobile-first design that works flawlessly on phones (where most local traffic is)  
+- Pages structured for **Google** and for **humans** (service pages, locations, FAQs, reviews)  
+- On-page SEO baked in: H1/H2 structure, schema, metadata, internal links  
+- Clear, high-converting call-to-actions (calls, forms, chat, booking)  
+- Performance-focused builds: Core Web Vitals, quick load times, clean code  
+
+**Ideal For:**
+- Local businesses stuck with slow, bloated, or DIY websites that don’t generate leads  
+- Anyone who wants their site to be an **asset**, not just an online brochure  
+
+---
+
+## Contact Information
+- **Phone:** +44 7846 885154  
+- **Email:** info@vanborglimited.com  
+- **Website:** https://vanborg.com  
+- **Business Hours:**  
+  - Monday–Friday: 8:00 AM – 9:00 PM  
+  - Saturday: 9:00 AM – 8:00 PM  
+  - Sunday: 10:30 AM – 5:00 PM  
+- **Emergency Support:** Available for urgent client issues (by agreement)  
+
+---
+
+## Technology Stack & Expertise
+- **Frontend:** React.js, TypeScript, Tailwind CSS  
+- **Backend / Integrations:** Node.js, REST APIs, webhooks  
+- **AI & Automation:** Voiceflow, OpenAI, Make.com / Zapier, custom flows  
+- **SEO & Local:** Google Search Console, GBP tools, technical/site audits  
+- **Analytics & Tracking:** Google Analytics 4, call tracking, form tracking, events  
+- **Email & CRM Tools:** Integration with popular CRMs and email platforms where needed  
+- **Ad Platforms:** Google Ads (Search, Display, YouTube – where relevant)  
+
+You don’t need to manage any of this yourself — you get **implementation + ongoing optimisation**, not just “consulting”.
+
+---
+
+## Target Market & Industries
+
+**Geographic Focus:**  
+- United Kingdom: England, Scotland, Wales, Northern Ireland  
+
+**Business Size:**  
+- Small to medium service-based businesses that rely on **leads & booked jobs**
+
+**Typical Niches:**
+- Emergency and urgent services (e.g. plumbers, roof repairs, locksmiths, damage restoration)  
+- High-ticket trades and home improvement (installers, contractors, specialists)  
+- Healthcare, wellness, and clinics (private practices, physio, dentists)  
+- Professional services (consultants, agencies, trainers, etc.)  
+- Other local experts where **1–5 extra jobs per month** is already meaningful revenue  
+
+---
+
+## Value Proposition & Guarantees
+
+**Core Promise:**  
+> We help you **show up where buyers are looking**, turn that attention into leads, and use AI + automation to make sure you don’t waste them.
+
+**Key Benefits:**
+- Stronger **local Google visibility** (Maps + organic)  
+- Higher quality enquiries instead of random time-wasters  
+- 24/7 response via **AI chatbots** so leads don’t go cold  
+- Systems that keep working even when you’re busy on a job  
+- Reporting that shows **what’s actually working** and what isn’t  
+
+**Approach:**
+- No fluff, no vanity metrics — we focus on **calls, forms, and booked work**  
+- Simple, honest communication and clear expectations  
+- Long-term thinking instead of short-term hacks  
+
+---
+
+## Company Culture & Values
+- **Straightforward:** Clear communication, no buzzword bullshit  
+- **Performance-Driven:** Everything is measured and improved  
+- **Ownership:** We treat your marketing like it’s our own money on the line  
+- **Iterative:** Launch fast, learn, refine, and scale what works  
+- **Ethical:** White-hat SEO, compliant tracking, honest positioning  
+
+---
+
+## Why Choose Van Borg Limited?
+
+1. **Built for Local Service Businesses** – everything is tailored around ranking locally and getting real jobs, not “traffic for traffic’s sake”.  
+2. **Technical + Commercial Mindset** – you get senior-level dev skills plus a focus on profit, not just pretty designs.  
+3. **AI & Automation First** – chatbots and smart flows fill the gaps where humans drop the ball.  
+4. **Lean & Fast** – no agency bloat; direct access, quick implementation, and fast iteration.  
+5. **Clarity on Performance** – clear reporting, clear decisions, clear next steps.  
+
+---
+
+## Getting Started
+
+1. **Book a Call**  
+   A short call to understand your niche, area, and what “good” looks like for you (leads, jobs, revenue).  
+
+2. **Strategy & Proposal**  
+   You get a clear, no-fluff plan: Local SEO, Google Ads, Website, and/or AI chatbots — only what you actually need.  
+
+3. **Implementation**  
+   We set everything up, fix what’s broken, and deploy the first version as quickly as possible.  
+
+4. **Optimise & Scale**  
+   We track results, refine the campaigns and website, and decide together where to push harder and where to cut.  
+
+---
+
+*Last Updated: January 2025*  
+*Document Version: 3.1*  
 *For the most current information, visit https://vanborg.com*

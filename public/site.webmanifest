@@ -1,0 +1,22 @@
+{
+  "name": "Van Borg Limited - Digital Marketing Solutions",
+  "short_name": "Van Borg",
+  "description": "Professional digital marketing services including SEO, Google Ads, AI Chatbots, and lead generation",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0ea5e9",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["business", "marketing", "productivity"],
+  "lang": "en-GB",
+  "scope": "/",
+  "id": "van-borg-limited"
+}

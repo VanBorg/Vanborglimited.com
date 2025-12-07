@@ -74,7 +74,7 @@ h3, .h3 {
    ANIMATIONS
    =================================== */
 
-/* Tailwind ping animation for TrustBadge pulse dot */
+/* Tailwind ping animation for pulse dots */
 @keyframes ping {
   75%, 100% {
     transform: scale(2);

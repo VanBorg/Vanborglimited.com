@@ -1,5 +1,4 @@
 import { memo } from 'react';
-import TrustBadge from './TrustBadge';
 import Card from './Card';
 import Button from './Button';
 
@@ -13,7 +12,13 @@ interface SectionHeaderProps {
 // Reusable Section Header Component
 export const SectionHeader = memo(({ badge, title, description, className = "" }: SectionHeaderProps) => (
   <header className={`space-y-4 sm:space-y-6 ${className}`}>
-    <TrustBadge text={badge} />
+    {badge && (
+      <div className="flex justify-center">
+        <span className="inline-flex items-center rounded-full border border-sky-200/60 bg-sky-50/80 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-sky-700">
+          {badge}
+        </span>
+      </div>
+    )}
     <h2 className="text-xl font-black tracking-tight leading-tight sm:text-2xl md:text-3xl lg:text-4xl">
       <span className="bg-gradient-to-r from-sky-500 via-cyan-500 to-blue-500 bg-clip-text text-transparent">
         {title}
