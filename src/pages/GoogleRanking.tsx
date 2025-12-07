@@ -35,18 +35,18 @@ const GoogleRanking = () => {
     
     // Open Graph
     setMetaTag('og:type', 'website', true);
-    setMetaTag('og:url', 'https://vanborg.com/google-ranking', true);
+    setMetaTag('og:url', 'https://vanborglimited.com/google-ranking', true);
     setMetaTag('og:title', 'Local SEO & Google Maps Ranking Services | Top-5 Local Visibility', true);
     setMetaTag('og:description', 'Achieve reliable top-5 local Google rankings and Google Business Profile mastery. Expert local SEO services to grow Maps visibility and organic leads—without promising top 5.', true);
-    setMetaTag('og:image', 'https://vanborg.com/og-image.jpg', true);
+    setMetaTag('og:image', 'https://vanborglimited.com/og-image.jpg', true);
     setMetaTag('og:site_name', 'Van Borg Limited', true);
     
     // Twitter
     setMetaTag('twitter:card', 'summary_large_image', true);
-    setMetaTag('twitter:url', 'https://vanborg.com/google-ranking', true);
+    setMetaTag('twitter:url', 'https://vanborglimited.com/google-ranking', true);
     setMetaTag('twitter:title', 'Local SEO & Google Maps Ranking Services (Top-5 Focus)', true);
     setMetaTag('twitter:description', 'Achieve strong top-5 local Google rankings and Google Business Profile mastery. Expert local SEO services with realistic promises.', true);
-    setMetaTag('twitter:image', 'https://vanborg.com/og-image.jpg', true);
+    setMetaTag('twitter:image', 'https://vanborglimited.com/og-image.jpg', true);
     setMetaTag('twitter:site', '@VanBorgLimited', true);
     setMetaTag('twitter:creator', '@VanBorgLimited', true);
     
@@ -57,7 +57,7 @@ const GoogleRanking = () => {
       canonicalLink.rel = 'canonical';
       document.head.appendChild(canonicalLink);
     }
-    canonicalLink.href = 'https://vanborg.com/google-ranking';
+    canonicalLink.href = 'https://vanborglimited.com/google-ranking';
     
     // Add structured data (Schema.org)
     const addStructuredData = (id: string, data: object) => {
@@ -76,7 +76,7 @@ const GoogleRanking = () => {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Van Borg Limited - Local SEO Services",
-      "image": "https://vanborg.com/favicon.svg",
+      "image": "https://vanborglimited.com/favicon.svg",
       "description": "Expert local SEO and Google Maps ranking services to help businesses dominate local search results",
       "address": {
         "@type": "PostalAddress",
@@ -91,7 +91,7 @@ const GoogleRanking = () => {
         "latitude": "51.5145",
         "longitude": "-0.1231"
       },
-      "url": "https://vanborg.com/google-ranking",
+      "url": "https://vanborglimited.com/google-ranking",
       "telephone": "+447846885154",
       "priceRange": "£1000-£1500",
       "openingHoursSpecification": [
@@ -132,7 +132,7 @@ const GoogleRanking = () => {
         "priceCurrency": "GBP",
         "priceValidUntil": "2025-12-31",
         "availability": "https://schema.org/InStock",
-        "url": "https://vanborg.com/google-ranking"
+        "url": "https://vanborglimited.com/google-ranking"
       }
     });
     

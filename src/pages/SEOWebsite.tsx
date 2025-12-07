@@ -32,17 +32,17 @@ const SEOWebsite = () => {
     setMetaTag('author', 'Van Borg Limited');
     
     setMetaTag('og:type', 'website', true);
-    setMetaTag('og:url', 'https://vanborg.com/seo-website', true);
+    setMetaTag('og:url', 'https://vanborglimited.com/seo-website', true);
     setMetaTag('og:title', 'SEO Website Development | Lead Generation & Booking', true);
     setMetaTag('og:description', 'SEO-optimized websites that drive leads and bookings. Professional development with conversion focus.', true);
-    setMetaTag('og:image', 'https://vanborg.com/og-image.jpg', true);
+    setMetaTag('og:image', 'https://vanborglimited.com/og-image.jpg', true);
     setMetaTag('og:site_name', 'Van Borg Limited', true);
     
     setMetaTag('twitter:card', 'summary_large_image', true);
-    setMetaTag('twitter:url', 'https://vanborg.com/seo-website', true);
+    setMetaTag('twitter:url', 'https://vanborglimited.com/seo-website', true);
     setMetaTag('twitter:title', 'SEO Website Development | Lead Generation & Booking', true);
     setMetaTag('twitter:description', 'SEO-optimized websites that drive leads and bookings. Professional development with conversion focus.', true);
-    setMetaTag('twitter:image', 'https://vanborg.com/og-image.jpg', true);
+    setMetaTag('twitter:image', 'https://vanborglimited.com/og-image.jpg', true);
     setMetaTag('twitter:site', '@VanBorgLimited', true);
     setMetaTag('twitter:creator', '@VanBorgLimited', true);
     
@@ -52,7 +52,7 @@ const SEOWebsite = () => {
       canonicalLink.rel = 'canonical';
       document.head.appendChild(canonicalLink);
     }
-    canonicalLink.href = 'https://vanborg.com/seo-website';
+    canonicalLink.href = 'https://vanborglimited.com/seo-website';
     
     return () => {
       document.title = 'Van Borg Limited';

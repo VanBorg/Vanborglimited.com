@@ -31,17 +31,17 @@ const Chatbot = () => {
     setMetaTag('author', 'Van Borg Limited');
     
     setMetaTag('og:type', 'website', true);
-    setMetaTag('og:url', 'https://vanborg.com/ai-chatbots', true);
+    setMetaTag('og:url', 'https://vanborglimited.com/ai-chatbots', true);
     setMetaTag('og:title', 'AI Chatbot Development | Lead Capture & Automation', true);
     setMetaTag('og:description', 'Smart chatbot for lead capture, booking, and support. Multi-channel deployment across website, WhatsApp, and Meta.', true);
-    setMetaTag('og:image', 'https://vanborg.com/og-image.jpg', true);
+    setMetaTag('og:image', 'https://vanborglimited.com/og-image.jpg', true);
     setMetaTag('og:site_name', 'Van Borg Limited', true);
     
     setMetaTag('twitter:card', 'summary_large_image', true);
-    setMetaTag('twitter:url', 'https://vanborg.com/ai-chatbots', true);
+    setMetaTag('twitter:url', 'https://vanborglimited.com/ai-chatbots', true);
     setMetaTag('twitter:title', 'AI Chatbot Development | Lead Capture & Automation', true);
     setMetaTag('twitter:description', 'Smart chatbot for lead capture, booking, and support. Multi-channel deployment across website, WhatsApp, and Meta.', true);
-    setMetaTag('twitter:image', 'https://vanborg.com/og-image.jpg', true);
+    setMetaTag('twitter:image', 'https://vanborglimited.com/og-image.jpg', true);
     setMetaTag('twitter:site', '@VanBorgLimited', true);
     setMetaTag('twitter:creator', '@VanBorgLimited', true);
     
@@ -51,7 +51,7 @@ const Chatbot = () => {
       canonicalLink.rel = 'canonical';
       document.head.appendChild(canonicalLink);
     }
-    canonicalLink.href = 'https://vanborg.com/ai-chatbots';
+    canonicalLink.href = 'https://vanborglimited.com/ai-chatbots';
     
     return () => {
       document.title = 'Van Borg Limited';

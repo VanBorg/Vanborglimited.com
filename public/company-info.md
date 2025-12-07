@@ -7,7 +7,7 @@ We help UK companies dominate **Google Search & Google Maps**, turn website visi
 
 **Company Details:**
 - **Legal Name:** Van Borg Limited  
-- **Trading As:** Vanborg.com  
+- **Trading As:** Vanborglimited.com  
 - **Location:** 71-75 Shelton Street, Covent Garden, London WC2H 9JQ, United Kingdom  
 - **Company Number:** 16172283 (Registered in England & Wales)  
 - **Currency:** GBP (British Pounds)  
@@ -100,7 +100,7 @@ We help UK companies dominate **Google Search & Google Maps**, turn website visi
 ## Contact Information
 - **Phone:** +44 7846 885154  
 - **Email:** info@vanborglimited.com  
-- **Website:** https://vanborg.com  
+- **Website:** https://vanborglimited.com  
 - **Business Hours:**  
   - Monday–Friday: 8:00 AM – 9:00 PM  
   - Saturday: 9:00 AM – 8:00 PM  
@@ -195,4 +195,4 @@ You don’t need to manage any of this yourself — you get **implementation + o
 
 *Last Updated: January 2025*  
 *Document Version: 3.1*  
-*For the most current information, visit https://vanborg.com*
+*For the most current information, visit https://vanborglimited.com*

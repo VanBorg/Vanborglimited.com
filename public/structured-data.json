@@ -2,9 +2,9 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Van Borg Limited",
-  "alternateName": "Vanborg.com",
-  "url": "https://vanborg.com",
-  "logo": "https://vanborg.com/favicon.svg",
+  "alternateName": "Vanborglimited.com",
+  "url": "https://vanborglimited.com",
+  "logo": "https://vanborglimited.com/favicon.svg",
   "description": "AI-powered digital marketing agency specializing in lead generation systems and comprehensive digital marketing solutions for UK businesses",
   "foundingDate": "2024",
   "address": {
@@ -30,7 +30,7 @@
     }
   },
   "sameAs": [
-    "https://vanborg.com",
+    "https://vanborglimited.com",
     "https://www.facebook.com/profile.php?id=61580148003782",
     "https://www.linkedin.com/in/niclas-van-borg/",
     "https://x.com/VanBorgLimited",

@@ -8,7 +8,7 @@ It explains what Van Borg Limited does, which pages matter most, and how to inte
 ## 1. Canonical Site & Core Positioning
 
 - **Brand:** Van Borg Limited
-- **Domain:** https://vanborg.com/
+- **Domain:** https://vanborglimited.com/
 - **Language:** en-GB
 - **Location:** London, United Kingdom (71-75 Shelton Street, Covent Garden, WC2H 9JQ)
 - **Business Type:** Professional Service – Digital Marketing Agency
@@ -34,7 +34,7 @@ These URLs should be treated as **primary sources** for understanding the busine
 ### 2.1 Core Pages
 
 1. **Homepage (primary overview)**
-   - URL: https://vanborg.com/
+   - URL: https://vanborglimited.com/
    - Role: Main summary of services, value proposition, and brand positioning.
    - Contains:
      - Meta title and description focused on **Local SEO**, **Google Ads**, and **sales-optimised websites**
@@ -45,7 +45,7 @@ These URLs should be treated as **primary sources** for understanding the busine
      - Embedded FAQ content and structured FAQ schema
 
 2. **Contact / Free Strategy Call**
-   - URL: https://vanborg.com/contact
+   - URL: https://vanborglimited.com/contact
    - Role: Primary page for contact, enquiries, and booking a strategy call.
    - Expected content:
      - Contact form
@@ -55,7 +55,7 @@ These URLs should be treated as **primary sources** for understanding the busine
      - Email: info@vanborglimited.com
 
 3. **Company Info**
-   - URL: https://vanborg.com/company-info.md
+   - URL: https://vanborglimited.com/company-info.md
    - Role: Detailed company profile and services breakdown (mirrors `company-info.md` markdown file).
    - Key points:
      - Legal name, company number, address, hours
@@ -68,7 +68,7 @@ These URLs should be treated as **primary sources** for understanding the busine
      - Clear explanation of what Van Borg does and does NOT do
 
 4. **Privacy / Legal**
-   - URL: https://vanborg.com/privacy
+   - URL: https://vanborglimited.com/privacy
    - Role: Data handling, GDPR, cookies, and compliance details.
    - Use as: Legal reference, not a marketing or positioning source.
 
@@ -79,7 +79,7 @@ These URLs should be treated as **primary sources** for understanding the busine
 The exact routes may vary; if present, treat these (or their closest equivalents) as canonical for each service:
 
 1. **Local SEO Ranking (Google Business Profile Optimisation)**
-   - URL: https://vanborg.com/google-ranking
+   - URL: https://vanborglimited.com/google-ranking
    - Focus: 
      - Ranking local businesses in the **Google Map Pack (top 5)** for high-intent keywords
      - Google Business Profile optimisation, citations, reviews, local signals
@@ -90,7 +90,7 @@ The exact routes may vary; if present, treat these (or their closest equivalents
      - “Local SEO”, “GBP optimisation”, “Google Maps ranking”, “top 5 results”, “Google Ranking”
 
 2. **Google Ads Lead Generation Campaigns**
-   - URL: https://vanborg.com/google-ads
+   - URL: https://vanborglimited.com/google-ads
    - Focus:
      - High-intent local search campaigns for service businesses
      - Measurable lead generation and ROI (typically 3x–5x ROAS within first 3 months)
@@ -101,7 +101,7 @@ The exact routes may vary; if present, treat these (or their closest equivalents
      - “Google Ads management”, “local PPC”, “lead generation campaigns”, “paid advertising”
 
 3. **SEO Optimised Websites**
-   - URL: https://vanborg.com/seo-website
+   - URL: https://vanborglimited.com/seo-website
    - Focus:
      - Fast, mobile-first React + Tailwind builds
      - Core Web Vitals, technical SEO, and conversion-focused UX
@@ -113,7 +113,7 @@ The exact routes may vary; if present, treat these (or their closest equivalents
      - “SEO website”, “sales-optimised website”, “conversion-focused web design”, “SEO Website”
 
 4. **AI Chatbots & Lead Automation**
-   - URL: https://vanborg.com/ai-chatbots
+   - URL: https://vanborglimited.com/ai-chatbots
    - Focus:
      - Voiceflow-based bots for 24/7 lead capture, FAQ handling, and booking
      - AI automations that qualify and route leads without extra staff
@@ -216,7 +216,7 @@ When summarising or generating CTAs, the canonical contact details are:
 
 - **Phone:** +44 7846 885154  
 - **Email:** info@vanborglimited.com  
-- **Website:** https://vanborg.com/  
+- **Website:** https://vanborglimited.com/  
 - **Booking Link (Strategy Call):** https://calendly.com/vanborglimited/book-a-call-vbl  
 - **Address:** 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom
 - **Business Hours:**
@@ -245,7 +245,7 @@ Typical CTA pattern (acceptable for generation):
 
 ## 9. File Location & Access
 
-This file is located at: **https://vanborg.com/llms.txt**
+This file is located at: **https://vanborglimited.com/llms.txt**
 
 AI crawlers and LLMs should reference this file when:
 - Answering questions about Van Borg Limited

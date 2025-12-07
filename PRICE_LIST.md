@@ -1,4 +1,4 @@
-# Vanborg.com - Product Price List
+# Vanborglimited.com - Product Price List
 
 ## Individual Services
 

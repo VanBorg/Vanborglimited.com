@@ -51,7 +51,7 @@ const Cookies = memo(() => {
                     <p>
                       This Cookie Policy describes how and why Van Borg Limited (&quot;we&quot;,
                       &quot;us&quot;, &quot;our&quot;) uses cookies and similar technologies when
-                      you visit <strong>vanborg.com</strong>.
+                      you visit <strong>vanborglimited.com</strong>.
                     </p>
                     <p>
                       This policy should be read together with our{' '}

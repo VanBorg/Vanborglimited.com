@@ -31,17 +31,17 @@ const GoogleAds = () => {
     setMetaTag('author', 'Van Borg Limited');
     
     setMetaTag('og:type', 'website', true);
-    setMetaTag('og:url', 'https://vanborg.com/google-ads', true);
+    setMetaTag('og:url', 'https://vanborglimited.com/google-ads', true);
     setMetaTag('og:title', 'Google Ads Management | Lead Generation Campaigns', true);
     setMetaTag('og:description', 'Expert Google Ads management for local lead generation. Targeted search campaigns with measurable ROI.', true);
-    setMetaTag('og:image', 'https://vanborg.com/og-image.jpg', true);
+    setMetaTag('og:image', 'https://vanborglimited.com/og-image.jpg', true);
     setMetaTag('og:site_name', 'Van Borg Limited', true);
     
     setMetaTag('twitter:card', 'summary_large_image', true);
-    setMetaTag('twitter:url', 'https://vanborg.com/google-ads', true);
+    setMetaTag('twitter:url', 'https://vanborglimited.com/google-ads', true);
     setMetaTag('twitter:title', 'Google Ads Management | Lead Generation Campaigns', true);
     setMetaTag('twitter:description', 'Expert Google Ads management for local lead generation. Targeted search campaigns with measurable ROI.', true);
-    setMetaTag('twitter:image', 'https://vanborg.com/og-image.jpg', true);
+    setMetaTag('twitter:image', 'https://vanborglimited.com/og-image.jpg', true);
     setMetaTag('twitter:site', '@VanBorgLimited', true);
     setMetaTag('twitter:creator', '@VanBorgLimited', true);
     
@@ -51,7 +51,7 @@ const GoogleAds = () => {
       canonicalLink.rel = 'canonical';
       document.head.appendChild(canonicalLink);
     }
-    canonicalLink.href = 'https://vanborg.com/google-ads';
+    canonicalLink.href = 'https://vanborglimited.com/google-ads';
     
     return () => {
       document.title = 'Van Borg Limited';
