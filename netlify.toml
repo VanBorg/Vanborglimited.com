@@ -5,9 +5,9 @@
   # Directory to publish (Vite's default output directory)
   publish = "dist"
   
-  # Node.js version
+  # Node.js version (Vite 7 requires Node 20.19+ or 22.12+)
   [build.environment]
-    NODE_VERSION = "18"
+    NODE_VERSION = "20.19.0"
 
 # Redirect rules for SPA routing
 [[redirects]]
