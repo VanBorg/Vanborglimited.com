@@ -7,6 +7,7 @@ import LazySection from './components/LazySection'
 import ScrollToTop from './components/ScrollToTop'
 import CookieBanner from './components/CookieBanner'
 
+<<<<<<< HEAD
 // Import service pages
 import GoogleRanking from './pages/GoogleRanking';
 import AIChatbots from './pages/AIChatbots';
@@ -18,6 +19,19 @@ import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import Cookies from './pages/Cookies';
 import GDPR from './pages/GDPR';
+=======
+// Lazy load all service pages for better performance
+const GoogleRanking = lazy(() => import('./pages/GoogleRanking'));
+const GoogleAds = lazy(() => import('./pages/GoogleAds'));
+const SEOWebsite = lazy(() => import('./pages/SEOWebsite'));
+const Bundel = lazy(() => import('./pages/Bundel'));
+const Pricing = lazy(() => import('./pages/Pricing'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
+const Cookies = lazy(() => import('./pages/Cookies'));
+const GDPR = lazy(() => import('./pages/GDPR'));
+>>>>>>> 43a468f (Configure Netlify deployment settings)
 
 // Lazy load components for better performance
 const Services = lazy(() => import('./components/Services'));
@@ -32,6 +46,7 @@ function App() {
       <div className="min-h-screen">
         <main id="main-content" role="main">
         <Routes>
+<<<<<<< HEAD
           <Route path="/seo-website" element={<SEOWebsite />} />
           <Route path="/google-ads" element={<GoogleAds />} />
           <Route path="/ai-chatbots" element={<AIChatbots />} />
@@ -42,6 +57,21 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/cookies" element={<Cookies />} />
           <Route path="/gdpr" element={<GDPR />} />
+=======
+          <Route path="/website" element={<Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-brand"></div></div>}><SEOWebsite /></Suspense>} />
+          <Route path="/ads" element={<Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-brand"></div></div>}><GoogleAds /></Suspense>} />
+          <Route path="/ranking" element={<Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-brand"></div></div>}><GoogleRanking /></Suspense>} />
+          <Route path="/bundel" element={<Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-brand"></div></div>}><Bundel /></Suspense>} />
+          <Route path="/pricing" element={<Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-brand"></div></div>}><Pricing /></Suspense>} />
+          <Route path="/contact" element={<Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-brand"></div></div>}><Contact /></Suspense>} />
+          <Route path="/privacy" element={<Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-brand"></div></div>}><Privacy /></Suspense>} />
+          <Route path="/privacy-policy" element={<Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-brand"></div></div>}><Privacy /></Suspense>} />
+          <Route path="/terms" element={<Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-brand"></div></div>}><Terms /></Suspense>} />
+          <Route path="/terms-of-service" element={<Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-brand"></div></div>}><Terms /></Suspense>} />
+          <Route path="/cookies" element={<Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-brand"></div></div>}><Cookies /></Suspense>} />
+          <Route path="/cookie-policy" element={<Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-brand"></div></div>}><Cookies /></Suspense>} />
+          <Route path="/gdpr" element={<Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-brand"></div></div>}><GDPR /></Suspense>} />
+>>>>>>> 43a468f (Configure Netlify deployment settings)
           {/* Legacy routes for backward compatibility */}
           <Route path="/SEOWebsite" element={<SEOWebsite />} />
           <Route path="/GoogleAds" element={<GoogleAds />} />

@@ -1,6 +1,7 @@
 # Van Borg Limited - AI-Powered Local SEO & Lead Generation
 
 ## Company Overview
+<<<<<<< HEAD
 Van Borg Limited is a digital marketing agency based in London, UK, specialising in **local SEO**, **Google Ads lead generation**, **SEO-optimised websites**, and **AI-powered chatbots** for service-based businesses.
 
 We help UK companies dominate **Google Search & Google Maps**, turn website visitors into qualified leads, and automate the boring follow-up so you can focus on delivering your service — not chasing enquiries.
@@ -12,6 +13,18 @@ We help UK companies dominate **Google Search & Google Maps**, turn website visi
 - **Company Number:** 16172283 (Registered in England & Wales)  
 - **Currency:** GBP (British Pounds)  
 - **Service Area:** United Kingdom (England, Scotland, Wales, Northern Ireland)  
+=======
+Van Borg Limited is a digital marketing agency based in Veendam, Netherlands, specialising in **local SEO**, **Google Ads lead generation**, and **SEO-optimised websites** for service-based businesses.
+
+We help businesses in the **Netherlands**, **Europa** and **UK** dominate **Google Search & Google Maps**, turn website visitors into qualified leads, and automate the boring follow-up so you can focus on delivering your service — not chasing enquiries.
+
+**Company Details:**
+- **Legal Name:** Van Borg Limited  
+- **Trading As:** Vanborg.com  
+- **Location:** Kieler Bocht 104, Veendam, 9642 CE, Nederland  
+- **Currency:** GBP (British Pounds)  
+- **Service Area:** Netherlands, Europa and UK  
+>>>>>>> 43a468f (Configure Netlify deployment settings)
 - **Founded:** 2024  
 - **Industry:** Digital Marketing, Local SEO, AI Automation  
 - **Business Type:** Limited Company (Ltd)  
@@ -98,7 +111,7 @@ We help UK companies dominate **Google Search & Google Maps**, turn website visi
 ---
 
 ## Contact Information
-- **Phone:** +44 7846 885154  
+- **Phone:** +31 6 4473 2266  
 - **Email:** info@vanborglimited.com  
 - **Website:** https://vanborglimited.com  
 - **Business Hours:**  
@@ -125,7 +138,13 @@ You don’t need to manage any of this yourself — you get **implementation + o
 ## Target Market & Industries
 
 **Geographic Focus:**  
+<<<<<<< HEAD
 - United Kingdom: England, Scotland, Wales, Northern Ireland  
+=======
+- Netherlands
+- Europa
+- UK (United Kingdom): England, Scotland, Wales, Northern Ireland  
+>>>>>>> 43a468f (Configure Netlify deployment settings)
 
 **Business Size:**  
 - Small to medium service-based businesses that rely on **leads & booked jobs**

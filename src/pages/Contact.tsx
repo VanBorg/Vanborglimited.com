@@ -133,7 +133,9 @@ const Contact = memo(() => {
       description: 'Book a 15-minute call to discuss your business goals and how we can help you achieve them.',
       buttonText: 'Book Now',
       buttonVariant: 'primary' as const,
+      // Use darker, on-brand cards instead of light pastel boxes
       gradient: 'from-sky-500 to-cyan-500',
+<<<<<<< HEAD
       bgGradient: 'from-sky-100/80 to-cyan-50/80',
       borderColor: 'border-sky-200/50',
       hoverBorder: 'hover:border-sky-300/60',
@@ -175,6 +177,15 @@ const Contact = memo(() => {
       onClick: handleEmailClick
     }
   ];
+=======
+      bgGradient: 'from-gray-900 via-gray-800 to-gray-900',
+      borderColor: 'border-gray-800/70',
+      hoverBorder: 'hover:border-sky-500/60',
+      hoverBg: 'group-hover:from-gray-900 group-hover:to-gray-900',
+      onClick: onClickHandlers[index]
+    };
+  });
+>>>>>>> 43a468f (Configure Netlify deployment settings)
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-gray-100">

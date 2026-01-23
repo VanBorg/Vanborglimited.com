@@ -9,6 +9,7 @@ interface FAQData {
 }
 
 // ---- Link mapping for bold keywords ----
+<<<<<<< HEAD
 const pageLinks: Record<string, string> = {
   'AI Chatbots': '/ai-chatbots',
   'Contact': '/contact',
@@ -18,6 +19,31 @@ const pageLinks: Record<string, string> = {
   'Local SEO Ranking': '/google-ranking',
   'SEO Website': '/seo-website',
   'SEO Optimised Websites': '/seo-website',
+=======
+const getPageLinks = (language: string): Record<string, string> => {
+  const baseLinks: Record<string, string> = {
+    'Contact': '/contact',
+    'Google Ranking': '/ranking',
+    'Google Ads': '/ads',
+    'SEO Website': '/website',
+    'SEO Websites': '/website',
+    'Bundel': '/bundel',
+    'Complete Bundels': '/bundel',
+    'Local SEO Ranking': '/ranking',
+    'Local SEO': '/ranking',
+    'Pricing': '/pricing',
+    'Prijzen': '/pricing',
+  };
+  
+  // Add language-specific form links
+  if (language === 'nl') {
+    baseLinks['Loom video'] = 'https://docs.google.com/forms/d/e/1FAIpQLSdbAT6P9ocdaXFZhqNxdgLOvTUBGpv02TAS9LpT6xJmux7wuw/viewform?usp=dialog';
+  } else {
+    baseLinks['Loom video'] = 'https://docs.google.com/forms/d/e/1FAIpQLSfJ8aclT9LyywMbioiuLp4UKavLoojglUtuSXbOKKx1b_CgIA/viewform?usp=dialog';
+  }
+  
+  return baseLinks;
+>>>>>>> 43a468f (Configure Netlify deployment settings)
 };
 
 // ---- Icon ----
@@ -84,10 +110,14 @@ const FAQItem = memo(
 
     return (
       <div
+<<<<<<< HEAD
         className="bg-white/80 rounded-lg border border-slate-200 shadow-md hover:shadow-lg transition-all duration-200"
         itemScope
         itemProp="mainEntity"
         itemType="https://schema.org/Question"
+=======
+        className="bg-black/80 rounded-lg border border-gray-800 shadow-md hover:shadow-lg transition-all duration-200"
+>>>>>>> 43a468f (Configure Netlify deployment settings)
       >
         <button
           onClick={onToggle}
@@ -95,8 +125,12 @@ const FAQItem = memo(
           aria-expanded={isOpen}
         >
           <h3
+<<<<<<< HEAD
             className="text-sm sm:text-base font-bold text-gray-900 flex-1 leading-snug"
             itemProp="name"
+=======
+            className="text-sm sm:text-base font-bold text-gray-100 flex-1 leading-snug"
+>>>>>>> 43a468f (Configure Netlify deployment settings)
           >
             {question}
           </h3>
@@ -111,13 +145,14 @@ const FAQItem = memo(
         {isOpen && (
           <div
             className="px-4 sm:px-5 pb-4 sm:pb-5"
-            itemScope
-            itemProp="acceptedAnswer"
-            itemType="https://schema.org/Answer"
           >
             <div
+<<<<<<< HEAD
               className="text-sm sm:text-base text-gray-700 leading-relaxed whitespace-pre-line"
               itemProp="text"
+=======
+              className="text-sm sm:text-base text-gray-300 leading-relaxed whitespace-pre-line"
+>>>>>>> 43a468f (Configure Netlify deployment settings)
             >
               {renderText(answer)}
             </div>
@@ -304,9 +339,13 @@ const FAQSection = () => {
 
   return (
     <section
+<<<<<<< HEAD
       className="relative w-full py-12 sm:py-16 lg:py-20 bg-white"
       itemScope
       itemType="https://schema.org/FAQPage"
+=======
+      className="relative w-full py-12 sm:py-16 lg:py-20 bg-gray-900"
+>>>>>>> 43a468f (Configure Netlify deployment settings)
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Card variant="glass" size="medium">

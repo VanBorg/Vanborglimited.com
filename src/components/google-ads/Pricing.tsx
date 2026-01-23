@@ -7,9 +7,16 @@ const GoogleAdsPricing = memo(() => {
       className="relative w-full bg-white py-8 sm:py-12 lg:py-16"
       aria-labelledby="google-ads-pricing-heading"
     >
+<<<<<<< HEAD
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl bg-gray-50 border border-gray-200/70 shadow-sm px-4 py-6 sm:px-8 sm:py-8 lg:px-10 lg:py-10">
           <div className="text-center">
+=======
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Outer container with black background */}
+        <div className="rounded-3xl bg-black border border-gray-800/70 shadow-sm px-4 py-6 sm:px-8 sm:py-8 lg:px-10 lg:py-10 overflow-visible">
+          <div className="text-center mb-8 sm:mb-12">
+>>>>>>> 43a468f (Configure Netlify deployment settings)
             <h2
               id="google-ads-pricing-heading"
               className="mt-4 sm:mt-6 text-2xl font-black tracking-tight sm:text-3xl md:text-4xl"
@@ -27,6 +34,7 @@ const GoogleAdsPricing = memo(() => {
             </div>
           </div>
 
+<<<<<<< HEAD
           <div className="mt-6 sm:mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Setup Fee */}
             <Card variant="glass" size="medium">
@@ -34,6 +42,84 @@ const GoogleAdsPricing = memo(() => {
               <div className="text-center space-y-3 sm:space-y-4 pt-4">
                 <div className="inline-block bg-gradient-to-r from-sky-500 to-cyan-500 text-white text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full shadow-md">
                   ONE-TIME
+=======
+          {/* 3 Tier Cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto items-stretch">
+            {tiers.map((tier) => {
+              const tierData = t.ads.pricing.tiers[tier.key];
+              
+              return (
+                <div
+                  key={tier.key}
+                  className={`relative rounded-xl border-2 ${tier.borderColor} ${tier.ringColor} ring-2 ring-offset-4 ring-offset-black overflow-visible ${
+                    tier.isPopular
+                      ? 'shadow-xl'
+                      : 'shadow-sm'
+                  } bg-gray-900/90 backdrop-blur-sm p-6 transition-all duration-300 hover:shadow-lg h-full flex flex-col`}
+                >
+                  {tier.isPopular && (
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                      <span className={`inline-block bg-gradient-to-r ${tier.gradient} text-white text-xs font-bold px-4 py-1 rounded-full shadow-lg`}>
+                        {t.ads.pricing.labels.mostPopular}
+                      </span>
+                    </div>
+                  )}
+
+                  <div className="space-y-6 flex-1 flex flex-col">
+                    {/* Header */}
+                    <div className="text-center pt-4">
+                      {/* Name */}
+                      <h3 className={`text-3xl sm:text-4xl font-black bg-gradient-to-r ${tier.gradient} bg-clip-text text-transparent mb-2`}>
+                        {tierData.name}
+                      </h3>
+
+                      {/* Subtitle - closer to header */}
+                      <p className="text-sm sm:text-base font-medium text-white mb-4">
+                        {tierData.subtitle}
+                      </p>
+
+                      {/* Total Price */}
+                      <div className={`text-4xl sm:text-5xl font-black bg-gradient-to-r ${tier.gradient} bg-clip-text text-transparent mb-4`}>
+                        {tierData.totalPrice}
+                      </div>
+
+                      {/* Breakdown in black box */}
+                      <div className="bg-black rounded-xl border border-gray-800/70 px-4 py-3 space-y-1">
+                        <p className="text-xs sm:text-sm text-white">{tierData.adSpend}</p>
+                        <p className="text-xs sm:text-sm text-white">{tierData.management}</p>
+                      </div>
+                    </div>
+
+                    {/* Included Features */}
+                    <div className="space-y-3">
+                      <h4 className="text-sm font-semibold text-gray-200 uppercase tracking-wide">{t.ads.pricing.labels.included}</h4>
+                      <ul className="space-y-2">
+                        {tierData.included.map((feature, idx) => (
+                          <li key={idx} className="flex items-start gap-3">
+                            <div className={`w-5 h-5 bg-gradient-to-br ${tier.gradient} rounded-lg flex items-center justify-center shadow-sm flex-shrink-0 mt-0.5`}>
+                              <svg
+                                className="w-3 h-3 text-white"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2.5}
+                                  d="M5 13l4 4L19 7"
+                                />
+                              </svg>
+                            </div>
+                            <span className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                              {feature}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+>>>>>>> 43a468f (Configure Netlify deployment settings)
                 </div>
 
                 <h3 className="text-xl sm:text-2xl font-black text-gray-900">Setup Fee</h3>

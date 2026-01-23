@@ -2,19 +2,28 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Van Borg Limited",
+<<<<<<< HEAD
   "alternateName": "Vanborglimited.com",
   "url": "https://vanborglimited.com",
   "logo": "https://vanborglimited.com/favicon.svg",
   "description": "AI-powered digital marketing agency specializing in lead generation systems and comprehensive digital marketing solutions for UK businesses",
+=======
+  "alternateName": "vanborg.com",
+  "url": "https://vanborg.com/",
+  "logo": "https://vanborg.com/favicon.svg",
+  "image": "https://vanborg.com/og-image.jpg",
+  "description": "Netherlands-based specialists in Google Ranking (Local SEO & Google Business Profile), Google Ads and SEO Websites. Serving the Netherlands (NL), United Kingdom (UK), and the EU.",
+>>>>>>> 43a468f (Configure Netlify deployment settings)
   "foundingDate": "2024",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "71-75 Shelton Street",
-    "addressLocality": "Covent Garden",
-    "addressRegion": "London",
-    "postalCode": "WC2H 9JQ",
-    "addressCountry": "GB"
+    "streetAddress": "Kieler Bocht 104",
+    "addressLocality": "Veendam",
+    "addressRegion": "Groningen",
+    "postalCode": "9642 CE",
+    "addressCountry": "NL"
   },
+<<<<<<< HEAD
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
@@ -23,6 +32,44 @@
     "areaServed": "GB",
     "availableLanguage": "en",
     "hoursAvailable": {
+=======
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "telephone": "+31644732266",
+      "email": "info@vanborglimited.com",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSfJ8aclT9LyywMbioiuLp4UKavLoojglUtuSXbOKKx1b_CgIA/viewform",
+      "areaServed": [
+        { "@type": "Country", "name": "Netherlands", "identifier": "NL" },
+        { "@type": "Place", "name": "EU" },
+        { "@type": "Country", "name": "United Kingdom", "identifier": "GB" }
+      ],
+      "availableLanguage": ["en-GB", "en", "nl"]
+    },
+    {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "telephone": "+31644732266",
+      "contactOption": "https://schema.org/WhatsApp",
+      "areaServed": [
+        { "@type": "Country", "name": "Netherlands", "identifier": "NL" },
+        { "@type": "Place", "name": "EU" },
+        { "@type": "Country", "name": "United Kingdom", "identifier": "GB" }
+      ],
+      "availableLanguage": ["nl", "en", "en-GB"]
+    }
+  ],
+  "sameAs": [
+    "https://vanborg.com",
+    "https://www.facebook.com/profile.php?id=61580148003782",
+    "https://x.com/VanBorgLimited",
+    "https://www.linkedin.com/in/van-borg/",
+    "https://www.google.com/maps/place/Van+Borg+Limited/data=!4m2!3m1!1s0x0:0x42a15c3175bf4659?sa=X&ved=1t:2428&ictx=111"
+  ],
+  "openingHoursSpecification": [
+    {
+>>>>>>> 43a468f (Configure Netlify deployment settings)
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
       "opens": "08:00",
@@ -36,12 +83,20 @@
     "https://x.com/VanBorgLimited",
     "https://share.google/zC3N9lSOaJGFbh9Xi"
   ],
+<<<<<<< HEAD
   "priceRange": "£499-£4,999",
   "currency": "GBP",
   "areaServed": {
     "@type": "Country",
     "name": "United Kingdom"
   },
+=======
+  "areaServed": [
+    { "@type": "Country", "name": "Netherlands", "identifier": "NL" },
+    { "@type": "Country", "name": "United Kingdom", "identifier": "GB" },
+    { "@type": "Place", "name": "EU" }
+  ],
+>>>>>>> 43a468f (Configure Netlify deployment settings)
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Digital Marketing Services",

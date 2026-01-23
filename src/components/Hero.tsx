@@ -1,5 +1,8 @@
 import { memo, useCallback } from 'react';
+<<<<<<< HEAD
 import { useNavigate } from 'react-router-dom';
+=======
+>>>>>>> 43a468f (Configure Netlify deployment settings)
 import Button from './Button';
 import Card from './Card';
 
@@ -53,31 +56,70 @@ const Hero = memo(() => {
   return (
     <section 
       id="hero"
+<<<<<<< HEAD
       className="bg-gradient-to-br from-white via-gray-50 to-gray-100 relative min-h-[100vh] w-full overflow-hidden" 
       aria-label="Van Borg Limited - AI-powered solutions hero section"
+=======
+      className="bg-gray-900 relative w-full overflow-hidden" 
+      aria-label="Van Borg Limited - Local SEO and Google Ranking Services"
+>>>>>>> 43a468f (Configure Netlify deployment settings)
     >
-      <div className="relative max-w-6xl mx-auto px-4 pt-24 pb-8 sm:px-6 sm:pt-28 sm:pb-12 lg:pt-32 lg:pb-20">
+      <div className="relative max-w-6xl mx-auto px-4 pt-24 pb-8 sm:px-6 sm:pt-28 sm:pb-10 lg:pt-32 lg:pb-12">
         <div className="max-w-4xl mx-auto">
           <Card variant="glass" size="medium">
-            <div className="max-w-3xl mx-auto text-center space-y-4 sm:space-y-6 lg:space-y-8">
+            <div className="max-w-3xl mx-auto text-center space-y-4 sm:space-y-5 lg:space-y-6">
               
               {/* Header */}
               <header className="space-y-4 sm:space-y-6">
                 <h1 className="font-black text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl tracking-tight leading-tight">
+<<<<<<< HEAD
                  <span className="bg-gradient-to-r from-sky-500 via-cyan-500 to-blue-500 bg-clip-text text-transparent">
                   Local SEO Services That Rank You in Google's Top 5
                 </span> 
+=======
+                  {(() => {
+                    const title = t.hero.title;
+                    const parts = title.split(', ');
+                    if (parts.length === 2) {
+                      return (
+                        <>
+                          <span className="text-gray-100">
+                            {parts[0]}, 
+                          </span>
+                          {' '}
+                          <span className="text-orange-500">{parts[1]}</span>
+                        </>
+                      );
+                    }
+                    return (
+                      <span className="text-gray-100">
+                        {title}
+                      </span>
+                    );
+                  })()}
+>>>>>>> 43a468f (Configure Netlify deployment settings)
               </h1>
 
-              <div className="relative max-w-5xl mx-auto">
+              <div className="relative max-w-5xl lg:max-w-6xl mx-auto">
                 {/* Reduced backdrop-blur for better mobile performance */}
+<<<<<<< HEAD
                 <div className="bg-gray-100/90 sm:bg-gray-100/80 rounded-2xl px-4 py-3 sm:px-6 sm:py-4 border border-gray-200/50 shadow-sm space-y-1.5">
                   <h2 className="text-base sm:text-lg md:text-xl text-gray-900 font-bold leading-tight">
                     Rank in Google's Top 5 within 90 days, <span className="text-sky-600"> or get every penny back.</span>
                   </h2>
                   <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                   Once you're in the top 5, we can scale further with Google Ads and a high-converting website.
+=======
+                <div className="bg-gray-900/90 sm:bg-gray-900/80 rounded-2xl px-4 py-3 sm:px-6 sm:py-4 border border-gray-800/50 shadow-sm">
+                  <p className="text-base sm:text-lg md:text-xl text-gray-200 font-bold leading-tight">
+                    {t.hero.subtitle}
+>>>>>>> 43a468f (Configure Netlify deployment settings)
                   </p>
+                  {t.hero.description && (
+                    <p className="text-sm sm:text-base text-gray-300 leading-relaxed mt-1.5">
+                      {t.hero.description}
+                    </p>
+                  )}
                 </div>
               </div>
               </header>

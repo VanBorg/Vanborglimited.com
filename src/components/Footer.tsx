@@ -18,6 +18,26 @@ const pages = [
 ];
 
 const Footer = memo(() => {
+<<<<<<< HEAD
+=======
+  const { t } = useI18n();
+  
+  const navLinks = [
+    { label: t.footer.navLinks.ranking, href: '/ranking' },
+    { label: t.footer.navLinks.ads, href: '/ads' },
+    { label: t.footer.navLinks.website, href: '/website' },
+    { label: t.footer.navLinks.bundel, href: '/bundel' },
+  ];
+
+  // Pages section: Home at top, services in middle, Pricing, Contact at bottom
+  const pages = [
+    { label: t.footer.pagesLinks.home, href: '/' },
+    ...navLinks,
+    { label: t.footer.pagesLinks.pricing, href: '/pricing' },
+    { label: t.navbar.contact, href: '/contact' },
+  ];
+
+>>>>>>> 43a468f (Configure Netlify deployment settings)
   return (
     <footer className="relative w-full overflow-hidden bg-gradient-to-br from-white via-gray-50 to-gray-100 text-gray-700">
       {/* Background Accents */}
@@ -112,7 +132,7 @@ const Footer = memo(() => {
 
                 {/* LinkedIn */}
                 <a
-                  href="https://www.linkedin.com/in/niclas-van-borg/"
+                  href="https://www.linkedin.com/in/van-borg/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Visit our LinkedIn profile"
@@ -209,6 +229,7 @@ const Footer = memo(() => {
               </span>
               Business Info
             </h2>
+<<<<<<< HEAD
             <div className="rounded-xl border border-gray-200/50 bg-gray-100/80 backdrop-blur-sm p-5 shadow-sm ring-1 ring-white/60 w-fit max-w-xs">
               <address className="not-italic text-sm leading-relaxed space-y-1 text-gray-600 font-body">
                 <div>71-75 Shelton Street</div>
@@ -232,6 +253,24 @@ const Footer = memo(() => {
                       <span className="whitespace-nowrap">Sunday:</span>
                       <span className="font-medium text-gray-900 whitespace-nowrap">10:30 AM - 5:00 PM</span>
                     </div>
+=======
+            <div className="rounded-xl border border-gray-800/50 bg-gray-900/80 backdrop-blur-sm p-5 shadow-sm ring-1 ring-gray-800/60 w-fit max-w-xs">
+              <address className="not-italic text-sm leading-relaxed space-y-1 text-gray-400 font-body">
+                <div>Kieler Bocht 104</div>
+                <div>Veendam, 9642 CE</div>
+                <div>Nederland</div>
+                <div>
+                  <a href="mailto:info@vanborglimited.com" className="text-gray-100 font-semibold hover:text-sky-400 transition-colors">
+                    info@vanborglimited.com
+                  </a>
+                </div>
+                <div className="pt-2">
+                  <div>
+                    <span className="text-gray-500 text-xs uppercase tracking-wide mr-2">NL:</span>
+                    <a href="tel:+31644732266" className="text-gray-100 font-semibold hover:text-sky-400 transition-colors">
+                      +31 6 4473 2266
+                    </a>
+>>>>>>> 43a468f (Configure Netlify deployment settings)
                   </div>
                 </div>
               </address>

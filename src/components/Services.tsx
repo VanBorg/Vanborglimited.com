@@ -81,8 +81,116 @@ const sanitizeHTML = (html: string): string => {
     .replace(/on\w+='[^']*'/g, '');
 };
 
+<<<<<<< HEAD
 const Services = () => {
   const [activeService, setActiveService] = useState<Service>(services[0]);
+=======
+const services: Service[] = [
+  {
+    id: 'seo',
+    title: 'Local SEO Ranking',
+    icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z',
+    image: '/images/google-ranking.png',
+  },
+  {
+    id: 'google-ads',
+    title: 'Google Ads',
+    icon: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6',
+    image: '/images/google-ads.png',
+  },
+  {
+    id: 'seo-website',
+    title: 'SEO Websites',
+    icon: 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
+    image: '/images/seo-website.png',
+  },
+  {
+    id: 'bundel',
+    title: 'Complete Bundels',
+    icon: 'M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z',
+    image: '/images/bundel.png',
+  }
+];
+
+const getTranslatedTitle = (serviceId: string, translations: any): string => {
+  const titleMap: Record<string, string> = {
+    seo: translations.navbar.services.ranking,
+    'google-ads': translations.navbar.services.ads,
+    'seo-website': translations.navbar.services.website,
+    bundel: translations.navbar.services.bundel
+  };
+  return titleMap[serviceId] || '';
+};
+
+const Services = memo(() => {
+  const { t, language } = useI18n();
+  const sectionRef = useRef<HTMLElement>(null);
+  const [shouldLoadImages, setShouldLoadImages] = useState(false);
+  const hasInitializedRef = useRef(false);
+
+  const getTranslatedServices = useCallback((): Service[] => {
+    return services.map((service) => ({
+      ...service,
+      title: getTranslatedTitle(service.id, t)
+    }));
+  }, [t]);
+
+  const [activeService, setActiveService] = useState<Service>(getTranslatedServices()[0]);
+
+  useEffect(() => {
+    const translatedServices = getTranslatedServices();
+    const currentActive = translatedServices.find((s) => s.id === activeService.id);
+    if (currentActive) {
+      setActiveService(currentActive);
+    }
+  }, [language, getTranslatedServices, activeService.id]);
+
+  // Preload images immediately when component mounts
+  useEffect(() => {
+    // Preload all service images immediately
+    const imageUrls = services.map(service => service.image);
+    imageUrls.forEach(url => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = url;
+      document.head.appendChild(link);
+    });
+
+    // Load images when section comes into view (earlier trigger)
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasInitializedRef.current) {
+          setShouldLoadImages(true);
+          hasInitializedRef.current = true;
+          observer.disconnect();
+        }
+      },
+      {
+        rootMargin: '500px', // Start loading 500px before section comes into view
+        threshold: 0.01
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    // Fallback: Load after 300ms if not already loaded
+    const fallbackTimer = setTimeout(() => {
+      if (!hasInitializedRef.current) {
+        setShouldLoadImages(true);
+        hasInitializedRef.current = true;
+        observer.disconnect();
+      }
+    }, 300);
+
+    return () => {
+      clearTimeout(fallbackTimer);
+      observer.disconnect();
+    };
+  }, []);
+>>>>>>> 43a468f (Configure Netlify deployment settings)
 
   const handleServiceClick = useCallback((service: Service) => {
     setActiveService(service);
@@ -218,6 +326,7 @@ const Services = () => {
               className="rounded-2xl bg-gradient-to-br from-sky-50/80 to-cyan-50/80 border border-sky-200/50 shadow-lg lg:order-2"
               aria-labelledby={`service-tab-${activeService.id}`}
             >
+<<<<<<< HEAD
               <div className="p-4 sm:p-5 lg:p-6 flex flex-col gap-4">
                 
                 {/* Service Header */}
@@ -229,6 +338,19 @@ const Services = () => {
                     >
                       <svg
                         className="w-6 h-6"
+=======
+              {/* fixed min height so tabs don't jump */}
+              <div className="p-4 sm:p-5 lg:p-6 min-h-[360px] sm:min-h-[380px] lg:min-h-[420px]">
+                <div className="flex flex-col gap-4 sm:gap-5 lg:gap-6 h-full">
+                  {/* Title Row */}
+                  <div className="flex items-center gap-3">
+                    <div
+                      className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-sky-500 to-cyan-500 text-white flex items-center justify-center shadow-md"
+                      aria-hidden="true"
+                    >
+                      <svg
+                        className="w-5 h-5 sm:w-6 sm:h-6"
+>>>>>>> 43a468f (Configure Netlify deployment settings)
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -241,12 +363,17 @@ const Services = () => {
                         />
                       </svg>
                     </div>
+<<<<<<< HEAD
 
                     <h3 className="text-lg sm:text-xl font-bold text-gray-900 leading-tight">
+=======
+                    <h3 className="text-base sm:text-lg font-bold text-gray-100 leading-tight break-words">
+>>>>>>> 43a468f (Configure Netlify deployment settings)
                       {activeService.title}
                     </h3>
                   </div>
 
+<<<<<<< HEAD
                   <Button
                     variant="primary"
                     onClick={handleSeeMore}
@@ -264,6 +391,71 @@ const Services = () => {
                       className="text-sm sm:text-base text-gray-700 leading-relaxed space-y-3 [&>p]:m-0 [&>p:last-child]:mb-0"
                       dangerouslySetInnerHTML={{ __html: sanitizeHTML(activeService.description) }}
                     />
+=======
+                  {/* Content + Image Row */}
+                  <div className="grid grid-cols-1 lg:grid-cols-[1.8fr_1.2fr] lg:gap-6 flex-1">
+                    {/* Left: Text + Price boxes */}
+                    <div className="flex flex-col gap-4">
+                      <div className="bg-black/90 rounded-xl px-4 py-3 border border-gray-800/50 shadow-sm">
+                        <div
+                          className="text-xs sm:text-sm text-gray-300 leading-relaxed space-y-2 [&>p]:m-0 [&>p:last-child]:mb-0"
+                          dangerouslySetInnerHTML={{
+                            __html: sanitizeHTML(t.services.serviceDetails[activeService.id as keyof typeof t.services.serviceDetails].description)
+                          }}
+                        />
+                      </div>
+
+                      <dl className="grid grid-cols-2 gap-3">
+                        <div className="bg-black rounded-xl border border-gray-800/70 shadow-sm px-3 py-2.5">
+                          <dt className="text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-gray-500 mb-1.5">
+                            {t.services.setupPrice}
+                          </dt>
+                          <dd className="text-base sm:text-lg font-black text-gray-100">
+                            {t.services.serviceDetails[activeService.id as keyof typeof t.services.serviceDetails].oneTimePrice}
+                          </dd>
+                        </div>
+                        <div className="bg-black rounded-xl border border-gray-800/70 shadow-sm px-3 py-2.5">
+                          <dt className="text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-gray-500 mb-1.5">
+                            {t.services.timeline}
+                          </dt>
+                          <dd className="text-base sm:text-lg font-black text-gray-100">
+                            {t.services.serviceDetails[activeService.id as keyof typeof t.services.serviceDetails].timeline}
+                          </dd>
+                        </div>
+                      </dl>
+                    </div>
+
+                    {/* Right: Button above Image */}
+                    <div className="flex flex-col items-end gap-4 lg:justify-start lg:h-full">
+                      <Button
+                        variant="primary"
+                        onClick={handleSeeMore}
+                        ariaLabel={`Meer informatie over ${activeService.title}`}
+                        className="!w-full !h-12 sm:!h-14 !px-6 sm:!px-8 !py-0 !text-sm sm:!text-base !font-semibold !rounded-lg !shadow-md hover:!shadow-lg !whitespace-nowrap !flex !items-center !justify-center"
+                      >
+                        {t.services.moreInfo}
+                      </Button>
+                      
+                      <div className="flex-1 flex items-end lg:items-start">
+                        {shouldLoadImages ? (
+                          <img
+                            src={activeService.image}
+                            alt={`${activeService.title} - ${t.services.title}`}
+                            className="w-full max-w-[280px] max-h-[320px] sm:max-h-[360px] object-contain rounded-lg"
+                            loading="eager"
+                            fetchPriority="high"
+                            width="280"
+                            height="360"
+                            decoding="async"
+                          />
+                        ) : (
+                          <div className="w-full max-w-[280px] max-h-[320px] sm:max-h-[360px] bg-gray-800/50 rounded-lg animate-pulse flex items-center justify-center">
+                            <div className="w-16 h-16 border-2 border-gray-700 border-t-sky-500 rounded-full animate-spin" />
+                          </div>
+                        )}
+                      </div>
+                    </div>
+>>>>>>> 43a468f (Configure Netlify deployment settings)
                   </div>
                 </div>
 

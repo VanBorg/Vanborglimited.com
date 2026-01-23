@@ -1,59 +1,33 @@
 [build]
-  # Build command
-  command = "npm run build"
-  
-  # Directory to publish (Vite's default output directory)
-  publish = "dist"
-  
-  # Node.js version (Vite 7 requires Node 20.19+ or 22.12+)
-  [build.environment]
-    NODE_VERSION = "20.19.0"
-
-# Redirect rules for SPA routing
+command = "npm run build"
+publish = "dist"
+[build.environment]
+NODE_VERSION = "20.19.0"
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-# Headers for security and performance
+from = "/"
+to = "/index.html"
+status = 200
 [[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    Cross-Origin-Opener-Policy = "same-origin"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; frame-ancestors 'none'; upgrade-insecure-requests"
-
-# Cache static assets
+for = "/"
+[headers.values]
+X-Frame-Options = "DENY"
+X-XSS-Protection = "1; mode=block"
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "strict-origin-when-cross-origin"
+Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 [[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# Cache HTML files for shorter period
+for = "/assets/"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
 [[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
-
-# Cache other static files
+for = "/.html"
+[headers.values]
+Cache-Control = "public, max-age=0, must-revalidate"
 [[headers]]
-  for = "/*.css"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000"
-
+for = "/.css"
+[headers.values]
+Cache-Control = "public, max-age=31536000"
 [[headers]]
-  for = "/*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000"
-
-# Security headers for API routes (if any)
-[[headers]]
-  for = "/api/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
+for = "/.js"
+[headers.values]
+Cache-Control = "public, max-age=31536000"

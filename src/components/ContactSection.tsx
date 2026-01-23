@@ -1,5 +1,6 @@
 import { memo, useCallback, useEffect, useRef, useState } from "react";
 import Button from './Button';
+<<<<<<< HEAD
 import Card from './Card';
 
 // Preload Google Maps resources
@@ -118,6 +119,11 @@ const GoogleMapEmbed = memo(() => {
 
 GoogleMapEmbed.displayName = 'GoogleMapEmbed';
 
+=======
+import GoogleMapEmbed from './GoogleMapEmbed';
+import { useI18n } from '../i18n/context';
+
+>>>>>>> 43a468f (Configure Netlify deployment settings)
 const ContactSection = memo(() => {
   const handleScheduleMeeting = useCallback(() => {
     window.open('https://calendly.com/vanborglimited/book-a-call-vbl', '_blank', 'noopener,noreferrer');
@@ -137,7 +143,8 @@ const ContactSection = memo(() => {
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
-          <Card variant="glass" size="medium">
+          {/* Grey container box inside black section */}
+          <div className="rounded-2xl border border-gray-800/70 bg-gray-800/90 shadow-lg p-4 sm:p-6 lg:p-8">
             <div className="mx-auto max-w-3xl space-y-6 text-center sm:space-y-8">
               {/* Header */}
               <header className="space-y-4 sm:space-y-6">
@@ -149,9 +156,15 @@ const ContactSection = memo(() => {
                 </h2>
 
                 <div className="relative mx-auto max-w-5xl">
+<<<<<<< HEAD
                   <div className="rounded-2xl border border-gray-200/50 bg-gray-100/80 px-4 py-2 shadow-sm backdrop-blur-sm sm:px-6 sm:py-3">
                     <p className="text-sm font-medium leading-relaxed text-gray-700 sm:text-base md:text-lg">
                       Let's discuss how we can help you dominate local search, and generate more leads.
+=======
+                  <div className="rounded-2xl border border-gray-800/50 bg-black px-4 py-2 shadow-sm sm:px-6 sm:py-3">
+                    <p className="text-sm font-medium leading-relaxed text-gray-300 sm:text-base md:text-lg">
+                      {t.contact.description}
+>>>>>>> 43a468f (Configure Netlify deployment settings)
                     </p>
                   </div>
                 </div>
@@ -161,8 +174,8 @@ const ContactSection = memo(() => {
               <div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-2 lg:gap-8">
                 {/* Left: Google Map + Buttons */}
                 <div className="order-1 lg:order-1 flex flex-col gap-4">
-                  {/* Google Map - takes up remaining space */}
-                  <div className="flex-1 min-h-[300px] sm:min-h-[400px]">
+                  {/* Google Map - black box */}
+                  <div className="flex-1 min-h-[300px] sm:min-h-[400px] rounded-xl border border-gray-800/60 bg-black overflow-hidden">
                     <GoogleMapEmbed />
                   </div>
 
@@ -188,11 +201,17 @@ const ContactSection = memo(() => {
                   </div>
                 </div>
 
-                {/* Right: Contact Information */}
+                {/* Right: Contact Information - black box inside grey container */}
                 <div className="order-2 lg:order-2 flex flex-col">
+<<<<<<< HEAD
                   <div className="rounded-xl border border-sky-200/60 bg-gradient-to-br from-sky-50 via-cyan-50 to-blue-50 p-4 shadow-sm ring-1 ring-white/60 backdrop-blur-sm sm:p-6 flex-1 flex flex-col">
                     <h3 className="mb-4 text-left text-lg font-semibold text-gray-900 sm:text-xl">
                       Contact Information
+=======
+                  <div className="rounded-xl border border-gray-800/60 bg-black p-4 shadow-sm ring-1 ring-gray-800/60 sm:p-6 flex-1 flex flex-col">
+                    <h3 className="mb-2 text-left text-lg font-semibold text-gray-100 sm:text-xl">
+                      {t.contact.contactInfo}
+>>>>>>> 43a468f (Configure Netlify deployment settings)
                     </h3>
                     
                     {/* Vertical Stack Layout with Divider - centered vertically */}
@@ -216,9 +235,37 @@ const ContactSection = memo(() => {
                           <p>United Kingdom</p>
                         </address>
                       </div>
+<<<<<<< HEAD
 
                       {/* Horizontal Divider */}
                       <div className="border-t border-gray-300/60"></div>
+=======
+                      <address className="not-italic space-y-1 ml-8">
+                        <p className="font-semibold text-gray-100 text-base sm:text-lg">Van Borg Limited</p>
+                        <p>Kieler Bocht 104</p>
+                        <p>Veendam, 9642 CE</p>
+                        <p>Nederland</p>
+                        <div className="mt-3 space-y-1">
+                          <p>
+                            <span className="text-gray-500 text-xs uppercase tracking-wide mr-2">NL:</span>
+                            <a 
+                              href="tel:+31644732266" 
+                              className="text-sky-600 hover:text-sky-700 font-semibold underline decoration-2 underline-offset-2 transition-colors"
+                            >
+                              +31 6 4473 2266
+                            </a>
+                          </p>
+                        </div>
+                        <p className="mt-3">
+                          <a 
+                            href="mailto:info@vanborglimited.com" 
+                            className="text-sky-600 hover:text-sky-700 font-semibold underline decoration-2 underline-offset-2 transition-colors"
+                          >
+                            info@vanborglimited.com
+                          </a>
+                        </p>
+                      </address>
+>>>>>>> 43a468f (Configure Netlify deployment settings)
 
                       {/* Opening Times */}
                       <div className="text-left text-sm text-gray-700 sm:text-base">
@@ -250,7 +297,7 @@ const ContactSection = memo(() => {
                 </div>
               </div>
             </div>
-          </Card>
+          </div>
         </div>
       </div>
     </section>

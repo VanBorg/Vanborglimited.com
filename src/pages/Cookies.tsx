@@ -290,8 +290,12 @@ const Cookies = memo(() => {
                         <strong>Email:</strong> info@vanborglimited.com
                       </p>
                       <p>
+<<<<<<< HEAD
                         <strong>Address:</strong> 71-75 Shelton Street, Covent Garden, London WC2H
                         9JQ, United Kingdom
+=======
+                        <strong>{t.cookies.sections.contact.address}:</strong> Kieler Bocht 104, Veendam, 9642 CE, Nederland
+>>>>>>> 43a468f (Configure Netlify deployment settings)
                       </p>
                       <p>
                         <strong>Company No:</strong> 16172283

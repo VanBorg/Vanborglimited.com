@@ -28,6 +28,10 @@ const STEPS = [
 ];
 
 const HowWeWork = memo(() => {
+<<<<<<< HEAD
+=======
+  const { t, language } = useI18n();
+>>>>>>> 43a468f (Configure Netlify deployment settings)
   const [slidesPerView, setSlidesPerView] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -90,6 +94,7 @@ const HowWeWork = memo(() => {
               >
                 How We Work
               </h2>
+<<<<<<< HEAD
               <div className="relative max-w-fit mx-auto">
                 <div className="bg-gray-100/80 backdrop-blur-sm rounded-2xl px-4 py-2 sm:px-6 sm:py-3 border border-gray-200/50 shadow-sm">
                   <h3 className="text-sm sm:text-base md:text-lg text-gray-700 font-semibold leading-relaxed">
@@ -102,6 +107,21 @@ const HowWeWork = memo(() => {
                     </a>{' '}
                     and let&apos;s talk.
                   </h3>
+=======
+
+              {/* Pricing link in black box */}
+              <div className="relative max-w-3xl mx-auto mt-4">
+                <div className="bg-black rounded-2xl px-4 py-3 sm:px-6 sm:py-4 border border-gray-800/70 shadow-sm">
+                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed text-center">
+                    {t.howWeWork.description.split('?')[0]}?{' '}
+                    <a
+                      href="/pricing"
+                      className="text-sky-600 hover:text-sky-700 font-semibold underline"
+                    >
+                      {language === 'nl' ? 'Bekijk prijzen' : 'View pricing'}
+                    </a>
+                  </p>
+>>>>>>> 43a468f (Configure Netlify deployment settings)
                 </div>
               </div>
             </header>

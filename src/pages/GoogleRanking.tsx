@@ -80,16 +80,16 @@ const GoogleRanking = () => {
       "description": "Expert local SEO and Google Maps ranking services to help businesses dominate local search results",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "71-75 Shelton Street",
-        "addressLocality": "Covent Garden",
-        "addressRegion": "London",
-        "postalCode": "WC2H 9JQ",
-        "addressCountry": "GB"
+        "streetAddress": "Kieler Bocht 104",
+        "addressLocality": "Veendam",
+        "addressRegion": "Groningen",
+        "postalCode": "9642 CE",
+        "addressCountry": "NL"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "51.5145",
-        "longitude": "-0.1231"
+        "latitude": "53.09899",
+        "longitude": "6.86799"
       },
       "url": "https://vanborglimited.com/google-ranking",
       "telephone": "+447846885154",
@@ -116,7 +116,7 @@ const GoogleRanking = () => {
       ],
       "sameAs": [
         "https://www.facebook.com/profile.php?id=61580148003782",
-        "https://www.linkedin.com/in/niclas-van-borg/",
+        "https://www.linkedin.com/in/van-borg/",
         "https://x.com/VanBorgLimited",
         "https://share.google/zC3N9lSOaJGFbh9Xi"
       ],

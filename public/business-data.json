@@ -1,16 +1,22 @@
 {
   "name": "Van Borg Limited",
   "legalName": "Van Borg Limited",
+<<<<<<< HEAD
   "tradingAs": "Vanborglimited.com",
   "description": "London-based digital marketing agency specialising in Local SEO, Google Ads lead generation, SEO-optimised websites and AI chatbots for service-based businesses across the UK.",
   "url": "https://vanborglimited.com",
   "logo": "https://vanborglimited.com/favicon.svg",
+=======
+  "tradingAs": "Vanborg.com",
+  "description": "Netherlands-based digital marketing agency specialising in Local SEO, Google Ads lead generation and SEO-optimised websites for service-based businesses in the Netherlands (NL), United Kingdom (UK), and the EU.",
+  "url": "https://vanborg.com",
+  "logo": "https://vanborg.com/favicon.svg",
+>>>>>>> 43a468f (Configure Netlify deployment settings)
   "foundingDate": "2024",
-  "companyNumber": "16172283",
   "businessType": "Limited Company (Ltd)",
   "industry": "Digital Marketing, Local SEO, Google Ads, AI Automation",
   "keywords": [
-    "local seo london",
+    "local seo netherlands",
     "google maps ranking agency",
     "google business profile optimisation",
     "google ads lead generation",
@@ -22,15 +28,19 @@
     "local seo agency uk"
   ],
   "address": {
-    "streetAddress": "71-75 Shelton Street",
-    "addressLocality": "Covent Garden",
-    "addressRegion": "London",
-    "postalCode": "WC2H 9JQ",
-    "addressCountry": "GB",
-    "addressCountryName": "United Kingdom"
+    "streetAddress": "Kieler Bocht 104",
+    "addressLocality": "Veendam",
+    "addressRegion": "Groningen",
+    "postalCode": "9642 CE",
+    "addressCountry": "NL",
+    "addressCountryName": "Netherlands"
   },
   "contact": {
+<<<<<<< HEAD
     "phone": "+44-7846-885154",
+=======
+    "phone": "+31 6 4473 2266",
+>>>>>>> 43a468f (Configure Netlify deployment settings)
     "email": "info@vanborglimited.com",
     "businessHours": "Monday–Friday: 8:00 AM – 9:00 PM; Saturday: 9:00 AM – 8:00 PM; Sunday: 10:30 AM – 5:00 PM (UK time)"
   },
@@ -146,7 +156,11 @@
     "Git & GitHub version control"
   ],
   "targetMarket": {
+<<<<<<< HEAD
     "geographic": "United Kingdom (England, Scotland, Wales, Northern Ireland)",
+=======
+    "geographic": "Netherlands, Europa and UK",
+>>>>>>> 43a468f (Configure Netlify deployment settings)
     "businessSize": "Small to medium service-based businesses (SMEs)",
     "industries": [
       "Plumbing services",
@@ -251,7 +265,13 @@
     }
   },
   "currency": "GBP",
+<<<<<<< HEAD
   "serviceArea": "United Kingdom",
   "lastUpdated": "2025-01-30",
   "documentVersion": "3.1"
+=======
+  "serviceArea": "Netherlands, Europa and UK",
+  "lastUpdated": "2025-01-27",
+  "documentVersion": "3.2"
+>>>>>>> 43a468f (Configure Netlify deployment settings)
 }

@@ -158,10 +158,45 @@ const Navbar = memo(() => {
               </button>
             </div>
 
+<<<<<<< HEAD
             {/* Navigation Links - Center (hidden on mobile) */}
             <div className="hidden md:flex flex-1 items-center justify-center gap-6">
               {/* Services Dropdown */}
               <div className="relative" ref={dropdownRef}>
+=======
+            {/* Navigation Links - Center (desktop) */}
+            <div className="hidden md:flex flex-1 items-center justify-center gap-4 lg:gap-6">
+              {services.map((service) => (
+              <Link
+                key={service.href}
+                to={service.href}
+                onClick={handleNavClick(service.href)}
+                className="relative px-4 py-1.5 text-base lg:text-lg font-bold text-gray-100 hover:text-sky-400 transition-all duration-300 rounded-lg group/link overflow-hidden flex items-center justify-center"
+              >
+                  <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-sky-500 to-cyan-500 group-hover/link:w-full transition-all duration-300 rounded-full" />
+                  <span className="absolute inset-0 opacity-0 group-hover/link:opacity-100 bg-gradient-to-r from-gray-800/80 to-gray-800/80 transition-opacity duration-300 rounded-lg -z-10" />
+                  <span className="absolute inset-0 opacity-0 group-hover/link:opacity-100 shadow-sm transition-opacity duration-300 rounded-lg -z-20" />
+                  <span className="relative tracking-tight text-center">{service.label}</span>
+                </Link>
+              ))}
+              <Link
+                to="/pricing"
+                onClick={handleNavClick('/pricing')}
+                className="relative px-4 py-1.5 text-base lg:text-lg font-bold text-gray-100 hover:text-sky-400 transition-all duration-300 rounded-lg group/link overflow-hidden flex items-center justify-center"
+              >
+                <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-sky-500 to-cyan-500 group-hover/link:w-full transition-all duration-300 rounded-full" />
+                <span className="absolute inset-0 opacity-0 group-hover/link:opacity-100 bg-gradient-to-r from-gray-800/80 to-gray-800/80 transition-opacity duration-300 rounded-lg -z-10" />
+                <span className="absolute inset-0 opacity-0 group-hover/link:opacity-100 shadow-sm transition-opacity duration-300 rounded-lg -z-20" />
+                <span className="relative tracking-tight text-center">{t.footer.pagesLinks.pricing}</span>
+              </Link>
+            </div>
+
+            {/* CTA + Lang - Right */}
+            <div className="flex items-center justify-end gap-3 flex-1">
+              {/* Mobile: Hamburger + Language Toggle */}
+              <div className="md:hidden flex items-center gap-2 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+                {/* Mobile menu button */}
+>>>>>>> 43a468f (Configure Netlify deployment settings)
                 <button
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
                   className="relative px-4 py-2.5 text-sm lg:text-lg font-semibold lg:font-bold text-gray-900 hover:text-gray-900 transition-colors duration-200 rounded-lg group/link overflow-hidden sm:px-5 sm:py-3 sm:transition-all sm:duration-300 flex items-center gap-1"
@@ -337,6 +372,7 @@ const Navbar = memo(() => {
           <div className="px-4 py-6 space-y-4">
             {/* Mobile Navigation Links */}
             <div className="space-y-2">
+<<<<<<< HEAD
               <button
                 onClick={() => handleNavClick('/calculator')}
                 className="w-full text-left px-4 py-3 rounded-lg hover:bg-sky-50 transition-colors duration-200 font-medium text-gray-900"
@@ -375,6 +411,25 @@ const Navbar = memo(() => {
                   ))}
                 </div>
               </div>
+=======
+              {services.map((service) => (
+                <Link
+                  key={service.href}
+                  to={service.href}
+                  onClick={handleNavClick(service.href)}
+                  className="block w-full text-left px-4 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200 font-medium text-gray-100"
+                >
+                  {service.label}
+                </Link>
+              ))}
+              <Link
+                to="/pricing"
+                onClick={handleNavClick('/pricing')}
+                className="block w-full text-left px-4 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200 font-medium text-gray-100"
+              >
+                {t.footer.pagesLinks.pricing}
+              </Link>
+>>>>>>> 43a468f (Configure Netlify deployment settings)
             </div>
 
             {/* Mobile CTA */}
